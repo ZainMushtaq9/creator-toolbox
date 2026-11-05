@@ -209,6 +209,73 @@ test("SSRF: localhost audit URL is rejected", async () => {
   assert.equal(r.json.error.code, "fetch_failed");
 });
 
+test("GSO URL-only: localhost is rejected like the page audit", async () => {
+  const r = await call("/api/v1/gso/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: { url: "http://localhost:8787/admin" },
+  });
+  assert.equal(r.status, 422);
+  assert.equal(r.json.success, false);
+  assert.equal(r.json.error.code, "fetch_failed");
+});
+
+test("GSO with no URL and no content is a 400 validation error", async () => {
+  const r = await call("/api/v1/gso/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: {},
+  });
+  assert.equal(r.status, 400);
+  assert.equal(r.json.success, false);
+  assert.equal(r.json.error.code, "validation_error");
+});
+
+test("GSO on supplied text still scores without a fetch", async () => {
+  const r = await call("/api/v1/gso/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: { url: "https://example.com/page", text: "An image compressor reduces file size. It works in your browser and keeps photos private." },
+  });
+  assert.equal(r.status, 200);
+  assert.equal(r.json.success, true);
+  assert.ok(r.json.data.score >= 0 && r.json.data.score <= 100);
+});
+
+test("AEO URL-only: localhost is rejected like the page audit", async () => {
+  const r = await call("/api/v1/aeo/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: { url: "http://localhost:8787/admin" },
+  });
+  assert.equal(r.status, 422);
+  assert.equal(r.json.success, false);
+  assert.equal(r.json.error.code, "fetch_failed");
+});
+
+test("AEO with no URL and no content is a 400 validation error", async () => {
+  const r = await call("/api/v1/aeo/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: {},
+  });
+  assert.equal(r.status, 400);
+  assert.equal(r.json.success, false);
+  assert.equal(r.json.error.code, "validation_error");
+});
+
+test("AEO on supplied text still scores without a fetch", async () => {
+  const r = await call("/api/v1/aeo/analyze", {
+    method: "POST",
+    token: ENV.ADMIN_TOKEN,
+    body: { url: "https://example.com/page", text: "What is a word counter? A word counter counts the words in your text. It runs in your browser." },
+  });
+  assert.equal(r.status, 200);
+  assert.equal(r.json.success, true);
+  assert.ok(r.json.data.score >= 0 && r.json.data.score <= 100);
+  assert.ok(Array.isArray(r.json.data.checks));
+});
+
 test("reports round-trip through the fake D1", async () => {
   const created = await call("/api/v1/reports", {
     method: "POST",
