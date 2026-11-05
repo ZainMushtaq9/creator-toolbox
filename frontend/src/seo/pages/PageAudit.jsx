@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SeoLayout from "../components/SeoLayout.jsx";
-import { runSeo, saveLocalReport } from "../seoApi.js";
+import { runSeo, apiMode, saveLocalReport } from "../seoApi.js";
 import { auditPage, AUDIT_WEIGHTS } from "../services/pageAudit.js";
 
 // Deterministic on-page SEO audit (0–100). Weights: metadata 15, content
@@ -24,7 +24,11 @@ export default function PageAudit() {
   const [busy, setBusy] = useState(false);
 
   const run = async () => {
-    if (!url.trim() || !html.trim()) { setError("Enter the page URL and paste its HTML."); return; }
+    if (!url.trim()) { setError("Enter the page URL to audit."); return; }
+    // URL-only works in Worker mode (the Worker fetches the page
+    // server-side). In local mode the browser cannot fetch other sites
+    // (CORS), so pasted HTML is still required there.
+    if (!html.trim() && apiMode() !== "worker") { setError("Paste the page HTML — in local mode the browser cannot fetch other sites, so the audit runs from pasted HTML only. (In Worker mode, entering the URL alone is enough.)"); return; }
     setError(""); setMsg(""); setBusy(true);
     try {
       const { source: src, data } = await runSeo(
@@ -56,14 +60,14 @@ export default function PageAudit() {
   return (
     <SeoLayout title="Page Audit" description="Deterministic on-page SEO audit with category scores and findings." path="/seo/audit">
       <h1>Page Audit</h1>
-      <p className="lede">Paste a page&rsquo;s HTML to audit it. The score is a CreatorToolbox diagnostic (0–100), not a Google ranking formula. In local mode nothing leaves this browser.</p>
+      <p className="lede">Enter a page URL to audit it. In Worker mode the Worker fetches the page for you — pasting HTML is optional. In local mode, paste the page HTML (the browser cannot fetch other sites). The score is a CreatorToolbox diagnostic (0–100), not a Google ranking formula. In local mode nothing leaves this browser.</p>
       <div className="tool-box">
         <label htmlFor="pa-url">Page URL</label>
         <input id="pa-url" className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com/page" />
         <label htmlFor="pa-keyword">Target keyword (optional)</label>
         <input id="pa-keyword" className="input" value={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="e.g. image compressor" />
-        <label htmlFor="pa-html">Page HTML (paste)</label>
-        <textarea id="pa-html" className="input" rows={8} value={html} onChange={(e) => setHtml(e.target.value)} placeholder="Paste the full HTML of the page…" />
+        <label htmlFor="pa-html">Page HTML (paste — optional in Worker mode)</label>
+        <textarea id="pa-html" className="input" rows={8} value={html} onChange={(e) => setHtml(e.target.value)} placeholder="Paste the full HTML of the page… (leave empty in Worker mode to let the Worker fetch the URL)" />
         <div className="toolbar">
           <button type="button" className="btn" onClick={run} disabled={busy}>{busy ? "Working…" : "Run audit"}</button>
         </div>
