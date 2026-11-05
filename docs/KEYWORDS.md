@@ -25,27 +25,68 @@ authorship/updated line.
 
 | Tool page | Primary target | Secondary terms |
 | --- | --- | --- |
-| `/tools/youtube-title-generator` | youtube title generator | video title ideas, catchy youtube titles |
-| `/tools/youtube-description-generator` | youtube description generator | video description template |
-| `/tools/youtube-hashtag-generator` | youtube hashtag generator | youtube hashtags, video hashtags |
-| `/tools/youtube-tag-generator` | youtube tag generator | youtube tags, video tags |
-| `/tools/youtube-thumbnail-resizer` | youtube thumbnail resizer | 1280x720 thumbnail, resize thumbnail |
-| `/tools/video-aspect-ratio-calculator` | aspect ratio calculator | video aspect ratio, 16:9 calculator |
-| `/tools/youtube-earnings-calculator` | youtube earnings calculator | youtube money calculator, youtube rpm calculator |
-| `/tools/youtube-shorts-title-generator` | youtube shorts title generator | shorts title ideas |
-| `/tools/instagram-caption-generator` | instagram caption generator | instagram captions, caption ideas |
-| `/tools/instagram-hashtag-generator` | instagram hashtag generator | instagram hashtags |
-| `/tools/instagram-bio-generator` | instagram bio generator | instagram bio ideas |
-| `/tools/instagram-post-size-calculator` | instagram post size | instagram dimensions, instagram image size |
-| `/tools/instagram-engagement-calculator` | instagram engagement calculator | engagement rate calculator |
-| `/tools/tiktok-hook-generator` | tiktok hook generator | tiktok hooks, video hook ideas |
-| `/tools/tiktok-caption-generator` | tiktok caption generator | tiktok captions |
-| `/tools/tiktok-hashtag-generator` | tiktok hashtag generator | tiktok hashtags |
-| `/tools/image-compressor` | image compressor | compress jpg, compress png, reduce image size |
-| `/tools/image-resizer` | image resizer | resize image online, resize photo |
-| `/tools/jpg-to-png-converter` | jpg to png converter | convert jpg to png |
-| `/tools/word-counter` | word counter | character counter, count words online |
-| `/tools/text-case-converter` | text case converter | uppercase lowercase converter, title case converter |
+| `/tools/youtube-title-generator` | youtube title generator | video title ideas, catchy youtube titles, youtube video title generator, youtube title ideas |
+| `/tools/youtube-description-generator` | youtube description generator | video description template, youtube description template, youtube video description |
+| `/tools/youtube-hashtag-generator` | youtube hashtag generator | youtube hashtags, video hashtags, hashtags for youtube shorts, youtube hashtags to copy and paste |
+| `/tools/youtube-tag-generator` | youtube tag generator | youtube tags, video tags, youtube tags generator |
+| `/tools/youtube-thumbnail-resizer` | youtube thumbnail resizer | 1280x720 thumbnail, resize thumbnail, youtube thumbnail size |
+| `/tools/video-aspect-ratio-calculator` | aspect ratio calculator | video aspect ratio, 16:9 calculator, 9:16 calculator, 4:3 calculator, 21:9 calculator, image aspect ratio calculator |
+| `/tools/youtube-earnings-calculator` | youtube earnings calculator | youtube money calculator, youtube rpm calculator, how much does youtube pay per view, youtube pay per 1000 views |
+| `/tools/youtube-shorts-title-generator` | youtube shorts title generator | shorts title ideas, youtube shorts titles, youtube shorts title ideas |
+| `/tools/instagram-caption-generator` | instagram caption generator | instagram captions, caption ideas, captions for instagram, instagram reels caption |
+| `/tools/instagram-hashtag-generator` | instagram hashtag generator | instagram hashtags, instagram hashtags for reels, instagram hashtag limit |
+| `/tools/instagram-bio-generator` | instagram bio generator | instagram bio ideas, instagram profile bio |
+| `/tools/instagram-post-size-calculator` | instagram post size | instagram dimensions, instagram image size, instagram story size, instagram reel size |
+| `/tools/instagram-engagement-calculator` | instagram engagement calculator | engagement rate calculator, instagram engagement rate checker |
+| `/tools/tiktok-hook-generator` | tiktok hook generator | tiktok hooks, video hook ideas, tiktok hook ideas |
+| `/tools/tiktok-caption-generator` | tiktok caption generator | tiktok captions, tiktok caption ideas, caption for tiktok |
+| `/tools/tiktok-hashtag-generator` | tiktok hashtag generator | tiktok hashtags, hashtags for tiktok, tiktok hashtag ideas, tiktok tag generator |
+| `/tools/image-compressor` | image compressor | compress jpg, compress png, reduce image size, photo compressor, compress image online |
+| `/tools/image-resizer` | image resizer | resize image online, resize photo, photo resizer, resize photo online |
+| `/tools/jpg-to-png-converter` | jpg to png converter | convert jpg to png, jpeg to png converter, convert jpeg to png |
+| `/tools/word-counter` | word counter | character counter, count words online, sentence counter, paragraph counter, reading time calculator |
+| `/tools/text-case-converter` | text case converter | uppercase lowercase converter, title case converter, sentence case converter, uppercase to lowercase converter |
+
+## Evening round 2026-11-05 — keyword research + on-page additions
+
+Live searches were run for all 21 tools (competitor page titles and angles
+checked on 2026-11-05). Every tool page gained 1–2 secondary terms in its
+`keywords` field plus one new FAQ (with FAQPage JSON-LD) answering a
+question people actually search for; a few meta descriptions were reworded
+to carry the term. Files changed: `frontend/src/config/tools.js` and
+`frontend/src/tools/instagram/InstagramHashtagGenerator.jsx`. No URLs,
+slugs, titles, layouts or tool logic changed.
+
+Two platform facts were corrected in this round (competitor pages agree, and
+the old wording was wrong):
+
+- **Instagram now allows up to 5 hashtags per post** (cut from 30 in
+  December 2025; Instagram Help Center states 5). The hashtag generator
+  page previously said 30 — its `formats` text, how-to step, FAQ and the
+  on-page notice now all say 5. The tool itself still returns 12 tags as a
+  pool to choose the best 5 from; only the guidance changed.
+- **TikTok's composer caps a caption at 5 hashtags** (rolling out since
+  August 2025). The TikTok hashtag page already advised 3–5; its FAQ now
+  states the cap.
+
+Deliberately NOT added (checked against what each tool actually does):
+
+- Word counter: no "speaking time", "unique words" or "keyword density" —
+  the tool shows words, characters with/without spaces, sentences,
+  paragraphs and reading time only.
+- Image compressor / resizer: no "compress to 20 KB / 50 KB / 100 KB",
+  no "resize by percentage", no batch — the tools use a quality slider and
+  exact dimensions only.
+- YouTube tag generator: no claim of a 500-character counter — the tool
+  does not show one. Its new FAQ states YouTube's 500-character tags-field
+  limit as a platform fact and tells users to trim if they run over.
+- Text case converter: no "camelCase", "snake_case" or "toggle case" —
+  the tool has UPPERCASE, lowercase, Title Case, Sentence case, Capitalized
+  Words and aLtErNaTiNg only.
+- Earnings calculator: no "youtube cpm calculator" — the tool computes
+  from RPM, not CPM. Its new FAQ explains CPM vs RPM instead.
+- No "viral", "best" or "#1" wording anywhere; no invented volume,
+  difficulty or ranking numbers anywhere.
 
 ## What ranking needs (beyond on-page work)
 
