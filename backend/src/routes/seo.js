@@ -47,6 +47,20 @@ const gsoSchema = z.object({
   questions: z.array(z.string().max(200)).max(10).optional().default([]),
 });
 
+// When neither html nor text is supplied, fetch the page server-side
+// (same pattern as /api/v1/audit/page). Returns { ok: true, html } or
+// { ok: false, response } where response is the envelopeError to return.
+async function fetchHtmlForAnalysis(url) {
+  let parsedUrl = null;
+  try { parsedUrl = new URL(url); } catch { parsedUrl = null; }
+  if (!parsedUrl || !/^https?:$/.test(parsedUrl.protocol)) {
+    return { ok: false, response: envelopeError("validation_error", "Provide a valid page URL to fetch, or paste HTML or plain text.", 400) };
+  }
+  const fetched = await fetchPage(url);
+  if (!fetched.ok) return { ok: false, response: envelopeError("fetch_failed", fetched.error, 422) };
+  return { ok: true, html: fetched.html };
+}
+
 export async function seoHandler(request, env) {
   if (!isAdmin(request, env)) {
     return envelopeError("unauthorized", "SEO Intelligence is owner-only. Send a valid Bearer ADMIN_TOKEN (Worker secret). With no token configured, this endpoint is locked.", 401);
@@ -96,12 +110,24 @@ export async function seoHandler(request, env) {
   if (path === "/api/v1/gso/analyze") {
     const v = validateBody(gsoSchema, parsed.value);
     if (!v.ok) return envelopeError("validation_error", v.error, 400);
-    return envelope(gsoAnalysis(v.value), { source: "worker" });
+    let html = v.value.html;
+    if (!html && !v.value.text) {
+      const f = await fetchHtmlForAnalysis(v.value.url);
+      if (!f.ok) return f.response;
+      html = f.html;
+    }
+    return envelope(gsoAnalysis({ ...v.value, html }), { source: "worker" });
   }
   if (path === "/api/v1/aeo/analyze") {
     const v = validateBody(gsoSchema, parsed.value);
     if (!v.ok) return envelopeError("validation_error", v.error, 400);
-    return envelope(aeoAnalysis(v.value), { source: "worker" });
+    let html = v.value.html;
+    if (!html && !v.value.text) {
+      const f = await fetchHtmlForAnalysis(v.value.url);
+      if (!f.ok) return f.response;
+      html = f.html;
+    }
+    return envelope(aeoAnalysis({ ...v.value, html }), { source: "worker" });
   }
   return envelopeError("not_found", `Unknown SEO endpoint: ${path}`, 404);
 }
