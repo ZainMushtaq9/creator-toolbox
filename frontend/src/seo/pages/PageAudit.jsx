@@ -60,7 +60,7 @@ export default function PageAudit() {
   return (
     <SeoLayout title="Page Audit" description="Deterministic on-page SEO audit with category scores and findings." path="/seo/audit">
       <h1>Page Audit</h1>
-      <p className="lede">Enter a page URL to audit it. In Worker mode the Worker fetches the page for you — pasting HTML is optional. In local mode, paste the page HTML (the browser cannot fetch other sites). The score is a CreatorToolbox diagnostic (0–100), not a Google ranking formula. In local mode nothing leaves this browser.</p>
+      <p className="lede">Enter a page URL to audit it. In Worker mode the Worker fetches the page for you — pasting HTML is optional. Note: a URL-only fetch reads the page&rsquo;s raw HTML, so JavaScript-rendered content is not visible to it and content scores may understate a JavaScript-rendered page — for full content scores, paste the page&rsquo;s rendered HTML instead. In local mode, paste the page HTML (the browser cannot fetch other sites). The score is a CreatorToolbox diagnostic (0–100), not a Google ranking formula. In local mode nothing leaves this browser.</p>
       <div className="tool-box">
         <label htmlFor="pa-url">Page URL</label>
         <input id="pa-url" className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com/page" />
