@@ -12,6 +12,10 @@ export default function Settings() {
   const [error, setError] = useState("");
   const [gsc, setGsc] = useState(null);
   const [gscError, setGscError] = useState("");
+  // Bumped after Change/Clear token so the API mode and token-presence
+  // lines re-render immediately (setToken/clearToken only touch
+  // sessionStorage, which React does not observe).
+  const [, setVersion] = useState(0);
 
   useEffect(() => {
     if (isWorkerConfigured()) {
@@ -25,12 +29,14 @@ export default function Settings() {
     setTokenInput("");
     setMsg("Token updated (stored in this tab's session storage only).");
     setError("");
+    setVersion((v) => v + 1);
   };
 
   const clear = () => {
     clearToken();
     setMsg("Token cleared from session storage. The dashboard will lock when you navigate or reload.");
     setError("");
+    setVersion((v) => v + 1);
   };
 
   return (
@@ -46,7 +52,7 @@ export default function Settings() {
         <p><strong>Honest free limit:</strong> 10,000 Neurons/day per account, recurring forever, resets 00:00 UTC. Overage on the Free plan stops with an error. Free use is recurring, not a one-off trial.</p>
         <p><strong>Long-context overflow: Google AI Studio <code>gemini-2.5-flash</code></strong> (up to 1M tokens) — used only when input exceeds the Workers AI window, behind the Worker secret <code>GEMINI_API_KEY</code> (free tier, no card, key from aistudio.google.com). <strong>NOT CONNECTED</strong> until the owner supplies the key. Exact Gemini free-tier RPM/RPD are unpublished — no number is claimed.</p>
         <p><strong>Optional fallbacks (never the default):</strong> Hugging Face Inference Providers (<code>openai/gpt-oss-120b:fastest</code>, <code>HF_API_TOKEN</code> — free HF accounts get zero included credits; needs purchased credits, PRO, or a BYOK key); AnyRouter (<code>anyrouter/free</code>, <code>ANYROUTER_API_KEY</code> — 5-request lifetime trial, then Go $2/mo or a donated BYOK key); Groq (<code>openai/gpt-oss-120b</code>, <code>GROQ_API_KEY</code> — 30 RPM, 1,000 req/day, 200,000 tokens/day, no embeddings); NVIDIA NIM (<code>NVIDIA_API_KEY</code>, trial-only terms).</p>
-        <p>No AI account, key or subscription has been created by this project. Workers AI needs only the Cloudflare account the Worker runs on — that account does not exist yet, so the integration is labelled NOT production-connected and no AI output is faked.</p>
+        <p>Workers AI runs on the project&rsquo;s Cloudflare account and the Worker is <strong>LIVE in production</strong> with Workers AI as the default provider — no key, no card. Gemini, Hugging Face, AnyRouter, Groq and NVIDIA stay <strong>NOT CONNECTED</strong> until their keys/credits are supplied; no AI output is faked.</p>
       </div>
 
       <div className="tool-box" style={{ marginTop: 16 }}>
