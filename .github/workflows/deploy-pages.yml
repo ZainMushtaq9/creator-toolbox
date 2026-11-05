@@ -40,6 +40,15 @@ jobs:
         run: npm --prefix frontend run build
         env:
           PAGES_BASE_PATH: /creator-toolbox/
+      # Build already chains prerender; this explicit step is a belt-and-
+      # braces re-run (idempotent) so a future build-script change can
+      # never silently ship un-prerendered pages again. Prerender writes
+      # a real static HTML file for every sitemap URL so GitHub Pages
+      # serves HTTP 200 instead of the SPA 404 fallback.
+      - name: Prerender static pages for GitHub Pages
+        run: npm --prefix frontend run prerender
+        env:
+          PAGES_BASE_PATH: /creator-toolbox/
       - name: Add SPA fallback and disable Jekyll
         run: cp frontend/dist/index.html frontend/dist/404.html && touch frontend/dist/.nojekyll
       - name: Upload Pages artifact
