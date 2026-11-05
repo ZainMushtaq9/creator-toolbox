@@ -1,0 +1,103 @@
+:root{
+  --primary:#176B58; --dark:#102A43; --bg:#F4F7F6; --accent:#E8A838;
+  --text:#1c2b33; --muted:#5b6b76; --card:#fff; --border:#dfe7e4; --radius:12px;
+  --heading:#102A43; --surface:#f0f5f3;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{color:var(--heading);line-height:1.25}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.site-header{background:var(--dark);color:#fff;position:sticky;top:0;z-index:50}
+.site-header .container{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{color:#fff;font-weight:800;font-size:1.25rem;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav a{color:#d7e3de;padding:8px 10px;border-radius:8px;font-size:.95rem}
+.nav a:hover,.nav a.active{background:rgba(255,255,255,.12);color:#fff;text-decoration:none}
+.nav-toggle{display:none;background:none;border:1px solid #456;color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;margin-left:auto}
+.hero{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;padding:56px 0 48px}
+.hero h1{color:#fff;font-size:2.4rem;margin:0 0 12px}
+.hero p{font-size:1.15rem;opacity:.92;max-width:640px}
+.hero .search{margin-top:20px;max-width:560px}
+.search input,.input,textarea.input,select.input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:1rem;font-family:inherit;background:var(--card);color:var(--text)}
+.search input:focus,.input:focus{outline:3px solid rgba(23,107,88,.25);border-color:var(--primary)}
+.btn{display:inline-block;background:var(--primary);color:#fff;border:none;padding:11px 18px;border-radius:10px;font-size:1rem;cursor:pointer;font-weight:600}
+.btn:hover{background:#125745}
+.btn.secondary{background:var(--card);color:var(--primary);border:1px solid var(--primary)}
+.btn.ghost{background:transparent;color:var(--heading);border:1px solid var(--border)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-sm{padding:7px 12px;font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.tool-card:hover{border-color:var(--primary)}
+.category-badge{display:inline-block;background:var(--surface);color:var(--primary);font-size:.8rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:8px}
+.section{padding:40px 0}
+.section h2{font-size:1.6rem;margin:0 0 8px}
+.section .lede{color:var(--muted);margin:0 0 20px}
+.tool-layout{display:grid;grid-template-columns:1fr;gap:20px}
+.tool-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;min-height:320px}
+/* min-height reserves space for the lazily-loaded tool component so the
+   ad slot and sections below it do not jump when the chunk arrives (CLS). */
+.tool-box label{font-weight:600;display:block;margin:12px 0 6px}
+.output{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;white-space:pre-wrap;word-break:break-word;margin-top:12px}
+.result-list{list-style:none;padding:0;margin:12px 0}
+.result-list li{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;display:flex;justify-content:space-between;gap:10px;align-items:start}
+.notice{background:#fff7e0;border:1px solid #f0d48a;border-radius:10px;padding:12px 14px;margin:12px 0;font-size:.95rem}
+.notice.info{background:#e8f3ef;border-color:#bcd8cc}
+.error{color:#a11;background:#fdecea;border:1px solid #f3b8b8;border-radius:8px;padding:10px 12px;margin:10px 0}
+.success{color:#14532d;background:#e6f4ea;border:1px solid #b5d8bf;border-radius:8px;padding:10px 12px;margin:10px 0}
+.breadcrumbs{font-size:.9rem;color:var(--muted);margin:16px 0 4px}
+.breadcrumbs a{color:var(--muted)}
+.ad-slot{border:1px dashed #b9c6c1;border-radius:10px;padding:18px;text-align:center;color:var(--muted);font-size:.9rem;margin:24px 0;background:var(--surface);min-height:90px;box-sizing:border-box}
+/* min-height reserves space so a loaded ad does not push content down (CLS). */
+.faq details{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer;color:var(--heading)}
+.site-footer{background:var(--dark);color:#c8d6d0;margin-top:48px;padding:36px 0}
+.site-footer a{color:#c8d6d0}
+.site-footer h3{color:#fff}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+.kv .stat{background:var(--surface);border-radius:10px;padding:12px}
+.kv .stat b{display:block;font-size:1.3rem;color:var(--heading)}
+.table{width:100%;border-collapse:collapse;margin:12px 0}
+.table th,.table td{border:1px solid var(--border);padding:8px 10px;text-align:left;font-size:.95rem}
+.table th{background:var(--surface)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+img.preview{max-width:100%;border-radius:10px;border:1px solid var(--border)}
+/* Reduced motion — Phase 2 (Roadmap PDF §2.4). Respect the user's
+   operating-system preference: no smooth scrolling or animation. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+}
+
+@media (max-width:760px){
+  .hero h1{font-size:1.7rem}
+  .nav{display:none;flex-direction:column;width:100%;padding-bottom:12px}
+  .nav.open{display:flex}
+  .nav-toggle{display:block}
+  .site-header .container{flex-wrap:wrap}
+}
+
+/* Dark theme — Phase 2. Applied via data-theme="dark" on <html>,
+   set before paint by the inline script in index.html and toggled
+   from the header. Choice is saved in localStorage ("ct-theme"). */
+[data-theme="dark"]{
+  --primary:#3ab98d; --bg:#0e1a17; --text:#e6eeeb; --muted:#9db3aa;
+  --card:#162723; --border:#2b403a; --heading:#e8f0ed; --surface:#1a2f29;
+  color-scheme:dark;
+}
+[data-theme="dark"] .notice{background:#2e2a16;border-color:#6b5a1e}
+[data-theme="dark"] .notice.info{background:#142e26;border-color:#2b403a}
+[data-theme="dark"] .error{color:#ffb4b4;background:#3a1d1d;border-color:#6b2f2f}
+[data-theme="dark"] .success{color:#9ed8ae;background:#142e1d;border-color:#2c5238}
+[data-theme="dark"] .btn:hover{background:#2a8f6d}
+[data-theme="dark"] .btn.secondary{color:var(--primary)}
+[data-theme="dark"] .hero{background:linear-gradient(135deg,#0f3d2f,var(--dark))}
+.theme-toggle{background:none;border:1px solid #456;color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.theme-toggle:hover{background:rgba(255,255,255,.12)}

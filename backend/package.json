@@ -1,0 +1,21 @@
+{
+  "name": "creator-toolbox-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/worker.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "migrate": "wrangler d1 migrations apply creator_toolbox --remote"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "jose": "^5.9.6",
+    "nanoid": "^5.0.9",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "wrangler": "^3.91.0"
+  }
+}

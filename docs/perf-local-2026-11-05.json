@@ -1,0 +1,52 @@
+{
+  "base": "http://localhost:4173",
+  "measuredAt": "2026-11-05T07:10:57.649Z",
+  "note": "Local vite preview measurement on this VM. LCP/CLS from PerformanceObserver; longestEventMs is the longest 'event' entry duration — an INP proxy, not a certified INP value.",
+  "targets": {
+    "LCP_ms": 2500,
+    "INP_ms": 200,
+    "CLS": 0.1
+  },
+  "results": [
+    {
+      "page": "home",
+      "path": "/",
+      "lcp": 264,
+      "cls": 0,
+      "longestEventMs": null,
+      "ttfbMs": 16,
+      "loadMs": 108,
+      "jsErrors": []
+    },
+    {
+      "page": "all-tools",
+      "path": "/tools",
+      "lcp": 160,
+      "cls": 0,
+      "longestEventMs": null,
+      "ttfbMs": 35,
+      "loadMs": 82,
+      "jsErrors": []
+    },
+    {
+      "page": "word-counter",
+      "path": "/tools/word-counter",
+      "lcp": 136,
+      "cls": 0.036,
+      "longestEventMs": null,
+      "ttfbMs": 4,
+      "loadMs": 63,
+      "jsErrors": []
+    },
+    {
+      "page": "title-generator",
+      "path": "/tools/youtube-title-generator",
+      "lcp": 140,
+      "cls": 0.014,
+      "longestEventMs": 32,
+      "ttfbMs": 3,
+      "loadMs": 83,
+      "jsErrors": []
+    }
+  ]
+}

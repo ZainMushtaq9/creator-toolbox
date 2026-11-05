@@ -1,0 +1,5 @@
+# REPLACE BEFORE DEPLOYMENT
+# This is a placeholder. Copy the exact ads.txt line from your own
+# Google AdSense account (Sites > your site > ads.txt) and replace the
+# line below. Do NOT deploy pub-YOUR-PUBLISHER-ID.
+google.com, pub-YOUR-PUBLISHER-ID, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,38 @@
+name = "creator-toolbox-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# D1 database — create first, then paste the real database_id here:
+#   npx wrangler d1 create creator_toolbox
+#   npx wrangler d1 migrations apply creator_toolbox --remote
+[[d1_databases]]
+binding = "DB"
+database_name = "creator_toolbox"
+database_id = "REPLACE_WITH_REAL_D1_DATABASE_ID"
+
+# Workers AI — the default AI provider. Native binding, no key, no card:
+# 10,000 Neurons/day per account, recurring forever, resets 00:00 UTC.
+[ai]
+binding = "AI"
+
+[vars]
+ENVIRONMENT = "production"
+# CORS: only this origin is reflected (Access-Control-Allow-Origin).
+# Replace with the real site origin before deploying. No origin is
+# allowed by default — the Worker previously reflected any Origin.
+ALLOWED_ORIGIN = "https://YOUR-DOMAIN"
+# AI provider: "workers-ai" (default) | "gemini" (long-context overflow
+# only) | "huggingface" | "anyrouter" | "groq" | "nvidia" (optional fallbacks).
+AI_PROVIDER = "workers-ai"
+
+# Secrets (set with `wrangler secret put NAME` — never commit values):
+#   GEMINI_API_KEY (long-context overflow only; key from aistudio.google.com)
+#   HF_API_TOKEN (optional fallback; fine-grained token, ONLY the
+#     "Make calls to Inference Providers" permission — never reuse the
+#     exposed 2026-11-04 chat-shared token, and keep it separate from
+#     the PSX project's token)
+#   ANYROUTER_API_KEY (optional fallback; sk-ar-v1-… from anyrouter.dev)
+#   GROQ_API_KEY (optional fallback; gsk_… from console.groq.com)
+#   NVIDIA_API_KEY (optional fallback only)
+#   GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, OAUTH_ENCRYPTION_KEY
+#   ADMIN_TOKEN (owner-only API + SEO dashboard; locked when unset)
