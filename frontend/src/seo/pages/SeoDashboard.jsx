@@ -46,7 +46,7 @@ export default function SeoDashboard() {
           {lastAudit ? (
             <p>Score <strong>{lastAudit.data?.score ?? "—"}/100</strong> for {lastAudit.data?.url || lastAudit.title} — saved {new Date(lastAudit.createdAt).toLocaleDateString()} (local report).</p>
           ) : (
-            <p>No audit saved yet. Run one in <Link to="/seo/audit">Page Audit</Link> — local, no backend needed.</p>
+            <p>No audit saved yet. Run one in <Link to="/seo/audit">Page Audit</Link> — {mode === "worker" ? "in Worker mode you can enter just the page URL and the Worker fetches it for you." : "local, no backend needed."}</p>
           )}
         </article>
         <article className="card">
@@ -79,7 +79,7 @@ export default function SeoDashboard() {
         </article>
         <article className="card">
           <h3>Reports stored locally</h3>
-          <p>{reports.length} report(s) in this browser (localStorage &lsquo;ct-seo-reports&rsquo;). None are stored server-side in local mode. <Link to="/seo/reports">View reports</Link>.</p>
+          <p>{reports.length} report(s) in this browser (localStorage &lsquo;ct-seo-reports&rsquo;). {mode === "worker" ? "Reports saved here stay in this browser; page audits run via the Worker are also recorded in the Worker’s database." : "None are stored server-side in local mode."} <Link to="/seo/reports">View reports</Link>.</p>
         </article>
       </div>
 
