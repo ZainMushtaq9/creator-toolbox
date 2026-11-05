@@ -9,7 +9,21 @@ import { apiMode, isWorkerConfigured, loadLocalReports, seoFetch } from "../seoA
 // (localStorage 'ct-seo-reports'), plus live GSC / AI status when a Worker
 // is configured. Nothing here is demo data — when there is no data, the
 // card says so plainly.
+//
+// The dashboard body lives in its own component (DashboardContent) so it
+// only mounts AFTER the lock screen unlocks. SeoLayout renders children
+// only when unlocked; if the mode were read in SeoDashboard itself, the
+// value would be captured before unlocking (no token yet) and the cards
+// would keep showing "Local (browser)" even in Worker mode.
 export default function SeoDashboard() {
+  return (
+    <SeoLayout title="SEO Intelligence Dashboard" description="Owner-only SEO dashboard: audits, keyword research, Search Console and AI status." path="/seo">
+      <DashboardContent />
+    </SeoLayout>
+  );
+}
+
+function DashboardContent() {
   const [reports, setReports] = useState([]);
   const [gsc, setGsc] = useState(null);
   const [gscError, setGscError] = useState("");
@@ -32,7 +46,7 @@ export default function SeoDashboard() {
   const mode = apiMode();
 
   return (
-    <SeoLayout title="SEO Intelligence Dashboard" description="Owner-only SEO dashboard: audits, keyword research, Search Console and AI status." path="/seo">
+    <>
       <h1>SEO Intelligence</h1>
       <p className="lede">
         Owner-only dashboard. {mode === "worker"
@@ -93,6 +107,6 @@ export default function SeoDashboard() {
         All scores on this dashboard are CreatorToolbox diagnostics computed from text you supply — not
         Google ranking data. Search volume, difficulty, rankings and traffic are never invented here.
       </p>
-    </SeoLayout>
+    </>
   );
 }
