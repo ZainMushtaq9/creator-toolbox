@@ -4,5 +4,5 @@
 export const ADS_CONFIG = {
   enabled: false,
   publisherId: "pub-YOUR-PUBLISHER-ID", // replace from your AdSense account
-  slots: { toolBelow: "", inContent: "" }
+  slots: { toolBelow: "", homeLeaderboard: "", homeInContent: "" }
 };
