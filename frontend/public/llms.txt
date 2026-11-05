@@ -1,0 +1,31 @@
+# CreatorToolbox
+
+> Free online tools and AI-powered productivity for everyone. Create. Optimize. Convert. Grow.
+> A free, all-in-one tools platform for content creators and website owners. All 21 core tools run in the browser — no sign-up, no upload for most tools.
+
+## What it is
+
+- 21 free browser-local tools: YouTube title, description, hashtag, tag, thumbnail resizer (1280x720), aspect-ratio calculator, earnings calculator (RPM estimate), Shorts title generator; Instagram caption, hashtag, bio, post-size calculator, engagement calculator; TikTok hook, caption, hashtag; image compressor, resizer, JPG-to-PNG; word counter, text case converter.
+- Workflows: step-by-step YouTube creator workflow combining the YouTube tools.
+- Collections and Workspaces: save and organise tools locally in the browser.
+- Blog: practical guides for creators on titles, thumbnails, hashtags and growth.
+- SEO Intelligence (owner-only, at /seo): keyword research, page audit, competitor analysis, keyword gap, AEO and GSO analysis, AI recommendations, reports. Not public.
+
+## Key pages
+
+- [Home](https://zainmushtaq9.github.io/creator-toolbox/)
+- [All tools](https://zainmushtaq9.github.io/creator-toolbox/tools)
+- [YouTube tools](https://zainmushtaq9.github.io/creator-toolbox/youtube-tools)
+- [Instagram tools](https://zainmushtaq9.github.io/creator-toolbox/instagram-tools)
+- [TikTok tools](https://zainmushtaq9.github.io/creator-toolbox/tiktok-tools)
+- [Image tools](https://zainmushtaq9.github.io/creator-toolbox/image-tools)
+- [Text tools](https://zainmushtaq9.github.io/creator-toolbox/text-tools)
+- [YouTube creator workflow](https://zainmushtaq9.github.io/creator-toolbox/workflows/youtube-creator)
+- [Blog](https://zainmushtaq9.github.io/creator-toolbox/blog)
+
+## Notes for AI search
+
+- The 21 core tools are template and calculation based, not AI-generated, unless a page says otherwise.
+- The YouTube earnings calculator gives an RPM estimate, not a guaranteed income.
+- The image compressor, resizer and JPG-to-PNG converter process files locally in the browser.
+- Full page list: [sitemap.xml](https://zainmushtaq9.github.io/creator-toolbox/sitemap.xml)
