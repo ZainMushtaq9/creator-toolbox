@@ -55,7 +55,7 @@ export default function Aeo() {
   return (
     <SeoLayout title="AEO Diagnostic" description="Answer Engine Optimization diagnostic: 8 checks, 0–100, from supplied page text or HTML." path="/seo/aeo">
       <h1>AEO Diagnostic</h1>
-      <p className="lede">Checks whether a page answers questions directly: a short direct answer early, question-led headings, definitions, examples, tables, references and visible authorship. In Worker mode you can enter just the page URL — the Worker fetches it for you. In local mode, paste HTML or text. Diagnostic only — it does not guarantee rich results or AI citations.</p>
+      <p className="lede">Checks whether a page answers questions directly: a short direct answer early, question-led headings, definitions, examples, tables, references and visible authorship. In Worker mode you can enter just the page URL — the Worker fetches it for you. Note: a URL-only fetch reads the page&rsquo;s raw HTML, so JavaScript-rendered content is not visible to it and content scores may understate a JavaScript-rendered page — for full content scores, paste the page&rsquo;s rendered HTML or text instead. In local mode, paste HTML or text. Diagnostic only — it does not guarantee rich results or AI citations.</p>
       <div className="tool-box">
         <label htmlFor="aeo-url">Page URL (required for a URL-only run in Worker mode)</label>
         <input id="aeo-url" className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com/page" />
