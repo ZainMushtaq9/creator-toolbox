@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SeoLayout from "../components/SeoLayout.jsx";
-import { runSeo, saveLocalReport } from "../seoApi.js";
+import { runSeo, apiMode, saveLocalReport } from "../seoApi.js";
 import { gsoAnalysis, GSO_WEIGHTS } from "../services/gsoAnalysis.js";
 
 // GSO — Generative Search Optimization diagnostic (internal framework only).
@@ -24,7 +24,13 @@ export default function Gso() {
   const [busy, setBusy] = useState(false);
 
   const run = async () => {
-    if (!html.trim() && !text.trim()) { setError("Paste page HTML or plain text to analyse."); return; }
+    if (!html.trim() && !text.trim()) {
+      // URL-only works in Worker mode (the Worker fetches the page
+      // server-side). In local mode the browser cannot fetch other sites
+      // (CORS), so pasted content is still required there.
+      if (apiMode() !== "worker") { setError("Paste page HTML or plain text to analyse. In local mode the browser cannot fetch other sites, so the analysis runs from pasted content only. (In Worker mode, entering the URL alone is enough.)"); return; }
+      if (!url.trim()) { setError("Enter a page URL to fetch, or paste HTML or plain text."); return; }
+    }
     setError(""); setMsg(""); setBusy(true);
     try {
       const qs = questions.split("\n").map((q) => q.trim()).filter(Boolean);
@@ -55,9 +61,9 @@ export default function Gso() {
   return (
     <SeoLayout title="GSO Diagnostic" description="Generative Search Optimization diagnostic: 9 weighted factors, 0–100, from supplied page text or HTML." path="/seo/gso">
       <h1>GSO Diagnostic</h1>
-      <p className="lede">Internal GSO framework only: answer completeness, factual support, originality, clarity, topic coverage, structure, entity clarity, crawlability and freshness. No score can predict or guarantee inclusion in AI Overviews or any generative answer.</p>
+      <p className="lede">Internal GSO framework only: answer completeness, factual support, originality, clarity, topic coverage, structure, entity clarity, crawlability and freshness. In Worker mode you can enter just the page URL — the Worker fetches it for you. In local mode, paste HTML or text. No score can predict or guarantee inclusion in AI Overviews or any generative answer.</p>
       <div className="tool-box">
-        <label htmlFor="gso-url">Page URL (optional)</label>
+        <label htmlFor="gso-url">Page URL (required for a URL-only run in Worker mode)</label>
         <input id="gso-url" className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com/page" />
         <label htmlFor="gso-html">Page HTML (paste — optional if text is supplied)</label>
         <textarea id="gso-html" className="input" rows={6} value={html} onChange={(e) => setHtml(e.target.value)} placeholder="Paste the full HTML of the page…" />
