@@ -26,7 +26,7 @@ export default function InstagramHashtagGenerator() {
       <ResultList items={results} onCopy={copy} />
       {results.length > 0 && <p className="output">{results.join(" ")}</p>}
       <Actions hasResult={results.length > 0} onCopyAll={() => copy(results.join(" "))} onDownload={() => downloadText("instagram-hashtags.txt", results.join(" "))} onReset={() => { setTopic(""); setResults([]); setError(""); }} />
-      <p className="notice">Instagram allows up to 30 hashtags per post; 5–15 relevant ones is a sensible range.</p>
+      <p className="notice">Instagram allows up to 5 hashtags per post — pick the 5 that fit your post best.</p>
     </div>
   );
 }
