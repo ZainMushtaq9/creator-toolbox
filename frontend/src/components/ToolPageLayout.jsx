@@ -4,7 +4,7 @@ import Breadcrumb from "./Breadcrumb.jsx";
 import SeoHead from "./SeoHead.jsx";
 import AdSlot from "./AdSlot.jsx";
 import { getCategory, relatedTools } from "../config/tools.js";
-import { webAppJsonLd, breadcrumbJsonLd } from "../config/seo.js";
+import { webAppJsonLd, breadcrumbJsonLd, faqJsonLd } from "../config/seo.js";
 import { trackEvent } from "../services/analytics.js";
 
 // Delegated analytics for the tool interaction area (config-gated OFF by
@@ -60,13 +60,14 @@ export default function ToolPageLayout({ tool, children }) {
     { name: cat.name, path: cat.path },
     { name: tool.name, path: null }
   ];
-  const jsonLd = [webAppJsonLd(tool), breadcrumbJsonLd(crumbs.filter((c) => c.path))];
+  const jsonLd = [webAppJsonLd(tool), breadcrumbJsonLd(crumbs.filter((c) => c.path)), faqJsonLd(tool.faqs)];
   return (
     <div className="container">
       <SeoHead title={tool.title} description={tool.description} path={`/tools/${tool.slug}`} jsonLd={jsonLd} />
       <Breadcrumb items={crumbs} />
       <h1>{tool.name}</h1>
       <p className="lede" style={{ color: "var(--muted)", maxWidth: 720 }}>{tool.description}</p>
+      <p style={{ fontSize: ".9rem", opacity: .8 }}>By CreatorToolbox · Updated November 2026</p>
       <div className="tool-layout">
         <div className="tool-box" ref={boxRef}>{children}</div>
         {/* Ad slot is deliberately BELOW the tool interaction. */}
@@ -78,6 +79,17 @@ export default function ToolPageLayout({ tool, children }) {
           <p>{tool.formats}</p>
           <h2>Example use cases</h2>
           <ul>{tool.examples.map((s, i) => (<li key={i}>{s}</li>))}</ul>
+        </section>
+        <section aria-labelledby="tool-facts">
+          <h2 id="tool-facts">Tool facts</h2>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <tbody>
+              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>What it does</th><td style={{ padding: "8px 0" }}>{tool.description}</td></tr>
+              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Cost</th><td style={{ padding: "8px 0" }}>Free — no subscription and no sign-up.</td></tr>
+              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Privacy</th><td style={{ padding: "8px 0" }}>Runs in your browser — nothing is uploaded to a server.</td></tr>
+              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Formats and limits</th><td style={{ padding: "8px 0" }}>{tool.formats}</td></tr>
+            </tbody>
+          </table>
         </section>
         <section className="faq" aria-labelledby="faqs">
           <h2 id="faqs">Frequently asked questions</h2>
