@@ -12,7 +12,7 @@ export default function CollectionPage() {
   const tools = col.tools.map(getTool).filter(Boolean);
   return (
     <div className="container section">
-      <SeoHead title={`${col.name} — CreatorToolbox`} description={col.description} path={`/collections/${col.slug}`} />
+      <SeoHead title={col.name} description={col.description} path={`/collections/${col.slug}`} />
       <Breadcrumb items={[{ name: "Home", path: "/" }, { name: "Collections", path: "/collections" }, { name: col.name, path: null }]} />
       <h1>{col.name}</h1>
       <p className="lede">{col.description}</p>
