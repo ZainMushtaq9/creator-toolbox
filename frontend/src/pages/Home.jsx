@@ -29,7 +29,7 @@ export default function Home() {
   const submitSearch = (e) => { e.preventDefault(); navigate(query.trim() ? `/tools?q=${encodeURIComponent(query.trim())}` : "/tools"); };
   return (
     <div>
-      <SeoHead title="CreatorToolbox — Free Online Tools" description="Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow — YouTube, Instagram, TikTok, image and text tools that run in your browser." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
+      <SeoHead title="Free Online Tools" description="Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow — YouTube, Instagram, TikTok, image and text tools that run in your browser." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
       {/* NOTE: WebSite + Organization JSON-LD now live statically in
           index.html so crawlers see them without JavaScript. */}
       {/* Hero — strategy tagline */}
