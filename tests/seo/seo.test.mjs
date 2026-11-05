@@ -11,6 +11,7 @@ import { fileURLToPath } from "node:url";
 
 import { TOOLS, publicPages } from "../../frontend/src/config/tools.js";
 import { pageMeta } from "../../frontend/src/config/seo.js";
+import { SITE_URL } from "../../frontend/src/config/site.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
@@ -28,7 +29,7 @@ test("sitemap.xml contains every public page", () => {
   const sitemap = readFileSync(join(ROOT, "frontend/public/sitemap.xml"), "utf8");
   assert.ok(sitemap.includes("<urlset"), "sitemap must be a urlset");
   for (const p of publicPages) {
-    assert.ok(sitemap.includes(`<loc>https://YOUR-DOMAIN${p.path}</loc>`), `sitemap missing ${p.path}`);
+    assert.ok(sitemap.includes(`<loc>${SITE_URL}${p.path}</loc>`), `sitemap missing ${p.path}`);
   }
   const count = (sitemap.match(/<url>/g) || []).length;
   assert.equal(count, publicPages.length);
@@ -45,7 +46,7 @@ test("robots.txt disallows private areas and points at the sitemap", () => {
   for (const path of ["/seo/", "/admin/", "/api/"]) {
     assert.ok(robots.includes(`Disallow: ${path}`), `robots must disallow ${path}`);
   }
-  assert.ok(robots.includes("Sitemap: https://YOUR-DOMAIN/sitemap.xml"));
+  assert.ok(robots.includes(`Sitemap: ${SITE_URL}/sitemap.xml`));
 });
 
 test("every tool page has a unique canonical", () => {
