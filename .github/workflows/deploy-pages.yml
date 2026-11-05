@@ -1,3 +1,9 @@
+# Deploy the CreatorToolbox frontend to GitHub Pages.
+# Builds the Vite app with the project subpath (/creator-toolbox/) so
+# routing and assets work on the Pages project URL, then publishes
+# frontend/dist. The backend (Worker/D1) is NOT deployed here — the
+# 21 tools run in the browser; the SEO dashboard falls back to local
+# mode until VITE_API_URL points at a deployed Worker.
 name: Deploy to GitHub Pages
 
 on:
