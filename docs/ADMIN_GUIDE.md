@@ -2,8 +2,10 @@
 
 **Audience:** the site owner only. This guide explains how to configure
 and use the private parts of CreatorToolbox (the Worker API and the SEO
-Intelligence dashboard). Nothing here is deployed yet — see
-`docs/deployment.md` for the deployment runbook.
+Intelligence dashboard). **Deployed 2026-11-05** — Worker at
+https://creator-toolbox-api.creator-toolbox.workers.dev, Pages at
+https://creator-toolbox-ekw.pages.dev; see `docs/deployment.md` for the
+deployment runbook.
 
 ## 1. What "admin" means here
 
