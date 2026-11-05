@@ -6,6 +6,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content="CreatorToolbox — free online tools for YouTube, Instagram, TikTok, images and text. No sign-up, most tools run in your browser." />
     <meta name="color-scheme" content="light dark" />
+    <!-- Site-wide structured data, static so crawlers see it without
+         JavaScript. Per-page JSON-LD (tool WebApplication, breadcrumbs)
+         is still injected client-side by SeoHead. The homepage no longer
+         injects these two blocks (see Home.jsx) to avoid duplicates. -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"CreatorToolbox","url":"https://zainmushtaq9.github.io/creator-toolbox","description":"Free online tools for content creators, developers, designers, students and digital marketers."}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"CreatorToolbox","url":"https://zainmushtaq9.github.io/creator-toolbox","description":"CreatorToolbox — free online tools for creators."}
+    </script>
     <script>
       // Set the theme before first paint to avoid a light/dark flash.
       // Saved choice wins; otherwise follow the system preference.
@@ -19,7 +29,7 @@
         document.documentElement.setAttribute("data-theme", "light");
       }
     </script>
-    <title>CreatorToolbox | Free Tools. Smarter Creation.</title>
+    <title>CreatorToolbox — Free Online Tools</title>
   </head>
   <body>
     <div id="root"></div>
