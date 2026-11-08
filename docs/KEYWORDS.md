@@ -49,13 +49,7 @@ authorship/updated line.
 
 ## Evening round 2026-11-05 — keyword research + on-page additions
 
-Live searches were run for all 21 tools (competitor page titles and angles
-checked on 2026-11-05). Every tool page gained 1–2 secondary terms in its
-`keywords` field plus one new FAQ (with FAQPage JSON-LD) answering a
-question people actually search for; a few meta descriptions were reworded
-to carry the term. Files changed: `frontend/src/config/tools.js` and
-`frontend/src/tools/instagram/InstagramHashtagGenerator.jsx`. No URLs,
-slugs, titles, layouts or tool logic changed.
+Live searches were run for all 21 tools (competitor page titles and angles checked on 2026-11-05). Every tool page gained 1–2 secondary terms in its `keywords` field; a few meta descriptions were reworded to carry the term. The round added 21 new FAQs (with FAQPage JSON-LD), each answering a question people actually search for — not one per tool: 17 pages gained one, the YouTube earnings calculator and the Instagram engagement calculator gained two each, and the Instagram post-size calculator and the TikTok hashtag generator gained none. Two more FAQs, one for each of those two pages, were added on 2026-11-08, bringing the total added to 23. (Correction, 2026-11-08: an earlier version of this section said every tool page gained one new FAQ, and the 941fc20 commit message described the round as adding 23 new FAQs. Verified against the 941fc20 diff, the round added 21 — see the breakdown above.)
 
 Two platform facts were corrected in this round (competitor pages agree, and
 the old wording was wrong):
