@@ -23,7 +23,9 @@ export const TOOLS = [
       { q: "Will these titles guarantee more views?", a: "No title can guarantee views. A good title helps people click, but the video itself has to deliver on the promise." },
       { q: "Is the tool free?", a: "Yes, completely free with no sign-up." },
       { q: "Is my topic uploaded to a server?", a: "No. Title generation runs locally in your browser." },
-      { q: "What makes a good YouTube title?", a: "A good title is specific, puts the main keyword near the front, and promises one clear benefit. Aim for around 60–70 characters so it is not cut off in search results — YouTube allows 100 characters in the title field." }
+      { q: "What makes a good YouTube title?", a: "A good title is specific, puts the main keyword near the front, and promises one clear benefit. Aim for around 60–70 characters so it is not cut off in search results — YouTube allows 100 characters in the title field." },
+      { q: "Where can I find video title ideas for my next video?", a: "Enter your topic here — this generator gives you video title ideas in four styles (how-to, list, curiosity or question) that you can copy and adapt to fit your video." },
+      { q: "Is this a YouTube video title generator?", a: "Yes. It turns your topic into catchy YouTube titles and YouTube title ideas using hand-written templates — free, instant and private, with nothing uploaded to a server." }
     ],
     related: ["youtube-description-generator", "youtube-hashtag-generator", "youtube-tag-generator", "youtube-shorts-title-generator"]
   },
@@ -40,7 +42,8 @@ export const TOOLS = [
       { q: "What should the first line of a description say?", a: "Put the most important words first — the topic and the benefit — because only the first lines show in search results." },
       { q: "Can I add my own links?", a: "Yes. The template leaves placeholders for links; replace them with your own before publishing." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "How long can a YouTube description be?", a: "YouTube allows up to 5,000 characters. Only the first 1–2 lines (about 150 characters) show in search results, so put the topic and the benefit first." }
+      { q: "How long can a YouTube description be?", a: "YouTube allows up to 5,000 characters. Only the first 1–2 lines (about 150 characters) show in search results, so put the topic and the benefit first." },
+      { q: "Can I use this as a YouTube description template?", a: "Yes. This tool works as a YouTube description template and a video description template in one — it gives you a structured layout with a hook, summary, timestamps placeholder and call to action that you can reuse for every video." }
     ],
     related: ["youtube-title-generator", "youtube-hashtag-generator", "youtube-tag-generator", "word-counter"]
   },
@@ -57,7 +60,8 @@ export const TOOLS = [
       { q: "How many hashtags should I use?", a: "YouTube allows up to 15; using 3–8 relevant ones is usually enough. Irrelevant hashtags do not help." },
       { q: "Do hashtags guarantee discovery?", a: "No. They help categorise a video, but titles, thumbnails and watch time matter far more." },
       { q: "Is my topic uploaded anywhere?", a: "No, everything runs locally in your browser." },
-      { q: "Can I use these hashtags for YouTube Shorts?", a: "Yes. The same hashtags work for Shorts — keep them short and relevant to the video, and put the most important one first." }
+      { q: "Can I use these hashtags for YouTube Shorts?", a: "Yes. The same hashtags work for Shorts — keep them short and relevant to the video, and put the most important one first." },
+      { q: "Where can I find YouTube hashtags to copy and paste?", a: "Right here — enter your topic and this tool generates video hashtags you can copy and paste into your description or title area. Keep them relevant to the video, and use no more than 15 per video." }
     ],
     related: ["youtube-tag-generator", "youtube-title-generator", "instagram-hashtag-generator", "tiktok-hashtag-generator"]
   },
@@ -74,7 +78,8 @@ export const TOOLS = [
       { q: "Do tags still matter on YouTube?", a: "They play a small role, mainly when viewers misspell a topic. Titles, descriptions and content matter much more." },
       { q: "How many tags should I add?", a: "A focused set of 10–20 relevant tags is enough. Stuffing hundreds of tags does not help." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What is YouTube's tag character limit?", a: "The tags field holds 500 characters in total, commas included. This generator returns a comma-separated list — paste it into YouTube Studio and trim the least relevant tags if you run over the limit." }
+      { q: "What is YouTube's tag character limit?", a: "The tags field holds 500 characters in total, commas included. This generator returns a comma-separated list — paste it into YouTube Studio and trim the least relevant tags if you run over the limit." },
+      { q: "What are YouTube tags, and how do I add video tags?", a: "YouTube tags are keywords in your video's tags field that help YouTube understand what the video is about. This YouTube tags generator suggests broad, specific and long-tail video tags — copy the comma-separated list into YouTube Studio." }
     ],
     related: ["youtube-hashtag-generator", "youtube-title-generator", "youtube-description-generator", "word-counter"]
   },
@@ -88,7 +93,7 @@ export const TOOLS = [
     examples: ["A phone photo resized to a crisp 1280 × 720 thumbnail.", "A wide screenshot fitted to thumbnail size without stretching."],
     faqs: [
       { q: "Is my image uploaded to a server?", a: "No. Resizing happens locally with the Canvas API. Your image never leaves your device." },
-      { q: "What size does YouTube recommend?", a: "1280 × 720 pixels (16:9). This tool outputs exactly that size." },
+      { q: "What size does YouTube recommend?", a: "The standard YouTube thumbnail size is 1280 × 720 pixels (16:9). This tool resizes your image to a 1280x720 thumbnail at exactly that size, ready to upload." },
       { q: "Will the image be stretched?", a: "No. Cover mode crops the edges to fill the frame; contain mode keeps the whole image with padding." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
       { q: "What is the maximum file size for a YouTube thumbnail?", a: "YouTube accepts thumbnails up to 2 MB, at least 640 pixels wide, in JPG, PNG, GIF or WebP. A 1280 × 720 JPG from this tool is usually well under that limit." }
@@ -108,7 +113,8 @@ export const TOOLS = [
       { q: "Which ratio should I use for YouTube Shorts?", a: "9:16 vertical (1080 × 1920). For standard YouTube videos use 16:9 (1920 × 1080)." },
       { q: "Does the calculator upload anything?", a: "No. It is a plain calculation in your browser." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "How do I find the aspect ratio of an image?", a: "Enter the image's width and height and the calculator shows the simplified ratio — for example 1920 × 1080 becomes 16:9." }
+      { q: "How do I find the aspect ratio of an image?", a: "Enter the image's width and height and the calculator shows the simplified ratio — for example 1920 × 1080 becomes 16:9." },
+      { q: "Does this work as a 16:9 calculator, or as an image aspect ratio calculator?", a: "Both. It works as a 16:9 calculator, a 9:16 calculator, a 4:3 calculator and a 21:9 calculator — enter a width and height, or pick a preset ratio, and it works out the other side and the simplified ratio for any video or image size." }
     ],
     related: ["youtube-thumbnail-resizer", "instagram-post-size-calculator", "image-resizer", "youtube-earnings-calculator"]
   },
@@ -126,7 +132,9 @@ export const TOOLS = [
       { q: "Does watch time or subscribers change the result?", a: "Yes, indirectly. Higher watch time and a valuable audience usually raise RPM, but this calculator only uses views and RPM." },
       { q: "Is my data stored?", a: "No. The calculation runs locally in your browser." },
       { q: "How much does YouTube pay per 1,000 views?", a: "That is your RPM — revenue per 1,000 views after YouTube's share. It varies by niche and audience country; roughly $1–$10 for most channels. Enter your own RPM from YouTube Studio for a better estimate." },
-      { q: "What is the difference between CPM and RPM?", a: "CPM is what advertisers pay per 1,000 ad impressions. RPM is what you actually earn per 1,000 views after YouTube's 45% share — and RPM is the number this calculator uses." }
+      { q: "What is the difference between CPM and RPM?", a: "CPM is what advertisers pay per 1,000 ad impressions. RPM is what you actually earn per 1,000 views after YouTube's 45% share — and RPM is the number this calculator uses." },
+      { q: "How much does YouTube pay per view?", a: "YouTube does not pay a fixed amount per view — what you earn depends on your RPM, the money you earn per 1,000 views after YouTube's share. Use this YouTube money calculator to estimate your earnings from your views and RPM." },
+      { q: "What is YouTube pay per 1000 views?", a: "YouTube pay per 1000 views is your RPM — revenue per 1,000 views after YouTube's share. Enter that RPM from YouTube Studio into this YouTube RPM calculator to estimate your monthly earnings." }
     ],
     related: ["video-aspect-ratio-calculator", "youtube-title-generator", "instagram-engagement-calculator", "youtube-shorts-title-generator"]
   },
@@ -143,7 +151,8 @@ export const TOOLS = [
       { q: "How long should a Shorts title be?", a: "Short — ideally under 60 characters — so it is fully visible on a phone screen." },
       { q: "Can I use these titles for TikTok or Reels too?", a: "Yes, the same short hook-style titles work on other short-video platforms." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What makes a good Shorts title?", a: "Keep it short and front-load the subject — only the first 40–50 characters show in the Shorts feed on most phones. A hook, a number or a clear result works better than a joke with no topic in it." }
+      { q: "What makes a good Shorts title?", a: "Keep it short and front-load the subject — only the first 40–50 characters show in the Shorts feed on most phones. A hook, a number or a clear result works better than a joke with no topic in it." },
+      { q: "Where can I find YouTube Shorts title ideas?", a: "Here — enter your Shorts topic and this tool generates Shorts title ideas and YouTube Shorts titles you can copy, all aiming for under 60 characters so they are not cut off on mobile." }
     ],
     related: ["youtube-title-generator", "tiktok-hook-generator", "tiktok-caption-generator", "youtube-hashtag-generator"]
   },
@@ -160,7 +169,8 @@ export const TOOLS = [
       { q: "How long should an Instagram caption be?", a: "Short captions (under 125 characters) show fully in the feed; longer storytelling captions work when the photo needs context." },
       { q: "Are emojis included?", a: "Some templates include emojis. Remove or change any that do not fit your style." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "Can I use these captions for Reels?", a: "Yes. The same captions work for Reels — keep the hook in the first line, since only about the first 125 characters show before the “more” cut." }
+      { q: "Can I use these captions for Reels?", a: "Yes. The same captions work for Reels — keep the hook in the first line, since only about the first 125 characters show before the “more” cut." },
+      { q: "Where can I find caption ideas for Instagram?", a: "Use this generator to get caption ideas for posts and Reels — enter your topic, pick a mood, and copy the line that fits. These captions for Instagram work as an Instagram Reels caption too: keep the hook in the first line, since only about the first 125 characters show before the “more” cut." }
     ],
     related: ["instagram-hashtag-generator", "instagram-bio-generator", "tiktok-caption-generator", "instagram-engagement-calculator"]
   },
@@ -177,7 +187,8 @@ export const TOOLS = [
       { q: "How many hashtags should I use?", a: "Instagram allows 5 hashtags per post. Use the 5 most relevant ones — a short, accurate set works better than a long, loose one." },
       { q: "Do hashtags guarantee reach?", a: "No. They help discovery, but the photo, caption and engagement matter more." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "Can I use these hashtags for Reels?", a: "Yes — the same 5-hashtag limit applies to Reels, and the same tags work there." }
+      { q: "Can I use these hashtags for Reels?", a: "Yes — the same 5-hashtag limit applies to Reels, and the same tags work there." },
+      { q: "What is the Instagram hashtag limit for Reels?", a: "The Instagram hashtag limit is 5 hashtags per post, and the same limit applies to Reels. The generator gives you a pool of tags, so choose the 5 Instagram hashtags for Reels that fit your post." }
     ],
     related: ["instagram-caption-generator", "youtube-hashtag-generator", "tiktok-hashtag-generator", "instagram-bio-generator"]
   },
@@ -194,7 +205,8 @@ export const TOOLS = [
       { q: "How long can an Instagram bio be?", a: "150 characters. This generator aims to stay under that limit." },
       { q: "Can I add emojis and line breaks?", a: "Yes — edit the generated bio to add emojis or line breaks before pasting it in." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What should I put in my Instagram bio?", a: "Three things: who you are, what followers get, and one call to action. Put your main keyword first — Instagram search reads the bio — and keep it under 150 characters." }
+      { q: "What should I put in my Instagram bio?", a: "Three things: who you are, what followers get, and one call to action. Put your main keyword first — Instagram search reads the bio — and keep it under 150 characters." },
+      { q: "Where can I find Instagram bio ideas for my profile?", a: "Use this generator to turn your name, niche and vibe into an Instagram profile bio under 150 characters. Try a few options, then keep the one that says who you are, what followers get, and one call to action." }
     ],
     related: ["instagram-caption-generator", "instagram-hashtag-generator", "instagram-engagement-calculator", "word-counter"]
   },
@@ -210,7 +222,8 @@ export const TOOLS = [
       { q: "What size should an Instagram feed photo be?", a: "1080 × 1080 for square, or 1080 × 1350 for portrait (4:5), which uses more screen space." },
       { q: "What size are Instagram Stories?", a: "1080 × 1920 pixels (9:16 vertical). Keep important text away from the top and bottom edges." },
       { q: "Does Instagram compress my photos?", a: "Yes, Instagram compresses uploads, so starting from the recommended size gives the best result." },
-      { q: "Is this calculator free?", a: "Yes, free with no sign-up." }
+      { q: "Is this calculator free?", a: "Yes, free with no sign-up." },
+      { q: "What are the Instagram dimensions for an image, a Story and a Reel?", a: "The Instagram dimensions in this calculator are: Instagram image size 1080 × 1080 for a square feed post (or 1080 × 1350 portrait), Instagram story size 1080 × 1920 (9:16), and Instagram reel size 1080 × 1920 (9:16). Pick the format first, then resize your image to match before uploading." }
     ],
     related: ["image-resizer", "video-aspect-ratio-calculator", "youtube-thumbnail-resizer", "instagram-engagement-calculator"]
   },
@@ -228,7 +241,8 @@ export const TOOLS = [
       { q: "Is my account data stored?", a: "No. The calculation runs locally in your browser." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
       { q: "Can I check another account's engagement rate?", a: "You need that account's public numbers — likes, comments and follower count. Saves, shares and reach are only visible to the account owner in Instagram Insights, so this calculator works from follower count." },
-      { q: "What is engagement rate by reach?", a: "The same engagements divided by reach instead of followers. Reach is a truer denominator, but only the account owner can see it in Insights." }
+      { q: "What is engagement rate by reach?", a: "The same engagements divided by reach instead of followers. Reach is a truer denominator, but only the account owner can see it in Insights." },
+      { q: "Is this an Instagram engagement rate checker?", a: "Yes — use it as an engagement rate calculator: enter likes, comments and saves plus your follower count, and it works out the engagement rate with the formula shown. It runs locally in your browser and stores no account data." }
     ],
     related: ["instagram-caption-generator", "instagram-post-size-calculator", "youtube-earnings-calculator", "instagram-bio-generator"]
   },
@@ -245,7 +259,8 @@ export const TOOLS = [
       { q: "Why do hooks matter on TikTok?", a: "Viewers decide in about 3 seconds whether to keep watching. A clear hook earns those seconds." },
       { q: "Should the hook match the video?", a: "Yes — a hook that overpromises and under-delivers hurts watch time and trust." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What makes a good TikTok hook?", a: "Say something specific in the first 2–3 seconds — a curiosity gap, a number, a bold claim, or a direct callout of who the video is for. Never open with a greeting or an introduction." }
+      { q: "What makes a good TikTok hook?", a: "Say something specific in the first 2–3 seconds — a curiosity gap, a number, a bold claim, or a direct callout of who the video is for. Never open with a greeting or an introduction." },
+      { q: "Where can I find TikTok hook ideas for my videos?", a: "Use this generator for video hook ideas: enter your topic, pick a style, and copy a line to say in the first 3 seconds. These TikTok hooks are one short spoken line, so keep the hook specific and matching what the video delivers." }
     ],
     related: ["tiktok-caption-generator", "youtube-shorts-title-generator", "tiktok-hashtag-generator", "youtube-title-generator"]
   },
@@ -262,7 +277,8 @@ export const TOOLS = [
       { q: "How long should a TikTok caption be?", a: "Short — one or two lines plus hashtags. Most viewers read the video, not a long caption." },
       { q: "Can I use these on Reels or Shorts too?", a: "Yes, short casual captions transfer well across short-video platforms." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "How long can a TikTok caption be?", a: "TikTok captions can be up to 2,200 characters through the API and up to 4,000 characters in the app. Short captions of one or two lines usually work better than long ones." }
+      { q: "How long can a TikTok caption be?", a: "TikTok captions for videos can be up to 2,200 characters — that is the limit in TikTok's Content Posting API reference for the video caption field. The 4,000-character figure applies to photo-post descriptions, not video captions. Short captions of one or two lines usually work better than long ones." },
+      { q: "Where can I find TikTok caption ideas?", a: "Use this generator to get a caption for TikTok from your topic and tone — conversational, punchy and short. Try a few TikTok caption ideas, then copy the one that fits your video and add 3–5 hashtags." }
     ],
     related: ["tiktok-hook-generator", "tiktok-hashtag-generator", "instagram-caption-generator", "youtube-shorts-title-generator"]
   },
@@ -278,7 +294,8 @@ export const TOOLS = [
       { q: "Does this tool use AI?", a: "No. Hashtags are matched from keyword templates in your browser." },
       { q: "How many hashtags should I use on TikTok?", a: "3–5 relevant hashtags is enough — TikTok's composer caps a caption at 5 hashtags. More tags do not mean more reach." },
       { q: "Do hashtags guarantee going viral?", a: "No. They help TikTok understand the video, but watch time and shares matter far more." },
-      { q: "Is it free?", a: "Yes, free with no sign-up." }
+      { q: "Is it free?", a: "Yes, free with no sign-up." },
+      { q: "Where can I find TikTok hashtag ideas?", a: "Use this generator as a TikTok tag generator: enter your video topic and it suggests hashtags for TikTok, mixing broad discovery tags with niche ones. Copy at most 5 of the 10 suggested tags into your caption — TikTok's composer caps a caption at 5 hashtags." }
     ],
     related: ["tiktok-hook-generator", "tiktok-caption-generator", "instagram-hashtag-generator", "youtube-hashtag-generator"]
   },
@@ -295,7 +312,11 @@ export const TOOLS = [
       { q: "Does compression preserve transparency?", a: "Yes, when the output format supports it (PNG or WebP). JPG cannot store transparency, so transparent areas become a solid background." },
       { q: "How much smaller will my image get?", a: "It depends on the image. Photos often shrink 50–80% at 70–80% quality with little visible loss; simple graphics shrink less." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What quality should I choose?", a: "70–80% is a good balance for photos — much smaller files with little visible loss. Use higher quality for graphics with text or sharp lines." }
+      { q: "What quality should I choose?", a: "70–80% is a good balance for photos — much smaller files with little visible loss. Use higher quality for graphics with text or sharp lines." },
+      { q: "Can I use this tool to reduce image size?", a: "Yes. Upload a JPG, PNG or WebP image, choose a quality level, then download the smaller file \u2014 compression runs in your browser, so nothing is uploaded." },
+      { q: "Can I compress PNG images here?", a: "Yes. Upload a PNG image, choose a quality level and download the compressed file. PNG transparency is preserved when the output is PNG or WebP." },
+      { q: "Is this a photo compressor for phone pictures?", a: "Yes. Upload a phone photo, choose a quality level and download the smaller file. Compression runs entirely in your browser, so the photo never leaves your device." },
+      { q: "Can I compress image online without uploading it?", a: "Yes. The tool runs entirely in your browser, so there is no upload and no sign-up." },
     ],
     related: ["image-resizer", "jpg-to-png-converter", "youtube-thumbnail-resizer", "instagram-post-size-calculator"]
   },
@@ -312,7 +333,11 @@ export const TOOLS = [
       { q: "What does maintain aspect ratio do?", a: "It locks the width-to-height proportion, so entering a width automatically sets the matching height and the image is never stretched." },
       { q: "Fit vs crop — what is the difference?", a: "Fit keeps the whole image inside the target size with padding; crop fills the target size and trims the edges." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "Can I resize an image without cropping it?", a: "Yes. Choose Fit — it keeps the whole image inside the target size with padding. Crop fills the target size and trims the edges instead." }
+      { q: "Can I resize an image without cropping it?", a: "Yes. Choose Fit — it keeps the whole image inside the target size with padding. Crop fills the target size and trims the edges instead." },
+      { q: "Can I resize image online without uploading it?", a: "Yes. Resizing happens locally in your browser \u2014 upload an image, enter a target width and/or height, and download the resized image." },
+      { q: "Can I resize photo files with this tool?", a: "Yes. Upload a JPG, PNG or WebP photo, enter a target width and/or height, choose maintain aspect ratio, fit or crop, and download the resized image." },
+      { q: "Is this a photo resizer?", a: "Yes. Upload an image, enter a target width and/or height, and download the resized file. Resizing happens locally in your browser, with no sign-up." },
+      { q: "Can I resize photo online for free?", a: "Yes. The tool is free with no sign-up, and resizing happens locally in your browser." },
     ],
     related: ["image-compressor", "jpg-to-png-converter", "youtube-thumbnail-resizer", "instagram-post-size-calculator"]
   },
@@ -329,7 +354,10 @@ export const TOOLS = [
       { q: "Will PNG look better than the JPG?", a: "No — conversion cannot add back detail lost when the JPG was compressed. PNG is lossless from this point on, but the starting quality stays the same." },
       { q: "Why is the PNG larger?", a: "PNG is a lossless format, so it stores more data than a compressed JPG. That is normal." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "Is JPG the same as JPEG?", a: "Yes — JPG and JPEG are the same format with a different file extension. Both work in this converter." }
+      { q: "Is JPG the same as JPEG?", a: "Yes — JPG and JPEG are the same format with a different file extension. Both work in this converter." },
+      { q: "How do I convert JPG to PNG?", a: "Upload a JPG image, click Convert to PNG, and download the PNG file." },
+      { q: "Is this a JPEG to PNG converter?", a: "Yes. JPG and JPEG are the same format with a different file extension, so JPEG files work in this converter too." },
+      { q: "Can I convert JPEG to PNG here?", a: "Yes. Upload a JPEG image, click Convert to PNG, and download the PNG file. The PNG is lossless from this point on, but it cannot add back detail lost when the JPG was compressed." },
     ],
     related: ["image-compressor", "image-resizer", "youtube-thumbnail-resizer", "word-counter"]
   },
@@ -347,7 +375,12 @@ export const TOOLS = [
       { q: "What is the difference between words and characters?", a: "Words are separated by spaces; characters include every letter, space and punctuation mark. Character counts include spaces unless stated otherwise — this tool shows both." },
       { q: "Is my text uploaded to a server?", a: "No. Counting runs locally in your browser and your text is never stored or sent anywhere." },
       { q: "Is the tool free?", a: "Yes, completely free with no sign-up." },
-      { q: "What does the word counter show?", a: "Words, characters with spaces, characters without spaces, sentences, paragraphs and estimated reading time — all updating live as you type." }
+      { q: "What does the word counter show?", a: "Words, characters with spaces, characters without spaces, sentences, paragraphs and estimated reading time — all updating live as you type." },
+      { q: "Can I use this as a character counter?", a: "Yes. It shows characters with spaces and characters without spaces, alongside words, sentences, paragraphs and estimated reading time." },
+      { q: "Can I count words online without signing up?", a: "Yes. Paste or type your text and the counts update live as you type. The tool is free with no sign-up, and your text never leaves your browser." },
+      { q: "Does this work as a sentence counter?", a: "Yes. Sentences are counted live as you type, along with words, characters, paragraphs and estimated reading time." },
+      { q: "Does this work as a paragraph counter?", a: "Yes. Paragraphs are counted live as you type, along with words, characters, sentences and estimated reading time." },
+      { q: "Is this a reading time calculator?", a: "Yes. It estimates reading time from your word count at about 200 words per minute \u2014 a 500-word essay works out at about 2\u20133 minutes." },
     ],
     related: ["text-case-converter", "youtube-description-generator", "instagram-bio-generator", "instagram-caption-generator"]
   },
@@ -364,7 +397,11 @@ export const TOOLS = [
       { q: "Is my text uploaded to a server?", a: "No. Conversion runs locally in your browser." },
       { q: "Does Title Case handle small words like “and” or “the”?", a: "This converter capitalises each word. For formal titles, check style-guide rules for small words before publishing." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What is sentence case?", a: "Sentence case capitalises only the first letter of each sentence — the rest stays lowercase. Use it for emails and essays typed in all caps." }
+      { q: "What is sentence case?", a: "Sentence case capitalises only the first letter of each sentence — the rest stays lowercase. Use it for emails and essays typed in all caps." },
+      { q: "Is this an uppercase lowercase converter?", a: "Yes. Paste your text and click UPPERCASE or lowercase to convert it, or choose Title Case, Sentence case, Capitalized Words or aLtErNaTiNg case." },
+      { q: "Can I use this as a title case converter?", a: "Yes. Click Title Case to capitalise each word of your text. For formal titles, check style-guide rules for small words before publishing." },
+      { q: "Can I use this as a sentence case converter?", a: "Yes. Click Sentence case to capitalise only the first letter of each sentence \u2014 the rest stays lowercase." },
+      { q: "Can I use this as an uppercase to lowercase converter?", a: "Yes. Paste text in capitals and click lowercase \u2014 for example, \u201cA SHOUTY HEADING\u201d becomes \u201ca shouty heading\u201d." },
     ],
     related: ["word-counter", "youtube-title-generator", "instagram-bio-generator", "youtube-description-generator"]
   }
