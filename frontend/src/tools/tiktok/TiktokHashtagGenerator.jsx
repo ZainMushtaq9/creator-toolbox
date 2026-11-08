@@ -26,7 +26,7 @@ export default function TiktokHashtagGenerator() {
       <ResultList items={results} onCopy={copy} />
       {results.length > 0 && <p className="output">{results.join(" ")}</p>}
       <Actions hasResult={results.length > 0} onCopyAll={() => copy(results.join(" "))} onDownload={() => downloadText("tiktok-hashtags.txt", results.join(" "))} onReset={() => { setTopic(""); setResults([]); setError(""); }} />
-      <p className="notice">3–5 relevant hashtags per video is a good starting point. More tags do not mean more reach.</p>
+      <p className="notice">The generator shows 10 hashtags as a pool to choose from — copy at most 5 into your caption, since TikTok's composer caps a caption at 5 hashtags. 3–5 relevant hashtags per video is a good starting point.</p>
     </div>
   );
 }
