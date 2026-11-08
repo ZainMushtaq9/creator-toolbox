@@ -1,4 +1,4 @@
-// 50 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
+// 51 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
 // do not list them as working tools, and do not create pages for them.
 // Priority after the 21 are stable: SEO tools first, then developer tools.
 // Each entry: name, pillar, stage ("2" or "3"), note.
@@ -55,5 +55,6 @@ export const FUTURE_TOOLS = [
   { name: "Character Counter (standalone)", pillar: "productivity-developer-tools", stage: "2", note: "Fold into Word Counter or standalone." },
   { name: "Time Zone Converter", pillar: "productivity-developer-tools", stage: "3", note: "Date math with IANA zones." },
   { name: "Stopwatch & Countdown", pillar: "productivity-developer-tools", stage: "3", note: "Local timers." },
-  { name: "AI Writing Assistant (labelled)", pillar: "ai-productivity", stage: "3", note: "Only via the NVIDIA backend when it exists; label AI output clearly." }
+  { name: "AI Writing Assistant (labelled)", pillar: "ai-productivity", stage: "3", note: "Only via the NVIDIA backend when it exists; label AI output clearly." },
+  { name: "Website Section Templates (AI-assisted guide)", pillar: "ai-productivity", stage: "3", note: "Candidate only. Curated section templates + prompts for Claude/Cursor-style tools; never claim the site builds websites. Blog topic first — owner decides." }
 ];
