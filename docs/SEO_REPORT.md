@@ -5,6 +5,11 @@
 (the site is not deployed), so no ranking, coverage or Core Web Vitals
 field data is claimed here.
 
+**Live-data update (2026-11-08):** the site is deployed and Search
+Console data now exists — the living self-audit is in
+`docs/SEO_AUDIT.md` (first run 2026-11-08, reel-5 method). This report
+remains the Phase 7 build-time record.
+
 ## Summary
 
 | Check | Result |
