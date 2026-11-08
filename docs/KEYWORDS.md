@@ -88,3 +88,37 @@ Deliberately NOT added (checked against what each tool actually does):
 - **Time:** a new site with zero authority does not rank in 5 days. Indexing takes days; ranking takes weeks to months. Nothing in this file promises a date.
 - **LLM visibility (ChatGPT etc.):** there is no "AI search console". ChatGPT answers from the Bing index, so Bing submission matters; `llms.txt` is live; pages now carry direct answers, definitions, tables, and FAQPage structured data so AI systems can quote them.
 - **Next content step (not done yet):** the 7 blog articles target how-to queries (e.g. "how to calculate YouTube earnings"); no new articles were added in this round.
+
+## Keyword intent — match the page to what the searcher wants
+
+Method (from the "Stop Chasing Backlinks" reel, Ghulam Ali SEO, 2026-10-07): before writing a page, ask what the person typing the query actually wants to do — that goal is the keyword's intent. A page that ranks but does not serve the intent earns no use: the reel's example is "best gaming laptop", where the searcher wants 5–10 options compared with their benefits before deciding, so a page that only lists products with little information is useless to them even if it ranks. (The reel's traffic screenshot is the creator's own account, unverified by us — only the method is adopted here, not his numbers.)
+
+Rule for this site: classify every query's intent before writing a FAQ, title, or description for it — use (do it now), learn (answer it), or compare (show options side by side). Then serve that intent first on the page.
+
+Audit (2026-11-08, verified in the repo): all 21 tool pages serve their primary intent. Each tool's interaction sits directly under the H1 and lede, so a use-intent visitor can act at once, and each lede states the outcome in the searcher's words. The 7 blog articles serve learn-intent ("how to…") and link to their tool. The homepage serves discovery intent (search box + all 21 tools + categories). No page on the site is a thin list with no information, and no current keyword carries an unserved comparison intent — the one comparison pair in the set (CPM vs RPM) is answered in the earnings calculator's FAQ.
+
+Intent per tool (primary keyword → intent → how the page serves it):
+
+- youtube-title-generator — use → generator at top; lede promises titles and title ideas from a topic.
+- youtube-description-generator — use → generator at top; structured description (hook, summary, timestamps, call to action).
+- youtube-hashtag-generator — use → generator at top; hashtags ready to copy and paste.
+- youtube-tag-generator — use → generator at top; broad, specific and long-tail tag suggestions.
+- youtube-thumbnail-resizer — use → resizer at top; exactly 1280 × 720.
+- video-aspect-ratio-calculator — use → calculator at top; ratios and matching width/height.
+- youtube-earnings-calculator — learn + use → calculator plus "How much does YouTube pay per 1,000 views?" and CPM vs RPM FAQs.
+- youtube-shorts-title-generator — use → generator at top; short titles under 60 characters where possible.
+- instagram-caption-generator — use → generator at top; captions by topic and mood for posts and Reels.
+- instagram-hashtag-generator — use → generator at top; popular + niche tags, 5-hashtag limit stated.
+- instagram-bio-generator — use → generator at top; bio under 150 characters, ready to paste.
+- instagram-post-size-calculator — use + learn → calculator at top; sizes in formats and FAQs (feed, Story, Reel, profile picture).
+- instagram-engagement-calculator — use + learn → calculator at top; formula shown plus "What is a good engagement rate?" FAQ.
+- tiktok-hook-generator — use → generator at top; opening lines for the first 3 seconds.
+- tiktok-caption-generator — use → generator at top; captions under the 2,200-character limit.
+- tiktok-hashtag-generator — use → generator at top; 10-tag pool to pick at most 5 from (5-hashtag cap stated).
+- image-compressor — use → compressor at top; JPG, PNG, WebP, quality slider, local only.
+- image-resizer — use → resizer at top; exact dimensions, fit or crop.
+- jpg-to-png-converter — use → converter at top; JPG to PNG in the browser, no upload.
+- word-counter — use → counter at top; words, characters, sentences, paragraphs, reading time.
+- text-case-converter — use → converter at top; UPPERCASE, lowercase, Title Case, Sentence case and more.
+
+The one real GSC query so far ("free online image compressor", 0 clicks / 1 impression, avg. position 98, 8 Nov 2026) is use-intent and the image-compressor page already serves it. When new GSC queries arrive, classify their intent first; a query with no matching intent on its page gets a patch that adds it — a comparison query ("X vs Y", "which …") would need a comparison answer, not another FAQ restating the tool.
