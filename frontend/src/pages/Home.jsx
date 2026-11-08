@@ -170,7 +170,7 @@ export default function Home() {
         <h2>How do I compress an image without uploading it?</h2>
         <p>Open the <Link to="/tools/image-compressor">free Image Compressor</Link>, choose a quality level and download the smaller file. Compression runs entirely in your browser, so your image never leaves your device — a 4 MB phone photo often shrinks to under 800 KB at 80% quality.</p>
         <h2>How do I find hashtags for Instagram?</h2>
-        <p>Enter your post topic in the <Link to="/tools/instagram-hashtag-generator">free Instagram Hashtag Generator</Link> and copy 5–15 relevant hashtags. For example, a travel photo topic gives #TravelPhotography, #Wanderlust and #PhotoOfTheDay.</p>
+        <p>Enter your post topic in the <Link to="/tools/instagram-hashtag-generator">free Instagram Hashtag Generator</Link> and copy up to 5 relevant hashtags. For example, a travel photo topic gives #TravelPhotography, #Wanderlust and #PhotoOfTheDay.</p>
       </section>
 
       {/* Ad placeholder — in-content, before the FAQs (placeholder only). */}
