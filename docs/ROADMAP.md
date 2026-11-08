@@ -25,7 +25,7 @@ spec, checklist and acceptance criteria. Test each phase before starting the nex
 ## Stage plan (from the adopted strategy)
 
 - **Stage 1 (this build)**: 21 tools + workflows (YouTube full), workspaces (localStorage), collections (8), blog (7 articles), SEO basics, AdSense/GA4 placeholders.
-- **Stage 2**: more image + developer tools, SEO Intelligence MVP, Search Console, AEO/GSO, 50 future tools prioritised (SEO + developer first — see `frontend/src/config/futureTools.js` and `docs/ROADMAP.md`).
+- **Stage 2**: more image + developer tools, SEO Intelligence MVP, Search Console, AEO/GSO, 51 future tools prioritised (SEO + developer first — see `frontend/src/config/futureTools.js` and `docs/ROADMAP.md`).
 - **Stage 3**: 50–100 quality tools, more workflows, project saving/export, experiments, affiliates, optional premium much later.
 
 ## The 8 development rules
@@ -115,3 +115,17 @@ Gaps against the Brief, checked 2026-11-05: no GitHub repository or CI yet
 (local files only, no `.github/`); no lint/format config; no `.env.example`;
 no API docs with examples (backend is a skeleton). These belong to Phases
 1/4/7 delivery, not to M1's tool scope.
+
+## Non-English tool markets — expansion proposal (2026-11-08)
+
+Method (from the "Tool Websites Are the Next Big Opportunity" reel, Ghulamali.hub, 2026-09-03): build tool websites in non-English languages — the reel names Brazilian Portuguese and Dutch as examples. In those languages Google behaves differently, competition is lower, and the language barrier keeps the space less saturated than English; such sites can be built with ChatGPT's help.
+
+Why it relates to this site: CreatorToolbox IS a tool website — 21 free tools, English-only today. The method applies to the site as a whole, not to one tool: every tool page is a candidate in principle.
+
+Verified current state (2026-11-08): the site is English-only — <html lang="en">; no i18n, hreflang or locale handling exists anywhere in frontend/src; no language plan exists in this roadmap; no non-English page, sitemap entry or translated copy exists.
+
+What a real implementation requires (not a page edit): per-locale routing, hreflang annotations, per-locale sitemap entries, translated UI strings plus tool copy, FAQs and meta descriptions, translation quality review — raw machine output must not ship as site copy — and a check that AdSense supports the chosen language. This is a major architectural change: owner approval is needed before any build. No language is chosen here and no page is translated by this patch.
+
+Pilot suggestion (a decision for the owner, not a commitment): translate one tool page first. Word-counter is the simplest UI and the most universal need, so it is the natural pilot candidate. The reel's examples are Brazilian Portuguese and Dutch; Urdu is another possible pilot the owner may consider. The pilot language is the owner's choice.
+
+Honest caveats: "less competition" is the creator's claim, not a measured fact for any specific language or keyword — no search volume, difficulty or ranking numbers exist for this proposal and none are invented here. The reel shows no data, screenshots or traffic figures at all; it also promotes the creator's free SEO course (ghulamaliseo.com/free). Nothing in this section promises a ranking, traffic or indexing outcome.

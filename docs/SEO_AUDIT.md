@@ -162,3 +162,27 @@ as fact:
   go here with their date.
 - Re-audit after any fix the audit finds. Change a value only with a
   named source and date — never from memory.
+
+## Website launch checklist — 15-point audit (2026-11-08)
+
+Method (from the "Launched a New Website? Do These 15 Things for SEO" reel, Ghulam Ali SEO, 2026-10-18): a fresh site should (1) remove the noindex tag, (2) set up Google Search Console, (3) submit its XML sitemap, (4) request indexing for its homepage, (5) set up Bing Webmaster Tools, (6) install Google Analytics, (7) create a Google Business Profile if eligible, (8) enable HTTPS, (9) test every page on mobile, (10) write a unique title for every page, (11) add a favicon, (12) tell Google its site name, (13) redirect old URLs where necessary, (14) check page speed, (15) allow ChatGPT Search to crawl the site.
+
+Verified status for this site (2026-11-08):
+
+- 1. Noindex — done. No noindex meta on any public page (index.html carries none; robots.txt is Allow: / for all crawlers, disallowing only /seo/, /admin/, /api/, /login/, /auth/). The only "noindex" strings in the repo are in the SEO audit engine code that checks for it.
+- 2. Search Console — done. URL-prefix property verified 2026-11-05 via the HTML-file method (account 5439).
+- 3. Sitemap submitted — done in part. Submitted 2026-11-08; the file itself is valid and live (HTTP 200, 54 URLs, correct XML) but Search Console still shows "Couldn't fetch", 0 discovered; the daily check owns the re-submit escalation.
+- 4. Homepage indexing requested — done. Homepage is indexed (last crawl 5 Nov, 8:35 PM); indexing was also requested for the three unindexed tool pages and the hashtag-generator page has since indexed (last crawl 8 Nov, 2:17 PM).
+- 5. Bing Webmaster — done. Set up 2026-11-05; import from Search Console succeeded and the sitemap reads SUCCESS with 54 URLs discovered.
+- 6. Google Analytics — not done. The GA4 loader is wired off and no measurement ID exists; that needs a real GA4 property created by the owner (no ID is invented here).
+- 7. Google Business Profile — not applicable. This is an international online tools site with no local business or physical location; the reel itself says "if eligible".
+- 8. HTTPS — done. Both deployments serve HTTPS (github.io and pages.dev).
+- 9. Mobile test — done in part. Responsive audit 39/39 checks, 0 overflow (2026-11-05); a formal per-page mobile test has not been run.
+- 10. Unique titles — done. validate:metadata enforces a unique title per tool and reports 0 errors across 54 pages.
+- 11. Favicon — done. frontend/public/favicon.svg exists and index.html links it as the site icon.
+- 12. Site name — done. WebSite and Organization JSON-LD sit statically in index.html with the name "CreatorToolbox".
+- 13. Redirect old URLs — not applicable. New site with no legacy URLs to redirect; the SPA 404.html fallback exists for unknown paths.
+- 14. Page speed — done in part. Local measurements only: LCP ≤ 264 ms, CLS ≤ 0.036, INP ≤ 32 ms; production Core Web Vitals are not measured and a per-page PageSpeed check has not been run (see Open items 2 in this document).
+- 15. AI-search crawl allowed — done. robots.txt is User-agent: * / Allow: / with no AI-bot disallow anywhere, and llms.txt is live. Note: there is no explicit GPTBot line — AI crawlers are covered by the wildcard Allow.
+
+Honest caveats: the caption lists 15 steps but the video's on-screen checklist shows 11 — favicon, site name, redirects and the mobile test are caption-only and are not spoken or shown. The reel says HTTPS is "not a ranking factor"; Google has confirmed HTTPS is a lightweight ranking signal since 2014, so the reel understates it. Requesting indexing does not assure indexing — this site's own record shows it (title and description pages were requested and are still not indexed). Nothing in this section claims a ranking, traffic or indexing outcome.
