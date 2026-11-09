@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { downloadBlob } from "../../utils/format.js";
 
 export default function YoutubeThumbnailResizer() {
@@ -9,6 +9,10 @@ export default function YoutubeThumbnailResizer() {
   const [error, setError] = useState("");
   const [msg, setMsg] = useState("");
   const canvasRef = useRef(null);
+  // Patch 043: revoke the input preview URL and the resized output URL
+  // when replaced or on unmount (both leaked before).
+  useEffect(() => () => { if (img?.url) URL.revokeObjectURL(img.url); }, [img?.url]);
+  useEffect(() => () => { if (outUrl) URL.revokeObjectURL(outUrl); }, [outUrl]);
   const onFile = (e) => {
     const f = e.target.files?.[0];
     if (!f) return;
@@ -18,7 +22,7 @@ export default function YoutubeThumbnailResizer() {
     const url = URL.createObjectURL(f);
     const image = new Image();
     image.onload = () => { setImg({ url, image }); setOutUrl(""); };
-    image.onerror = () => setError("That image could not be read. Try a different file.");
+    image.onerror = () => { URL.revokeObjectURL(url); setError("That image could not be read. Try a different file."); };
     image.src = url;
   };
   const resize = () => {
@@ -39,7 +43,7 @@ export default function YoutubeThumbnailResizer() {
     }
     ctx.drawImage(image, dx, dy, dw, dh);
     const mime = format === "png" ? "image/png" : "image/jpeg";
-    setOutUrl(canvas.toDataURL(mime, 0.92));
+    canvas.toBlob((b) => { if (b) setOutUrl(URL.createObjectURL(b)); }, mime, 0.92);
     setMsg("Resized to exactly 1280 × 720 pixels.");
   };
   const download = () => {
@@ -61,7 +65,7 @@ export default function YoutubeThumbnailResizer() {
       </select>
       <div className="toolbar"><button type="button" className="btn" onClick={resize}>Resize Thumbnail</button></div>
       {error && <p className="error" role="alert">{error}</p>}
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <canvas ref={canvasRef} style={{ display: "none" }} />
       {img && <p><img className="preview" src={img.url} alt="Original upload preview" /></p>}
       {outUrl && <div><p><img className="preview" src={outUrl} alt="Resized 1280 by 720 thumbnail preview" /></p><div className="toolbar"><button type="button" className="btn" onClick={download}>Download 1280 × 720</button></div></div>}

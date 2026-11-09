@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCopy } from "../shared.jsx";
 import { gcd } from "../../utils/format.js";
 
 const PRESETS = { "16:9": [16, 9], "9:16": [9, 16], "1:1": [1, 1], "4:5": [4, 5], "4:3": [4, 3], "21:9": [21, 9] };
@@ -9,6 +10,7 @@ export default function VideoAspectRatioCalculator() {
   const [known, setKnown] = useState("");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
+  const { msg, copy } = useCopy();
   const calc = () => {
     const w = Number(width), h = Number(height);
     if (!Number.isFinite(w) || !Number.isFinite(h) || w <= 0 || h <= 0) { setError("Enter positive numbers for width and height."); setResult(""); return; }
@@ -35,6 +37,8 @@ export default function VideoAspectRatioCalculator() {
       <div className="toolbar"><button type="button" className="btn" onClick={calc}>Calculate Ratio</button></div>
       {error && <p className="error" role="alert">{error}</p>}
       {result && <div className="output">{result}</div>}
+      {result && <div className="toolbar"><button type="button" className="btn secondary" onClick={() => copy(result)}>Copy result</button></div>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <p>Common sizes: YouTube 1920 × 1080 (16:9) · Shorts/Reels/TikTok 1080 × 1920 (9:16) · Square post 1080 × 1080 (1:1) · Portrait post 1080 × 1350 (4:5).</p>
     </div>
   );

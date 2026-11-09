@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useCopy } from "../shared.jsx";
 export default function YoutubeEarningsCalculator() {
   const [views, setViews] = useState("100000");
   const [rpm, setRpm] = useState("3");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
+  const { msg, copy } = useCopy();
   const calc = () => {
     const v = Number(views), r = Number(rpm);
     if (!Number.isFinite(v) || !Number.isFinite(r) || v < 0 || r < 0) { setError("Enter zero or positive numbers for views and RPM."); setResult(""); return; }
@@ -21,6 +23,8 @@ export default function YoutubeEarningsCalculator() {
       <div className="toolbar"><button type="button" className="btn" onClick={calc}>Calculate Earnings</button></div>
       {error && <p className="error" role="alert">{error}</p>}
       {result && <div className="output">{result}</div>}
+      {result && <div className="toolbar"><button type="button" className="btn secondary" onClick={() => copy(result)}>Copy result</button></div>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <p>Typical RPM is roughly $1–$10 for most channels. Finance and business audiences often earn more per view than entertainment audiences.</p>
     </div>
   );
