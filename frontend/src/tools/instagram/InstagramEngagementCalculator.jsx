@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCopy } from "../shared.jsx";
 export default function InstagramEngagementCalculator() {
   const [likes, setLikes] = useState("1200");
   const [comments, setComments] = useState("80");
@@ -6,6 +7,7 @@ export default function InstagramEngagementCalculator() {
   const [followers, setFollowers] = useState("20000");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
+  const { msg, copy } = useCopy();
   const calc = () => {
     const l = Number(likes), c = Number(comments), s = Number(saves), f = Number(followers);
     if ([l, c, s, f].some((n) => !Number.isFinite(n) || n < 0)) { setError("Enter zero or positive numbers."); setResult(""); return; }
@@ -29,6 +31,8 @@ export default function InstagramEngagementCalculator() {
       <div className="toolbar"><button type="button" className="btn" onClick={calc}>Calculate Engagement</button></div>
       {error && <p className="error" role="alert">{error}</p>}
       {result && <div className="output">{result}</div>}
+      {result && <div className="toolbar"><button type="button" className="btn secondary" onClick={() => copy(result)}>Copy result</button></div>}
+      {msg && <p className="success" role="status">{msg}</p>}
     </div>
   );
 }

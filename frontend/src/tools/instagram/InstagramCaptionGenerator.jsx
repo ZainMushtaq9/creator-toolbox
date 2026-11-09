@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { z } from "zod";
-import { useCopy, TemplateNote, ResultList, Actions } from "../shared.jsx";
+import { useCopy, TemplateNote, ResultList, Actions, checkLength } from "../shared.jsx";
 import { downloadText } from "../../utils/format.js";
 
 export default function InstagramCaptionGenerator() {
@@ -10,8 +9,8 @@ export default function InstagramCaptionGenerator() {
   const [error, setError] = useState("");
   const { msg, copy } = useCopy();
   const generate = () => {
-    const r = z.string().trim().min(2, "Enter a topic of at least 2 characters.").safeParse(topic);
-    if (!r.success) { setError(r.error.issues[0].message); setResults([]); return; }
+    const err = checkLength(topic, 2, "Enter a topic of at least 2 characters.");
+    if (err) { setError(err); setResults([]); return; }
     setError("");
     const t = topic.trim();
     const sets = {
@@ -34,7 +33,7 @@ export default function InstagramCaptionGenerator() {
       </select>
       <div className="toolbar"><button type="button" className="btn" onClick={generate}>Generate Captions</button></div>
       {error && <p className="error" role="alert">{error}</p>}
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <ResultList items={results} onCopy={copy} />
       <Actions hasResult={results.length > 0} onCopyAll={() => copy(results.join("\n"))} onDownload={() => downloadText("instagram-captions.txt", results.join("\n"))} onReset={() => { setTopic(""); setResults([]); setError(""); }} />
     </div>
