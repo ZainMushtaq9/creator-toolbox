@@ -168,6 +168,16 @@ Honest caveats: "writing is Google's top second ranking factor" is the creator's
    "native language" have not been formally audited per page; run
    them with the active-voice pass (item 5) before any AI-assisted
    text ships.
+9. Titles over 60 characters — youtube-earnings-calculator (rendered
+   title 64 characters) and jpg-to-png-converter (61) exceed the
+   reel-16 under-60 guideline once the " | CreatorToolbox" suffix is
+   included; two more sit exactly at 60. Shorten only in a title pass
+   (or through the daily check's CTR step if CTR data supports it);
+   do not change titles on the guideline alone.
+10. Meta descriptions under 150 characters — all 21 descriptions
+    measure 95–141 characters, none in the reel-16 150–160 range.
+    Decide only with CTR evidence whether to lengthen any;
+    descriptions are complete and honest as written.
 
 ## How this document is maintained
 
@@ -210,3 +220,20 @@ Site-level keyword mining (new vs the per-keyword checks already in §2 of this 
 Semantic terms for content (new vs the "semantically optimised" line in §3): for each tool topic, get the list of NLP terms that belong to the topic (the video uses NeuronWriter and Rankability for this) and make sure those terms appear in the page copy. The tools named are paid and are not connected under the free-only rule, so no term list has been produced for any tool here; the technique is recorded, not the output. Do not present a guessed term list as a measurement.
 
 Honest caveats: the video's earnings and traffic figures are the creator's claims, unverified by us — his own site at $1,400 a month, a single-tool page with 91,000 visits earning $11,000 a month, another basic tool site at 380,000 visits earning $7,000 a month — and two different dollar figures are given for 91,000-visit examples in the same video, so no figure from it is quoted as a fact for this site. "100+ websites ranked" is the creator's claim. The video points viewers at a keyword tool sold by a third-party reseller for about $20 — do not use reseller or shared paid accounts for this site. The 10 niches and 3 easiest-to-rank sites the video promises are not listed in its transcript, so no niche list is recorded here. Nothing in this section promises a ranking, traffic or indexing outcome.
+
+## On-page checklist — the 8-box per-page gate (reel 16, 2026-11-09)
+
+Method (from the "Master SEO to Get Found on Google + AI Search" reel, Ghulam Ali SEO, 2026-10-04 — the "Last Part" of a Master SEO + AI Search series): every page needs eight boxes ticked — (1) title tag with the keyword, under 60 characters, click-worthy; (2) one H1 per page, the page title carrying the keyword; (3) H2 carrying the primary keyword as the main section heading; (4) H3 for the remaining headings and sub-sections; (5) a short, descriptive URL carrying the keyword; (6) a meta description of 150–160 characters written like ad copy — it does not help ranking but boosts CTR; (7) internal linking to money pages, the most important step, never skipped; (8) image optimization — descriptive file names, keywords in alt text, images in WebP format always.
+
+Measured status for this site (2026-11-09, measured from the repo — titles and descriptions counted from frontend/src/config/tools.js; headings from frontend/src/components/ToolPageLayout.jsx):
+
+- Title tag — 19 of 21 rendered titles are 60 characters or under (rendered title = tool.title + " | CreatorToolbox"). Two exceed 60: youtube-earnings-calculator at 64 and jpg-to-png-converter at 61; two more sit exactly at 60 (youtube-thumbnail-resizer, instagram-engagement-calculator). The tool.title field alone is at most 47 characters — the brand suffix is what pushes the two over. Open item 9.
+- One H1 — PASS on all 21 tool pages. ToolPageLayout renders exactly one <h1>{tool.name}</h1> and the H1 carries the keyword (it is the tool name).
+- H2 carries the keyword — PARTIAL. Each tool page has 6 H2s; only 1 of the 6 carries the keyword ("How to use the {tool.name}"). The other 5 are fixed template labels shared by all 21 pages (Supported formats and limitations; Example use cases; Tool facts; Frequently asked questions; Related tools). The reel's model is one H2 as the main section; this site deliberately uses H2s as section labels. Recorded as a measured difference, not a defect — no heading change is made on the guideline alone.
+- H3 — hierarchy is H1 → 6 H2s → H3 related-tool names (4 per page). PASS as designed; it differs from the reel's model (reel: H3 for all other sub-sections; site: H3 for related tool names only).
+- URL — PASS. All 21 slugs are short, descriptive keyword slugs with no IDs or parameters.
+- Meta description — 0 of 21 in the reel's 150–160 range. Measured lengths run 95–141 characters (shortest: tiktok-hashtag-generator, 95; longest: instagram-caption-generator, 141). The validator only requires ≥ 40 characters and uniqueness, which all 21 meet. Descriptions are complete honest sentences; the 150–160 range is the reel's guideline, not adopted as a target without CTR evidence. Open item 10.
+- Internal linking — PASS. Every tool page links to 4 related tool pages (validator-checked, 0 broken), plus breadcrumbs and the shared nav; patch 036 closed the no-JavaScript gap. For this site the tool pages are the money pages (the AdSense inventory), so the related-tools block serves that role.
+- Image optimization — NOT APPLICABLE to current pages. The only site image is favicon.svg; there are no content images and no og:image (verified reel 5, re-confirmed 2026-11-09: frontend/public/ holds only favicon.svg). WebP-always is recorded here as the rule for any future content or og:image. User-upload previews are client-side, not site assets; their alt text is descriptive (verified reel 5).
+
+Honest caveats: the reel shows no traffic data and no Search Console screenshots — its slides are illustrative mockups (placeholder domain "yoursite.com", mock code snippets), so there is no demo-data caveat to carry beyond that. The end card repeats the creator's "100 sites ranked" claim (same claim as reel 7), unverified by us. The reel promotes his free SEO course on every frame and points to the full video on YouTube, which was not reviewed here. The under-60 title and 150–160 description figures are the creator's guidelines: Google truncates long titles and shows roughly 150–160-character snippets, but neither figure is a ranking rule, and the meta description does not affect ranking — the reel itself says so. Nothing in this section claims a ranking, traffic or indexing outcome.
