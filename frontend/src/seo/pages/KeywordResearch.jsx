@@ -61,7 +61,7 @@ export default function KeywordResearch() {
           <button type="button" className="btn" onClick={run} disabled={busy}>{busy ? "Working…" : "Research keywords"}</button>
         </div>
         {error && <p className="error">{error}</p>}
-        {msg && <p className="success">{msg}</p>}
+        {msg && <p className="success" role="status">{msg}</p>}
       </div>
 
       {result && (

@@ -65,7 +65,7 @@ export default function CompetitorAnalysis() {
           <button type="button" className="btn" onClick={run} disabled={busy}>{busy ? "Working…" : "Compare pages"}</button>
         </div>
         {error && <p className="error">{error}</p>}
-        {msg && <p className="success">{msg}</p>}
+        {msg && <p className="success" role="status">{msg}</p>}
         <p className="notice">In local mode the browser cannot fetch other sites (CORS), so both pages are compared from pasted HTML. When the Worker is configured, it fetches the competitor URL server-side instead.</p>
       </div>
 

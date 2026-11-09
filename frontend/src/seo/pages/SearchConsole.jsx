@@ -98,7 +98,7 @@ export default function SearchConsole() {
               <button type="button" className="btn secondary" onClick={loadProperties} disabled={busy}>List properties</button>
             </div>
             {error && <p className="error">{error}</p>}
-            {msg && <p className="success">{msg}</p>}
+            {msg && <p className="success" role="status">{msg}</p>}
           </div>
 
           {properties && (

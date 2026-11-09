@@ -43,7 +43,7 @@ export default function Settings() {
     <SeoLayout title="SEO Settings" description="SEO Intelligence configuration: AI provider, API status, token management and Search Console status." path="/seo/settings">
       <h1>Settings</h1>
       <p className="lede">Current configuration, stated honestly. No secrets are ever displayed on this page.</p>
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       {error && <p className="error">{error}</p>}
 
       <div className="tool-box">

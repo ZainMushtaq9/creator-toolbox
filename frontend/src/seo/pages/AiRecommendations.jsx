@@ -94,7 +94,7 @@ export default function AiRecommendations() {
               <button type="button" className="btn" onClick={run} disabled={busy}>{busy ? "Working…" : "Get AI recommendations"}</button>
             </div>
             {error && <p className="error">{error}</p>}
-            {msg && <p className="success">{msg}</p>}
+            {msg && <p className="success" role="status">{msg}</p>}
           </div>
 
           {result && (
@@ -117,7 +117,7 @@ export default function AiRecommendations() {
                 <div className="toolbar">
                   <button type="button" className="btn secondary" onClick={saveDraft}>Save draft to Reports (pending approval)</button>
                 </div>
-                {msg && <p className="success">{msg}</p>}
+                {msg && <p className="success" role="status">{msg}</p>}
               </div>
             </div>
           )}

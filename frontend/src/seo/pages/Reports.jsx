@@ -60,7 +60,7 @@ export default function Reports() {
         {stored === false && " The Worker reports it has no database bound, so server-side storage is unavailable."}
       </p>
       {error && <p className="error">{error}</p>}
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <div className="toolbar"><button type="button" className="btn secondary btn-sm" onClick={load}>Reload reports</button></div>
 
       {reports.length === 0 ? (
