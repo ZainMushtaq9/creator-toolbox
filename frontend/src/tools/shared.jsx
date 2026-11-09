@@ -7,6 +7,18 @@ export function useCopy() {
   return { msg, setMsg, copy };
 }
 
+// Minimal replacement for the zod checks this app used: trim + minimum
+// length (with the field's own message) and an optional maximum length
+// (zod's default message, reproduced verbatim). Returns "" when valid.
+// zod itself is no longer a frontend dependency (patch 043) — the backend
+// still uses it, so only frontend/package.json drops it.
+export function checkLength(value, min, message, max) {
+  const v = (value ?? "").trim();
+  if (v.length < min) return message;
+  if (max !== undefined && v.length > max) return `String must contain at most ${max} character(s).`;
+  return "";
+}
+
 export function TemplateNote() {
   return <p className="notice info">Template-based generator — not AI. Your input stays in your browser; nothing is uploaded.</p>;
 }
