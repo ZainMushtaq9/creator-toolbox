@@ -20,8 +20,11 @@ export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <RouteTracker />
+      {/* Patch 043: skip link — keyboard users previously tabbed through
+          13 nav links + 2 header buttons (15 stops) before any content. */}
+      <a className="skip-link" href="#main">Skip to content</a>
       <Header />
-      <main>
+      <main id="main">
         <ErrorBoundary>
           <Router />
         </ErrorBoundary>

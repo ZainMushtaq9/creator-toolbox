@@ -1,21 +1,25 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Home from "../pages/Home.jsx";
-import AllTools from "../pages/AllTools.jsx";
-import Category from "../pages/Category.jsx";
-import ToolPage from "../pages/ToolPage.jsx";
-import About from "../pages/About.jsx";
-import Contact from "../pages/Contact.jsx";
-import Blog from "../pages/Blog.jsx";
-import BlogArticle from "../pages/BlogArticle.jsx";
-import Legal from "../pages/Legal.jsx";
-import NotFound from "../pages/NotFound.jsx";
-import Workflows from "../pages/Workflows.jsx";
-import YoutubeWorkflow from "../pages/YoutubeWorkflow.jsx";
-import Workspaces from "../pages/Workspaces.jsx";
-import Collections from "../pages/Collections.jsx";
-import CollectionPage from "../pages/CollectionPage.jsx";
-import SeoExperiments from "../pages/SeoExperiments.jsx";
+// Patch 043: every non-home route is lazy-loaded so the homepage's initial
+// JS no longer carries the code for all 14 other pages (index chunk
+// 318,653 B -> ~268 kB raw). Home stays eager (it is the landing page).
+// The single <Suspense> fallback below already covers lazy routes.
+const AllTools = lazy(() => import("../pages/AllTools.jsx"));
+const Category = lazy(() => import("../pages/Category.jsx"));
+const ToolPage = lazy(() => import("../pages/ToolPage.jsx"));
+const About = lazy(() => import("../pages/About.jsx"));
+const Contact = lazy(() => import("../pages/Contact.jsx"));
+const Blog = lazy(() => import("../pages/Blog.jsx"));
+const BlogArticle = lazy(() => import("../pages/BlogArticle.jsx"));
+const Legal = lazy(() => import("../pages/Legal.jsx"));
+const NotFound = lazy(() => import("../pages/NotFound.jsx"));
+const Workflows = lazy(() => import("../pages/Workflows.jsx"));
+const YoutubeWorkflow = lazy(() => import("../pages/YoutubeWorkflow.jsx"));
+const Workspaces = lazy(() => import("../pages/Workspaces.jsx"));
+const Collections = lazy(() => import("../pages/Collections.jsx"));
+const CollectionPage = lazy(() => import("../pages/CollectionPage.jsx"));
+const SeoExperiments = lazy(() => import("../pages/SeoExperiments.jsx"));
 
 const SeoDashboard = lazy(() => import("../seo/pages/SeoDashboard.jsx"));
 const KeywordResearch = lazy(() => import("../seo/pages/KeywordResearch.jsx"));
