@@ -13,7 +13,7 @@ export const TOOLS = [
   {
     slug: "youtube-title-generator", name: "YouTube Title Generator", category: "youtube-tools",
     title: "Free YouTube Title Generator Online",
-    description: "Generate catchy YouTube video titles and title ideas from your topic using proven templates. Free, instant, and no sign-up.",
+    description: "Generate catchy YouTube video titles and title ideas from your topic using proven templates — how-to, list, curiosity or question. Free, instant, no sign-up.",
     keywords: "youtube title generator, video title ideas, catchy youtube titles, youtube video title generator, youtube title ideas",
     howTo: ["Enter your video topic or main keyword.", "Pick a style (how-to, list, curiosity or question).", "Click Generate Titles.", "Copy your favourite title and tweak it to fit your video."],
     formats: "Text output. Copy any title to your clipboard. No file upload.",
@@ -32,7 +32,7 @@ export const TOOLS = [
   {
     slug: "youtube-description-generator", name: "YouTube Description Generator", category: "youtube-tools",
     title: "Free YouTube Description Generator Online",
-    description: "Create a structured YouTube video description from a template — hook, summary, timestamps placeholder and call to action.",
+    description: "Create a structured YouTube video description from a template — hook, summary, timestamps and call to action. Paste it into YouTube Studio and adjust the links.",
     keywords: "youtube description generator, video description template, youtube description template, youtube video description",
     howTo: ["Enter your video title and topic.", "Add 2–3 key points your video covers.", "Click Generate Description.", "Copy it into YouTube Studio and adjust the links."],
     formats: "Text output, ready to paste into YouTube Studio.",
@@ -50,7 +50,7 @@ export const TOOLS = [
   {
     slug: "youtube-hashtag-generator", name: "YouTube Hashtag Generator", category: "youtube-tools",
     title: "Free YouTube Hashtag Generator Online",
-    description: "Generate relevant YouTube hashtags from your topic — ready to copy and paste — so viewers can discover your video.",
+    description: "Generate relevant YouTube hashtags from your topic — ready to copy — so viewers can discover your video. Use up to 15 per video; YouTube ignores extras.",
     keywords: "youtube hashtag generator, youtube hashtags, video hashtags, hashtags for youtube shorts, youtube hashtags to copy and paste",
     howTo: ["Enter your video topic.", "Click Generate Hashtags.", "Copy the hashtags and paste them into your description or title area."],
     formats: "Text output. Use up to 15 hashtags per video; YouTube ignores extras beyond that.",
@@ -68,7 +68,7 @@ export const TOOLS = [
   {
     slug: "youtube-tag-generator", name: "YouTube Tag Generator", category: "youtube-tools",
     title: "Free YouTube Tag Generator Online",
-    description: "Generate keyword tag suggestions for your YouTube video's tags field, including broad, specific and long-tail variations.",
+    description: "Generate tag suggestions for your video's tags field, including broad, specific and long-tail variations. Copy the comma-separated list into YouTube Studio.",
     keywords: "youtube tag generator, youtube tags, video tags, youtube tags generator",
     howTo: ["Enter your main keyword or topic.", "Click Generate Tags.", "Copy the comma-separated tags into YouTube Studio."],
     formats: "Comma-separated text output.",
@@ -86,7 +86,7 @@ export const TOOLS = [
   {
     slug: "youtube-thumbnail-resizer", name: "YouTube Thumbnail Resizer", category: "youtube-tools",
     title: "Free YouTube Thumbnail Resizer (1280 × 720)",
-    description: "Resize any image to exactly 1280 × 720 pixels for a YouTube thumbnail — processed locally in your browser, nothing is uploaded.",
+    description: "Resize any image to 1280 × 720 pixels for a YouTube thumbnail. Choose fit or contain, then download — processed locally in your browser, nothing is uploaded.",
     keywords: "youtube thumbnail resizer, 1280x720 thumbnail, resize thumbnail, youtube thumbnail size",
     howTo: ["Upload an image (JPG, PNG or WebP).", "Choose fit (cover) or contain (letterboxed).", "Click Resize Thumbnail.", "Download the 1280 × 720 image."],
     formats: "Input: JPG, PNG, WebP. Output: JPG or PNG at exactly 1280 × 720 px. File size limit: 20 MB.",
@@ -103,7 +103,7 @@ export const TOOLS = [
   {
     slug: "video-aspect-ratio-calculator", name: "Video Aspect Ratio Calculator", category: "youtube-tools",
     title: "Free Video Aspect Ratio Calculator Online",
-    description: "Calculate aspect ratios (16:9, 9:16, 1:1, 4:5, 4:3, 21:9) and the matching width or height for any video or image size.",
+    description: "Calculate aspect ratios (16:9, 9:16, 1:1, 4:5, 4:3, 21:9) and the matching width or height for any video or image size. Enter one side or pick a preset ratio.",
     keywords: "aspect ratio calculator, video aspect ratio, 16:9 calculator, 9:16 calculator, 4:3 calculator, 21:9 calculator, image aspect ratio calculator",
     howTo: ["Enter a width and height, or pick a preset ratio.", "Enter one known side.", "The calculator works out the other side and the simplified ratio."],
     formats: "Numbers only. No files involved.",
@@ -120,8 +120,8 @@ export const TOOLS = [
   },
   {
     slug: "youtube-earnings-calculator", name: "YouTube Earnings Calculator", category: "youtube-tools",
-    title: "Free YouTube Earnings Calculator (RPM Estimate)",
-    description: "Estimate YouTube earnings from views and RPM. This is an estimate only — actual revenue depends on audience, niche, season and ads.",
+    title: "Free YouTube Earnings Calculator (RPM)",
+    description: "Estimate YouTube earnings from views and RPM. This is an estimate only — actual revenue depends on audience, niche, season and ads. Try $1, $3 and $8 RPM.",
     keywords: "youtube earnings calculator, youtube money calculator, youtube rpm calculator, how much does youtube pay per view, youtube pay per 1000 views",
     howTo: ["Enter your monthly views.", "Enter an RPM (revenue per 1,000 views) — try $1, $3 and $8 to see the range.", "Read the estimated monthly and yearly earnings."],
     formats: "Numbers only. Formula: estimated earnings = (views ÷ 1,000) × RPM.",
@@ -141,7 +141,7 @@ export const TOOLS = [
   {
     slug: "youtube-shorts-title-generator", name: "YouTube Shorts Title Generator", category: "youtube-tools",
     title: "Free YouTube Shorts Title Generator Online",
-    description: "Generate short, punchy titles for YouTube Shorts — under 60 characters where possible, built for vertical scrolling.",
+    description: "Generate short, punchy titles for YouTube Shorts — under 60 characters where possible, built for vertical scrolling. Pick a style and copy your favourite.",
     keywords: "youtube shorts title generator, shorts title ideas, youtube shorts titles, youtube shorts title ideas",
     howTo: ["Enter your Shorts topic.", "Pick a style (hook, how-to or curiosity).", "Click Generate Titles.", "Copy a title under 60 characters if you can."],
     formats: "Text output. Titles aim for under 60 characters so they are not cut off on mobile.",
@@ -159,7 +159,7 @@ export const TOOLS = [
   {
     slug: "instagram-caption-generator", name: "Instagram Caption Generator", category: "instagram-tools",
     title: "Free Instagram Caption Generator Online",
-    description: "Generate Instagram captions for posts and Reels from your topic and mood — short, funny, aesthetic or motivational — using templates, not AI.",
+    description: "Generate Instagram captions for posts and Reels from your topic and mood — short, funny, aesthetic or motivational — using templates, not AI. Copy one.",
     keywords: "instagram caption generator, instagram captions, caption ideas, captions for instagram, instagram reels caption",
     howTo: ["Enter your post topic.", "Pick a mood (aesthetic, funny, motivational or minimal).", "Click Generate Captions.", "Copy your favourite and add your own hashtags."],
     formats: "Text output. Captions are short enough for Instagram posts and Reels.",
@@ -177,7 +177,7 @@ export const TOOLS = [
   {
     slug: "instagram-hashtag-generator", name: "Instagram Hashtag Generator", category: "instagram-tools",
     title: "Free Instagram Hashtag Generator Online",
-    description: "Generate relevant Instagram hashtags from your topic, mixing popular and niche tags so your post can be discovered.",
+    description: "Generate relevant Instagram hashtags from your topic, mixing popular and niche tags so your post can be discovered. Copy the 5 that fit into your caption.",
     keywords: "instagram hashtag generator, instagram hashtags, instagram hashtags for reels, instagram hashtag limit",
     howTo: ["Enter your post topic.", "Click Generate Hashtags.", "Copy the 5 hashtags that fit your post best and paste them in your caption or first comment."],
     formats: "Text output. Instagram allows up to 5 hashtags per post — pick the 5 that fit your post best.",
@@ -195,7 +195,7 @@ export const TOOLS = [
   {
     slug: "instagram-bio-generator", name: "Instagram Bio Generator", category: "instagram-tools",
     title: "Free Instagram Bio Generator Online",
-    description: "Generate a short Instagram bio from your name, niche and vibe — under 150 characters, ready to paste into your profile.",
+    description: "Generate a short Instagram bio from your name, niche and vibe — under 150 characters, ready to paste. Pick your vibe: clean, creative or professional.",
     keywords: "instagram bio generator, instagram bio ideas, instagram profile bio",
     howTo: ["Enter your name or handle and your niche.", "Pick a vibe (clean, creative or professional).", "Click Generate Bios.", "Copy one under 150 characters into your profile."],
     formats: "Text output. Instagram bios are limited to 150 characters.",
@@ -213,7 +213,7 @@ export const TOOLS = [
   {
     slug: "instagram-post-size-calculator", name: "Instagram Post Size Calculator", category: "instagram-tools",
     title: "Free Instagram Post Size Calculator Online",
-    description: "Find the right pixel size for Instagram posts, Reels, Stories and profile pictures — square, portrait, landscape and vertical.",
+    description: "Find the right size for Instagram posts, Reels, Stories and profile pictures — square, portrait, landscape, vertical. Square 1080 × 1080, Story 1080 × 1920.",
     keywords: "instagram post size, instagram dimensions, instagram image size, instagram story size, instagram reel size",
     howTo: ["Pick a format (feed square, portrait, landscape, Story/Reel or profile picture).", "Read the recommended pixel size and ratio.", "Resize your image to match before uploading."],
     formats: "Reference sizes: square 1080 × 1080 (1:1), portrait 1080 × 1350 (4:5), landscape 1080 × 566 (1.91:1), Story/Reel 1080 × 1920 (9:16).",
@@ -230,7 +230,7 @@ export const TOOLS = [
   {
     slug: "instagram-engagement-calculator", name: "Instagram Engagement Calculator", category: "instagram-tools",
     title: "Free Instagram Engagement Calculator Online",
-    description: "Calculate your Instagram engagement rate from likes, comments, saves and followers. Formula shown, no data stored.",
+    description: "Calculate your Instagram engagement rate from likes, comments, saves and followers. Formula shown, no data stored. Enter your numbers and read the rate.",
     keywords: "instagram engagement calculator, engagement rate calculator, instagram engagement rate checker",
     howTo: ["Enter likes, comments and saves for a post (or averages).", "Enter your follower count.", "Read the engagement rate."],
     formats: "Numbers only. Formula: engagement rate = ((likes + comments + saves) ÷ followers) × 100.",
@@ -249,7 +249,7 @@ export const TOOLS = [
   {
     slug: "tiktok-hook-generator", name: "TikTok Hook Generator", category: "tiktok-tools",
     title: "Free TikTok Hook Generator Online",
-    description: "Generate scroll-stopping opening lines for TikTok videos — the first 3 seconds decide whether viewers stay.",
+    description: "Generate scroll-stopping opening lines for TikTok videos — the first 3 seconds decide whether viewers stay. Pick a style and say it in the first 3 seconds.",
     keywords: "tiktok hook generator, tiktok hooks, video hook ideas, tiktok hook ideas",
     howTo: ["Enter your video topic.", "Pick a hook style (curiosity, bold claim or mistake).", "Click Generate Hooks.", "Say the hook in the first 3 seconds of your video."],
     formats: "Text output. Hooks are one short spoken line.",
@@ -267,7 +267,7 @@ export const TOOLS = [
   {
     slug: "tiktok-caption-generator", name: "TikTok Caption Generator", category: "tiktok-tools",
     title: "Free TikTok Caption Generator Online",
-    description: "Generate short TikTok captions from your topic — conversational, punchy and under the 2,200-character limit.",
+    description: "Generate short TikTok captions from your topic — conversational, punchy and under the 2,200-character limit. Pick a funny, casual or informative tone.",
     keywords: "tiktok caption generator, tiktok captions, tiktok caption ideas, caption for tiktok",
     howTo: ["Enter your video topic.", "Pick a tone (funny, casual or informative).", "Click Generate Captions.", "Copy one and add 3–5 hashtags."],
     formats: "Text output. TikTok captions can be up to 2,200 characters, but short captions usually perform better.",
@@ -285,7 +285,7 @@ export const TOOLS = [
   {
     slug: "tiktok-hashtag-generator", name: "TikTok Hashtag Generator", category: "tiktok-tools",
     title: "Free TikTok Hashtag Generator Online",
-    description: "Generate relevant TikTok hashtags from your topic, mixing broad discovery tags with niche ones.",
+    description: "Generate relevant TikTok hashtags from your topic, mixing broad discovery tags with niche ones. Copy 3–5 into your caption — TikTok caps captions at 5 hashtags.",
     keywords: "tiktok hashtag generator, tiktok hashtags, hashtags for tiktok, tiktok hashtag ideas, tiktok tag generator",
     howTo: ["Enter your video topic.", "Click Generate Hashtags.", "Copy 3–5 hashtags into your caption."],
     formats: "Text output. 3–5 relevant hashtags per video is a good starting point.",
@@ -302,7 +302,7 @@ export const TOOLS = [
   {
     slug: "image-compressor", name: "Image Compressor", category: "image-tools",
     title: "Free Image Compressor Online (No Upload)",
-    description: "Compress JPG, PNG and WebP images in your browser. Adjust quality and download smaller files — nothing is uploaded.",
+    description: "Compress JPG, PNG and WebP images in your browser. Adjust quality and download smaller files — no upload. Photos often shrink 50–80% at 70–80% quality.",
     keywords: "image compressor, compress jpg, compress png, reduce image size, photo compressor, compress image online",
     howTo: ["Upload an image (JPG, PNG or WebP, up to 20 MB).", "Choose a quality level.", "Click Compress Image.", "Download the compressed file and compare sizes."],
     formats: "Input: JPG, PNG, WebP. Output: same format where possible; PNG transparency is preserved when output is PNG/WebP. JPG has no transparency.",
@@ -323,7 +323,7 @@ export const TOOLS = [
   {
     slug: "image-resizer", name: "Image Resizer", category: "image-tools",
     title: "Free Image Resizer Online (No Upload)",
-    description: "Resize images to exact dimensions with maintain-aspect-ratio, fit or crop options — processed locally, nothing uploaded.",
+    description: "Resize images to exact dimensions with maintain-aspect-ratio, fit or crop options — processed locally, no upload. Enter width or height and download the result.",
     keywords: "image resizer, resize image online, resize photo, photo resizer, resize photo online",
     howTo: ["Upload an image (JPG, PNG or WebP).", "Enter a target width and/or height.", "Choose maintain aspect ratio, fit or crop.", "Download the resized image."],
     formats: "Input: JPG, PNG, WebP. Output: JPG or PNG. High-quality resize via the Pica library, loaded on demand.",
@@ -343,8 +343,8 @@ export const TOOLS = [
   },
   {
     slug: "jpg-to-png-converter", name: "JPG to PNG Converter", category: "image-tools",
-    title: "Free JPG to PNG Converter Online (No Upload)",
-    description: "Convert JPG images to PNG in your browser. No upload, no sign-up — your file never leaves your device.",
+    title: "Free JPG to PNG Converter (No Upload)",
+    description: "Convert JPG images to PNG in your browser. No upload, no sign-up — your file never leaves your device. JPG and JPEG are the same format, so both work here.",
     keywords: "jpg to png converter, convert jpg to png, jpeg to png converter, convert jpeg to png",
     howTo: ["Upload a JPG image.", "Click Convert to PNG.", "Download the PNG file."],
     formats: "Input: JPG/JPEG. Output: PNG. Note: converting JPG to PNG does not restore quality lost in JPG compression, and PNG files are usually larger.",
@@ -364,7 +364,7 @@ export const TOOLS = [
   {
     slug: "word-counter", name: "Word Counter", category: "text-tools",
     title: "Free Online Word Counter",
-    description: "Count words, characters, sentences, paragraphs and reading time in any text — free, instant, and private.",
+    description: "Count words, characters, sentences, paragraphs and reading time in any text — free, instant, and private. Counts update live as you type, and nothing is stored.",
     keywords: "word counter, character counter, count words online, sentence counter, paragraph counter, reading time calculator",
     howTo: ["Paste or type your text in the box.", "Counts update live as you type.", "Use Copy or Reset to start again."],
     formats: "Plain text input. No file upload. Text is never sent to a server.",
@@ -387,7 +387,7 @@ export const TOOLS = [
   {
     slug: "text-case-converter", name: "Text Case Converter", category: "text-tools",
     title: "Free Text Case Converter Online",
-    description: "Convert text to UPPERCASE, lowercase, Title Case, Sentence case and more — free, instant, private.",
+    description: "Convert text to UPPERCASE, lowercase, Title Case, Sentence case and more — free, instant, private. Paste your text, click a case button and copy the result.",
     keywords: "text case converter, uppercase lowercase converter, title case converter, sentence case converter, uppercase to lowercase converter",
     howTo: ["Paste or type your text.", "Click a case button (UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg).", "Copy the converted text."],
     formats: "Plain text input and output. No file upload.",
