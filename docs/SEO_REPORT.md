@@ -176,3 +176,23 @@ Verified status for this site (2026-11-08):
 - Link earning: no backlink acquisition has been done or recorded; the backlink profile is NOT MEASURED (docs/SEO_AUDIT.md §6). Earning a link is owner outreach work, not code.
 
 Honest caveats: "100+ websites ranked", "10 years of keyword research", "200+ sites", "a client site ranked in three months" and "50% of wins come from the initial audit" are the creator's own claims — none is verified by us, and no figure from his screenshots is adopted here. "Under 2 seconds or Google won't rank you" is his rule of thumb, not a Google-stated cutoff; the field thresholds this project uses are the ones in the SEO report checklist (LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1). The audit-crawler and content-terms tool names in the video are garbled in the transcript, so no tool name is asserted for them; only Ahrefs is named clearly in the video (for broken-link work). The end-of-video checklist is his lead magnet (email in comments) and is not adopted. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## 11. LLM citation — how to show up in AI answers (2026-11-09)
+
+Method (from the LLM-citation reel, Ghulam Ali SEO, 2026-11-08): LLMs do not rank websites the way Google does — they cite them. When an LLM cites your site (links it in its answer), that is how you appear in AI answers. To get cited: (1) search Google yourself for the query you want to be found for and study what Google shows; (2) check the results on every platform, including AI answers, for the same query; (3) mix and merge what you find and create content that is optimized for Google so it can rank, and similar in shape to what AI shows, but unique — not a copy.
+
+Rule 1 — citation, not ranking, is the goal in AI answers. Do not report "ranking in ChatGPT/Perplexity" — report whether the site is cited, and for which query. No citation of this site in any AI answer has been observed or measured yet (open item in the verified status below).
+
+Rule 2 — the citable unit is a direct answer. AI answers quote short, factual, self-contained answers. The site's direct-answer hero text, per-tool ledes and 143 FAQs are already in that shape; new content should keep the same shape (answer first, then detail), following the keyword-intent rule (reel 4, docs/KEYWORDS.md) and the one-page-per-cluster rule (§10).
+
+Rule 3 — check what Google and AI show before writing. Before a new FAQ, article or tool page is written for a query, search the query on Google and, where an AI answer is available, read what it cites; build the page to cover the same ground with verified facts, in our own words. Do not copy AI-generated text into the site.
+
+Rule 4 — keep the machine-readable surface current. llms.txt, robots.txt (AI crawlers not blocked), sitemap.xml and structured data are what AI crawlers read; they must stay accurate as pages change.
+
+Verified status for this site (2026-11-09):
+
+- llms.txt is live (frontend/public/llms.txt, 31 lines — 21 tools, key pages, sitemap link). robots.txt carries a wildcard Allow: / and disallows only /seo/, /admin/, /api/, /login/ and /auth/ — no AI bot is named or disallowed, so AI crawlers are not blocked. The GSO scoring module exists (Phase 5, /seo/gso, deterministic weights); production use is still blocked on Worker deployment + credentials.
+- No AI-search citation or mention of this site has been observed or measured. GSC's only query to date is "free online image compressor" (Google Search, position 98, 0 clicks); no tool measures ChatGPT/Perplexity visibility and none is connected.
+- The creator also promises a YouTube video on this topic and a tool that finds the terms people search for on AI platforms. Neither is verified or adopted. No public data source exists for AI-platform search terms, so CreatorToolbox does not list such a tool as buildable — it stays an idea, not a candidate, until a source is verified.
+
+Honest caveats: "LLMs don't rank, they cite" is the creator's framing; current LLM search products do surface cited sources in their answers, which is consistent with it, but no ranking or citation outcome is promised here. The transcript says the content should be "deoptimized" for Google — that contradicts "so it can rank for Google" in the same sentence and is treated here as a slip for "optimized"; the word "deoptimized" is not adopted as a method. The reel is a talking-head answer to a viewer's comment (msubhan_07); it shows no screenshots, no traffic figures and no example domain, so there is no demo-data caveat to carry. Nothing in this section claims a ranking, traffic, citation or indexing outcome.

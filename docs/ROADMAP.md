@@ -129,3 +129,11 @@ What a real implementation requires (not a page edit): per-locale routing, hrefl
 Pilot suggestion (a decision for the owner, not a commitment): translate one tool page first. Word-counter is the simplest UI and the most universal need, so it is the natural pilot candidate. The reel's examples are Brazilian Portuguese and Dutch; Urdu is another possible pilot the owner may consider. The pilot language is the owner's choice.
 
 Honest caveats: "less competition" is the creator's claim, not a measured fact for any specific language or keyword — no search volume, difficulty or ranking numbers exist for this proposal and none are invented here. The reel shows no data, screenshots or traffic figures at all; it also promotes the creator's free SEO course (ghulamaliseo.com/free). Nothing in this section promises a ranking, traffic or indexing outcome.
+
+## AI-assisted prototyping rule for future tools (reel 12, 2026-11-09)
+
+Method (from the "How to Make Tools Website" video, Ghulam Ali SEO, 2026-02-12): a tool can be prototyped fast with an AI coding tool — the video builds a sun/moon/rising-sign calculator in Replit in about 7–14 minutes by prompting in natural language and giving a competitor URL, then the tool tests itself in the browser and publishes to a URL that can be embedded on a page.
+
+Rule for this site: AI tools may be used to prototype a future-tool candidate (the 51 candidates in frontend/src/config/futureTools.js), but a prototype is not a shipped tool. Anything that ships must be rebuilt to this repo's standards — browser-local, no backend, validated inputs, tests, SEO metadata and prerendered routes — and pass the same gates as a hand-built tool. No prototype is published as a live tool page, and no Replit or other hosted URL is embedded on this site. The video's build-time figures (7–14 minutes) are the creator's demo, not a commitment for this codebase.
+
+Honest caveats: the video's earnings figures are the creator's claims, unverified by us (see docs/SEO_AUDIT.md, "Tool-site keyword mining + semantic terms"). Nothing in this section promises a ranking, traffic or indexing outcome.
