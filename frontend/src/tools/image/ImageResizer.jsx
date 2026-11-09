@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { downloadBlob } from "../../utils/format.js";
 
 export default function ImageResizer() {
@@ -11,6 +11,10 @@ export default function ImageResizer() {
   const [outUrl, setOutUrl] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  // Patch 043: revoke the input preview URL and the resized output URL
+  // when replaced or on unmount (both leaked before).
+  useEffect(() => () => { if (img?.url) URL.revokeObjectURL(img.url); }, [img?.url]);
+  useEffect(() => () => { if (outUrl) URL.revokeObjectURL(outUrl); }, [outUrl]);
   const canvasRef = useRef(null);
   const onFile = (e) => {
     const f = e.target.files?.[0];
@@ -21,7 +25,7 @@ export default function ImageResizer() {
     const url = URL.createObjectURL(f);
     const image = new Image();
     image.onload = () => { setImg({ url, image, w: image.width, h: image.height }); setWidth(String(Math.min(1200, image.width))); setHeight(String(Math.round(Math.min(1200, image.width) * image.height / image.width))); setOutUrl(""); };
-    image.onerror = () => setError("That image could not be read.");
+    image.onerror = () => { URL.revokeObjectURL(url); setError("That image could not be read."); };
     image.src = url;
   };
   const onWidth = (v) => {
@@ -63,7 +67,7 @@ export default function ImageResizer() {
         await pica().resize(src, dst);
       }
       canvasRef.current = dst;
-      setOutUrl(dst.toDataURL(format === "png" ? "image/png" : "image/jpeg", 0.92));
+      dst.toBlob((b) => { if (b) setOutUrl(URL.createObjectURL(b)); }, format === "png" ? "image/png" : "image/jpeg", 0.92);
     } catch (err) {
       setError("Resize failed in this browser. (" + (err?.message || "unknown error") + ")");
     } finally { setBusy(false); }

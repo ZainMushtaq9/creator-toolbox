@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { downloadBlob } from "../../utils/format.js";
 
 export default function JpgToPngConverter() {
   const [img, setImg] = useState(null);
-  const [outUrl, setOutUrl] = useState("");
+  const [out, setOut] = useState(null);
   const [error, setError] = useState("");
+  // Patch 043: revoke the input preview URL and the converted output URL
+  // when replaced or on unmount (both leaked before).
+  useEffect(() => () => { if (img?.url) URL.revokeObjectURL(img.url); }, [img?.url]);
+  useEffect(() => () => { if (out?.url) URL.revokeObjectURL(out.url); }, [out?.url]);
   const onFile = (e) => {
     const f = e.target.files?.[0];
     if (!f) return;
@@ -13,8 +17,8 @@ export default function JpgToPngConverter() {
     setError("");
     const url = URL.createObjectURL(f);
     const image = new Image();
-    image.onload = () => { setImg({ url, image, name: f.name }); setOutUrl(""); };
-    image.onerror = () => setError("That image could not be read.");
+    image.onload = () => { setImg({ url, image, name: f.name }); setOut(null); };
+    image.onerror = () => { URL.revokeObjectURL(url); setError("That image could not be read."); };
     image.src = url;
   };
   const convert = () => {
@@ -22,13 +26,10 @@ export default function JpgToPngConverter() {
     const canvas = document.createElement("canvas");
     canvas.width = img.image.width; canvas.height = img.image.height;
     canvas.getContext("2d").drawImage(img.image, 0, 0);
-    setOutUrl(canvas.toDataURL("image/png"));
+    canvas.toBlob((b) => { if (b) setOut({ blob: b, url: URL.createObjectURL(b) }); }, "image/png");
   };
   const download = () => {
-    const canvas = document.createElement("canvas");
-    canvas.width = img.image.width; canvas.height = img.image.height;
-    canvas.getContext("2d").drawImage(img.image, 0, 0);
-    canvas.toBlob((b) => { if (b) downloadBlob(img.name.replace(/\.[^.]+$/, "") + ".png", b); }, "image/png");
+    if (out?.blob) downloadBlob(img.name.replace(/\.[^.]+$/, "") + ".png", out.blob);
   };
   return (
     <div>
@@ -38,7 +39,7 @@ export default function JpgToPngConverter() {
       <div className="toolbar"><button type="button" className="btn" onClick={convert}>Convert to PNG</button></div>
       {error && <p className="error" role="alert">{error}</p>}
       {img && <p><img className="preview" src={img.url} alt="Original JPG preview" /></p>}
-      {outUrl && <div><p><img className="preview" src={outUrl} alt="Converted PNG preview" /></p><div className="toolbar"><button type="button" className="btn" onClick={download}>Download PNG</button></div></div>}
+      {out && <div><p><img className="preview" src={out.url} alt="Converted PNG preview" /></p><div className="toolbar"><button type="button" className="btn" onClick={download}>Download PNG</button></div></div>}
     </div>
   );
 }

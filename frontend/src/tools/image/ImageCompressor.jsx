@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { downloadBlob } from "../../utils/format.js";
 
 export default function ImageCompressor() {
@@ -8,6 +8,10 @@ export default function ImageCompressor() {
   const [out, setOut] = useState(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  // Patch 043: revoke preview/output object URLs when replaced or on
+  // unmount — previously every upload/compress leaked a blob URL.
+  useEffect(() => () => { if (preview) URL.revokeObjectURL(preview); }, [preview]);
+  useEffect(() => () => { if (out?.url) URL.revokeObjectURL(out.url); }, [out?.url]);
   const onFile = (e) => {
     const f = e.target.files?.[0];
     if (!f) return;
