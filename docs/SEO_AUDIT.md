@@ -178,6 +178,10 @@ Honest caveats: "writing is Google's top second ranking factor" is the creator's
     measure 95–141 characters, none in the reel-16 150–160 range.
     Decide only with CTR evidence whether to lengthen any;
     descriptions are complete and honest as written.
+11. Inter as the primary font — the body font stack starts with
+    Inter, one of Hallmark's named AI-design tells (reel 17).
+    Decide in a design pass whether to switch the primary font;
+    do not change it on the guideline alone.
 
 ## How this document is maintained
 
@@ -237,3 +241,16 @@ Measured status for this site (2026-11-09, measured from the repo — titles and
 - Image optimization — NOT APPLICABLE to current pages. The only site image is favicon.svg; there are no content images and no og:image (verified reel 5, re-confirmed 2026-11-09: frontend/public/ holds only favicon.svg). WebP-always is recorded here as the rule for any future content or og:image. User-upload previews are client-side, not site assets; their alt text is descriptive (verified reel 5).
 
 Honest caveats: the reel shows no traffic data and no Search Console screenshots — its slides are illustrative mockups (placeholder domain "yoursite.com", mock code snippets), so there is no demo-data caveat to carry beyond that. The end card repeats the creator's "100 sites ranked" claim (same claim as reel 7), unverified by us. The reel promotes his free SEO course on every frame and points to the full video on YouTube, which was not reviewed here. The under-60 title and 150–160 description figures are the creator's guidelines: Google truncates long titles and shows roughly 150–160-character snippets, but neither figure is a ranking rule, and the meta description does not affect ranking — the reel itself says so. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## AI-slop design audit — the Hallmark tells, measured (reel 17, 2026-11-09)
+
+Method (from the "Ugly AI generated websites?" reel, aiwithdivyam, 2026-11-06): AI coding assistants fall back on the same design defaults — purple gradients, repetitive identical cards, oversized headings, Inter font, bounce-on-hover, decorative emoji — and the Hallmark skill (Nutlope/hallmark, MIT licence, usehallmark.com; for Claude Code, Codex, Cursor and OpenCode) runs 57 "slop-test gates" plus a self-critique pass against those tells, with generate / audit / redesign / study commands and 50 design themes. The application here is a measured check of each tell against this site's real CSS and JSX, counted 2026-11-09.
+
+- Purple gradients — PASS. Zero purple or violet anywhere in frontend/src (no "purple", "violet", #8b5cf6, #a855f7 or #7c3aed in any .css, .jsx or .js file). The hero gradient is dark green (#176B58 → #102A43) with gold (232,168,56) and green (58,185,141) radial glows — deliberate brand colours, not the purple-gradient cliché. The only gradients on the site are the hero's.
+- Inter font — HIT (1 of 6 tells). The body font stack is Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif (frontend/src/styles/global.css:7), and Inter is one of Hallmark's named default tells. Recorded as a measured hit, not a forced fix: changing the primary font is a design decision for the owner, and Inter with system fallbacks is a standard UI choice. Open item 11.
+- Oversized headings — PASS (measured). The hero H1 is 2.9rem on desktop and 1.9rem on mobile (global.css:23,99) — a normal hero range, not the extreme oversized AI-hero size.
+- Repetitive identical cards — MEASURED AS DESIGNED. The 21 tool cards sit in a uniform auto-fill grid (minmax 240px, global.css:47) — that is the directory pattern, and each card carries its own icon chip, name and copy. Hallmark's gate targets identical-card rows on a landing page; a uniform directory grid is the correct UX for this site, so no change is made.
+- Hover lift — PASS (measured). Card hover is translateY(-3px) with a 0.15s ease transition and a soft shadow (global.css:48–49) — a subtle lift, not the bounce-on-hover tell. Buttons lift 1px.
+- Decorative emoji — PASS (measured). The only non-text glyphs in the UI are ✦ (hero badge, Home.jsx) and ✓ / ✗ check marks (YoutubeWorkflow.jsx, Aeo.jsx) — functional marks, not decorative emoji.
+
+Honest caveats: the reel's "48,000+ stars" claim is unverified — the latest verified figure found is ~41,408 stars on 29 October 2026 (other late-October sources show 33.8k–43.8k), so the 48k figure is not adopted here. Stars measure attention, not outcomes; no independent study is cited that Hallmark-built pages convert better or are judged more trustworthy. Hallmark emits HTML + CSS, not production React components, so the skill cannot build this site's pages directly — its audit and redesign commands are the applicable part, and any AI-assisted prototype still falls under the reel-12 rebuild-to-standards rule (docs/ROADMAP.md). The reel's install is DM-gated (repo name and setup guide offered by DM); no DM was sent and no install was performed — the skill was verified from its public repo page and independent write-ups instead. Nothing in this section claims a ranking, traffic or indexing outcome.
