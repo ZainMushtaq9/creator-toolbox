@@ -149,6 +149,76 @@ Honest caveats: "writing is Google's top second ranking factor" is the creator's
 - Never buy links, and never use reseller / shared paid accounts (see
   the method note above).
 
+### Link Intersect (Link Gap) method (reel 18, 2026-11-09)
+
+Method (from the "Free Backlinks for Life" reel, Ghulam Ali SEO,
+2026-10-18): list your top 50–100 competitor sites, then run each
+one through Ahrefs Link Intersect against your own site — the tool
+shows the domains linking to competitors but not to you. Outreach
+those domains for a link exchange (or a free link; the reel itself
+says free links may not come and some sites ask for payment — skip
+the paid ones, offer an exchange). The reel's on-screen mock also
+shows "USE CLAUDE AI TO SCALE YOUR BACKLINK OUTREACH" — outreach
+mail drafted with AI; any such draft still falls under the AI-written
+content gate (reel 14, §3 above), and outreach itself is owner work,
+not code.
+
+Tool status: Ahrefs is paid (Starter $29/mo; the free plan covers
+only websites you own and verify, per Ahrefs' own pricing page —
+already recorded in docs/SEO_REPORT.md §9), so Link Intersect is
+NOT available via Ahrefs under this project's free-only rule and no
+paid plan will be bought without the owner's approval. The reel's
+fallback — a seller who runs the Ahrefs work per competitor — is a
+grey-market reseller route and is NOT used or recommended (same rule
+as reels 8 and 12). Free route verified live 2026-11-09: Linkody's
+free backlink gap tool (linkody.com/en/seo-tools/free-backlink-gap)
+does the same set-difference — up to 5 competitors, no signup, no
+credit card, full results + CSV export, data from a commercial
+backlink index. The tool was verified, not run: running it needs the
+owner's competitor picks, and the prospect list it returns is owner
+outreach work (open item 12).
+
+### Free backlink directory (reel 18, 2026-11-09)
+
+Second method from the same reel: ghulamaliseo.com/backlinks —
+verified live 2026-11-09. The page is a living directory of 128
+sources ranked by Domain Rating (page title: "High DR Free
+Backlinks (DoFollow)"), from DR 99 down to DR 50, mixing tool and
+software directories (Product Hunt, AlternativeTo, SaaSHub, Toolify
+AI, ToolFame), maker communities (Indie Hackers, Peerlist, BetaList,
+HackerNoon, Hashnode) and publications (Forbes, TechCrunch,
+Wikipedia, Reddit, Medium). The page's own labels — "DoFollow" and
+"real, editorial backlinks" — are the page's claims, NOT verified
+here: most entries are self-created profiles or listings, and
+whether any given link is dofollow or passes value is per-platform
+and unmeasured.
+
+Realistic shortlist for this site (no account or listing created in
+this task — owner action only):
+- Already live: GitHub (the public repo) and GitHub Pages (the
+  canonical site) — both appear in the directory's Elite Authority
+  tier.
+- Creatable without spend, if the owner decides: Product Hunt,
+  AlternativeTo, SaaSHub, Peerlist, Indie Hackers, BetaList,
+  HackerNoon, Hashnode, Toolify AI, ToolFame, There's an AI for
+  That, Open Tools — tool directories and maker communities where a
+  free listing or profile can be created.
+- NOT obtainable by signup: Wikipedia, Forbes, TechCrunch,
+  VentureBeat, YourStory, Muck Rack, First Round Review — editorial
+  coverage, not a form to fill in. Do not list them as planned links.
+
+Honest caveats: the reel's "rankings will come if you build them
+all" is the creator's claim, not a promise — no ranking outcome is
+claimed here. Directory and profile links are typically weak and
+often nofollow; the reel-8 quality rule still governs (one link on
+a relevant, trafficked, indexed page beats many directory profiles).
+The Ahrefs screenshots in the reel are illustrative mockups
+(placeholder domains "yourwebsite.com" / "competitor1.com", garbled
+sidebar text), not a real account. The reel ends with a follow-gated
+DM offer (the backlinks URL by inbox message); no DM was sent — the
+page was verified live directly instead. Nothing in this section
+claims a ranking, traffic or indexing outcome.
+
 ## Open items
 
 1. Crawl stats — open Search Console Settings → Crawl stats in the next
@@ -182,6 +252,13 @@ Honest caveats: "writing is Google's top second ranking factor" is the creator's
     Inter, one of Hallmark's named AI-design tells (reel 17).
     Decide in a design pass whether to switch the primary font;
     do not change it on the guideline alone.
+12. Backlink acquisition — Link Intersect method recorded (reel 18)
+    with a verified free route (Linkody gap tool, up to 5
+    competitors, no signup); the directory shortlist is recorded in
+    §6. No account, listing or tool run has been done. Owner
+    outreach only — pick competitors, run the gap tool, decide which,
+    if any, shortlist sources to create, and record each one when it
+    goes live.
 
 ## How this document is maintained
 
