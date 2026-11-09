@@ -170,6 +170,23 @@ function crumbsFor(names) {
   return items;
 }
 
+// Links every prerendered page carries so a no-JavaScript crawler (or an
+// AI agent with JS off) can reach every main section from any page. The
+// React app replaces this static body on mount, so users never see it.
+const NAV_LINKS = [
+  { href: "/tools", label: "All Tools" },
+  { href: "/workflows", label: "Workflows" },
+  { href: "/collections", label: "Collections" },
+  { href: "/blog", label: "Blog" },
+  { href: "/workspaces", label: "Workspaces" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
+  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
+];
+
 // Returns { title, description, h1, lede, jsonLd, links } for a route,
 // mirroring what the React page renders (SeoHead + H1 + lede).
 function routeMeta(path) {
@@ -277,7 +294,11 @@ function routeMeta(path) {
   if (!page) throw new Error(`no metadata for route: ${path}`);
   let links;
   if (path === "/") links = [{ href: "/tools", label: "Browse all 21 free tools" }, { href: "/workflows", label: "See workflows" }];
-  else if (path === "/tools") links = CATEGORIES.map((c) => ({ href: c.path, label: c.name }));
+  else if (path === "/tools") links = [
+    ...CATEGORIES.map((c) => ({ href: c.path, label: c.name })),
+    ...TOOLS.map((t) => ({ href: `/tools/${t.slug}`, label: t.name })),
+  ];
+  else if (path === "/workflows") links = [{ href: "/workflows/youtube-creator", label: "YouTube Creator Workflow" }];
   else if (path === "/collections") links = COLLECTIONS.map((c) => ({ href: `/collections/${c.slug}`, label: c.name }));
   else if (path === "/blog") links = ARTICLES.map((a) => ({ href: `/blog/${a.slug}`, label: a.title }));
   else links = [{ href: "/tools", label: "Browse all 21 free tools" }];
@@ -343,6 +364,9 @@ function main() {
     const links = [
       { href: "/", label: SITE_NAME },
       ...meta.links,
+      ...NAV_LINKS.filter(
+        (n) => n.href !== "/" && !meta.links.some((l) => l.href === n.href),
+      ),
     ];
     const staticBody =
       `<main class="container section"><h1>${esc(meta.h1)}</h1>` +
