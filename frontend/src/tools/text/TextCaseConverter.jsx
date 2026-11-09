@@ -34,7 +34,7 @@ export default function TextCaseConverter() {
         ))}
       </div>
       {result && <div><p><strong>Result ({activeCase}):</strong></p><div className="output">{result}</div></div>}
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <Actions hasResult={!!result} onCopyAll={() => copy(result)} onDownload={() => downloadText("converted-text.txt", result)} onReset={() => { setText(""); setResult(""); setActiveCase(""); }} />
       <p>Title Case capitalises each word here. For formal titles, check your style guide — small words like “and” and “the” are often left lowercase.</p>
     </div>

@@ -27,7 +27,7 @@ export default function WordCounter() {
         <div className="stat"><b>{stats.paragraphs}</b>Paragraphs</div>
         <div className="stat"><b>{stats.reading ? `~${stats.reading} min` : "—"}</b>Reading time</div>
       </div>
-      {msg && <p className="success">{msg}</p>}
+      {msg && <p className="success" role="status">{msg}</p>}
       <Actions hasResult={!!text} onCopyAll={() => copy(text)} onDownload={() => downloadText("word-counter-text.txt", text)} onReset={() => setText("")} />
       <p>Reading time assumes about 200 words per minute. Numbers count as words; punctuation attached to a word does not create an extra word.</p>
     </div>
