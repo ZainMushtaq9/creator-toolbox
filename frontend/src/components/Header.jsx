@@ -30,7 +30,7 @@ export default function Header() {
           <Wrench size={20} style={{ verticalAlign: "-3px", marginRight: 6 }} />
           Creator<span>Toolbox</span>
         </Link>
-        <button className="nav-toggle" aria-label="Toggle navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
+        <button type="button" className="nav-toggle" aria-label="Toggle navigation" aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>
           <Menu size={20} /> Menu
         </button>
         <button
@@ -43,7 +43,7 @@ export default function Header() {
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           {theme === "dark" ? "Light" : "Dark"}
         </button>
-        <nav className={`nav${open ? " open" : ""}`} aria-label="Main navigation">
+        <nav id="main-nav" className={`nav${open ? " open" : ""}`} aria-label="Main navigation">
           <NavLink to="/" end onClick={() => setOpen(false)}>Home</NavLink>
           <NavLink to="/tools" onClick={() => setOpen(false)}>All Tools</NavLink>
           {CATEGORIES.map((c) => (

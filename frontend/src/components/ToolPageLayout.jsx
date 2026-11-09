@@ -83,11 +83,12 @@ export default function ToolPageLayout({ tool, children }) {
         <section aria-labelledby="tool-facts">
           <h2 id="tool-facts">Tool facts</h2>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <caption className="sr-only">Tool facts</caption>
             <tbody>
-              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>What it does</th><td style={{ padding: "8px 0" }}>{tool.description}</td></tr>
-              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Cost</th><td style={{ padding: "8px 0" }}>Free — no subscription and no sign-up.</td></tr>
-              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Privacy</th><td style={{ padding: "8px 0" }}>Runs in your browser — nothing is uploaded to a server.</td></tr>
-              <tr><th style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Formats and limits</th><td style={{ padding: "8px 0" }}>{tool.formats}</td></tr>
+              <tr><th scope="row" style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>What it does</th><td style={{ padding: "8px 0" }}>{tool.description}</td></tr>
+              <tr><th scope="row" style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Cost</th><td style={{ padding: "8px 0" }}>Free — no subscription and no sign-up.</td></tr>
+              <tr><th scope="row" style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Privacy</th><td style={{ padding: "8px 0" }}>Runs in your browser — nothing is uploaded to a server.</td></tr>
+              <tr><th scope="row" style={{ textAlign: "left", padding: "8px 8px 8px 0", verticalAlign: "top" }}>Formats and limits</th><td style={{ padding: "8px 0" }}>{tool.formats}</td></tr>
             </tbody>
           </table>
         </section>
