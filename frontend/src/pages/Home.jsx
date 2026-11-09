@@ -88,7 +88,8 @@ export default function Home() {
         <h2>Browse by category</h2>
         <div className="grid">{CATEGORIES.map((c) => <CategoryCard key={c.slug} category={c} />)}</div>
         <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 16 }}>
-          <thead><tr><th style={{ textAlign: "left" }}>Category</th><th style={{ textAlign: "left" }}>Tools</th><th style={{ textAlign: "left" }}>What they cover</th></tr></thead>
+          <caption className="sr-only">Tools by category</caption>
+          <thead><tr><th scope="col" style={{ textAlign: "left" }}>Category</th><th scope="col" style={{ textAlign: "left" }}>Tools</th><th scope="col" style={{ textAlign: "left" }}>What they cover</th></tr></thead>
           <tbody>
             {CATEGORIES.map((c) => (
               <tr key={c.slug}>
