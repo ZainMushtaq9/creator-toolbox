@@ -99,6 +99,16 @@ as fact:
 - The 7 blog articles are non-thin (≥ 4 body sections) and link to
   their tools.
 
+### AI-written content gate (reel 14, 2026-11-09)
+
+Method (from the AI-content reel, Ghulam Ali SEO, 2026-11-08): never ship raw one-prompt output — the reel crosses out the prompt "write an article on this keyword". AI-assisted text may ship only if it passes all 7 checks: (1) semantically written, (2) skimmable, (3) better than the top competitor, (4) easy to read, (5) in the audience's native language (for this site: natural English, not stilted or machine-translated text), (6) no grammatical or punctuation mistakes, (7) active voice. If it cannot be written to that standard, do not use it.
+
+How this fits the existing rules: §11 Rule 3 ("do not copy AI-generated text into the site") still stands for raw copied output. This gate governs AI-assisted drafting: a draft must be checked against all 7 criteria and rewritten to verified facts in our own words before it ships. A draft that fails any check is rewritten or dropped, never published as-is.
+
+Verified status for this site (2026-11-09): no raw one-prompt AI output is published on the site — all copy was written for this site and verified in the 2026-11-08 fixes round (76/76 exact-phrase coverage, 143 FAQs verified). Skimmability is already the shape of the site's direct answers, ledes and FAQs (§11 Rule 2). "Better than the top competitor" and "native language" have NOT been formally audited per page — open item 8.
+
+Honest caveats: "writing is Google's top second ranking factor" is the creator's claim — Google publishes no such ranking of writing as the second factor, so no weight is asserted here. The transcript garbles "ranking factor" as "drinking factor"; the on-screen text ("Much more power then you think") confirms the power claim only, not the factor ranking. The reel shows no screenshots, no traffic figures and no example domain, so there is no demo-data caveat to carry. Nothing in this section claims a ranking, traffic or indexing outcome.
+
 ## 4. On-page audit (verified 2026-11-08)
 
 - Title carries the keyword: exact-phrase coverage 76/76 across 21
@@ -154,6 +164,10 @@ as fact:
    available; never buy links.
 7. Plagiarism scan — only if a legitimate free route exists; copy is
    original in-repo writing.
+8. AI-content gate checks — "better than the top competitor" and
+   "native language" have not been formally audited per page; run
+   them with the active-voice pass (item 5) before any AI-assisted
+   text ships.
 
 ## How this document is maintained
 
