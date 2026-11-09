@@ -238,16 +238,16 @@ claims a ranking, traffic or indexing outcome.
    "native language" have not been formally audited per page; run
    them with the active-voice pass (item 5) before any AI-assisted
    text ships.
-9. Titles over 60 characters — youtube-earnings-calculator (rendered
-   title 64 characters) and jpg-to-png-converter (61) exceed the
-   reel-16 under-60 guideline once the " | CreatorToolbox" suffix is
-   included; two more sit exactly at 60. Shorten only in a title pass
-   (or through the daily check's CTR step if CTR data supports it);
-   do not change titles on the guideline alone.
-10. Meta descriptions under 150 characters — all 21 descriptions
-    measure 95–141 characters, none in the reel-16 150–160 range.
-    Decide only with CTR evidence whether to lengthen any;
-    descriptions are complete and honest as written.
+9. Titles over 60 characters — CLOSED 2026-11-09 (patch 040):
+   youtube-earnings-calculator shortened 64 → 55 and
+   jpg-to-png-converter 61 → 54; all 21 rendered titles now measure
+   60 or under. Two sit exactly at 60 (youtube-thumbnail-resizer,
+   instagram-engagement-calculator) — left as-is, they meet the
+   guideline.
+10. Meta descriptions under 150 characters — CLOSED 2026-11-09
+    (patch 040): all 21 descriptions now measure 150–160 characters,
+    lengthened only with verified sentences from each tool's own page
+    content. No invented claims or numbers.
 11. Inter as the primary font — the body font stack starts with
     Inter, one of Hallmark's named AI-design tells (reel 17).
     Decide in a design pass whether to switch the primary font;
@@ -308,12 +308,12 @@ Method (from the "Master SEO to Get Found on Google + AI Search" reel, Ghulam Al
 
 Measured status for this site (2026-11-09, measured from the repo — titles and descriptions counted from frontend/src/config/tools.js; headings from frontend/src/components/ToolPageLayout.jsx):
 
-- Title tag — 19 of 21 rendered titles are 60 characters or under (rendered title = tool.title + " | CreatorToolbox"). Two exceed 60: youtube-earnings-calculator at 64 and jpg-to-png-converter at 61; two more sit exactly at 60 (youtube-thumbnail-resizer, instagram-engagement-calculator). The tool.title field alone is at most 47 characters — the brand suffix is what pushes the two over. Open item 9.
+- Title tag — 21 of 21 rendered titles are 60 characters or under (rendered title = tool.title + " | CreatorToolbox"; re-measured 2026-11-09, patch 040). youtube-earnings-calculator was shortened 64 → 55 ("Free YouTube Earnings Calculator (RPM)") and jpg-to-png-converter 61 → 54 ("Free JPG to PNG Converter (No Upload)"); keywords and meaning kept, slugs and H1s untouched. Two sit exactly at 60 (youtube-thumbnail-resizer, instagram-engagement-calculator) — left as-is, they meet the guideline. The tool.title field alone is at most 43 characters. Open item 9 — closed 2026-11-09 by patch 040.
 - One H1 — PASS on all 21 tool pages. ToolPageLayout renders exactly one <h1>{tool.name}</h1> and the H1 carries the keyword (it is the tool name).
 - H2 carries the keyword — PARTIAL. Each tool page has 6 H2s; only 1 of the 6 carries the keyword ("How to use the {tool.name}"). The other 5 are fixed template labels shared by all 21 pages (Supported formats and limitations; Example use cases; Tool facts; Frequently asked questions; Related tools). The reel's model is one H2 as the main section; this site deliberately uses H2s as section labels. Recorded as a measured difference, not a defect — no heading change is made on the guideline alone.
 - H3 — hierarchy is H1 → 6 H2s → H3 related-tool names (4 per page). PASS as designed; it differs from the reel's model (reel: H3 for all other sub-sections; site: H3 for related tool names only).
 - URL — PASS. All 21 slugs are short, descriptive keyword slugs with no IDs or parameters.
-- Meta description — 0 of 21 in the reel's 150–160 range. Measured lengths run 95–141 characters (shortest: tiktok-hashtag-generator, 95; longest: instagram-caption-generator, 141). The validator only requires ≥ 40 characters and uniqueness, which all 21 meet. Descriptions are complete honest sentences; the 150–160 range is the reel's guideline, not adopted as a target without CTR evidence. Open item 10.
+- Meta description — 21 of 21 in the 150–160 range (re-measured 2026-11-09, patch 040; was 0 of 21, lengths 95–141). Measured lengths now run 150–160 characters (shortest: instagram-bio-generator and tiktok-caption-generator, 150; longest: youtube-description-generator, tiktok-hashtag-generator, image-resizer and word-counter, 160). Every added sentence comes from the tool's own page content (how-to, formats, FAQs) — no invented claims, no invented numbers. The validator requires ≥ 40 characters and uniqueness, which all 21 meet. Open item 10 — closed 2026-11-09 by patch 040.
 - Internal linking — PASS. Every tool page links to 4 related tool pages (validator-checked, 0 broken), plus breadcrumbs and the shared nav; patch 036 closed the no-JavaScript gap. For this site the tool pages are the money pages (the AdSense inventory), so the related-tools block serves that role.
 - Image optimization — NOT APPLICABLE to current pages. The only site image is favicon.svg; there are no content images and no og:image (verified reel 5, re-confirmed 2026-11-09: frontend/public/ holds only favicon.svg). WebP-always is recorded here as the rule for any future content or og:image. User-upload previews are client-side, not site assets; their alt text is descriptive (verified reel 5).
 
