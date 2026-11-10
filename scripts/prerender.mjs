@@ -61,7 +61,7 @@ const STATIC_PAGES = {
   "/": {
     title: "Free Online Tools",
     description:
-      "Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow — YouTube, Instagram, TikTok, image and text tools that run in your browser.",
+      "Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image and text tools.",
     h1: "Create. Optimize. Convert. Grow.",
     lede: "CreatorToolbox is a free collection of 21 online tools for YouTube, Instagram, TikTok, images and text — free with no sign-up, running in your browser so nothing is uploaded.",
   },
