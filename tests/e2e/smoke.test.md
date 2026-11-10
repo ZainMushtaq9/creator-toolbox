@@ -14,5 +14,5 @@ Still manual (interactive flows — no browser automation was built for them):
 - [ ] Workspaces: create project, add note, export JSON, delete item/project.
 - [ ] Collections: all 8 pages load with included tools.
 - [ ] SEO experiments: save an experiment, add after-28-days values.
-- [ ] All 21 tool pages load (only 3 are sampled by the automated test).
+- [ ] All 26 tool pages load (only 3 are sampled by the automated test).
 - [ ] Category filter buttons on /tools.

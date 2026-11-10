@@ -63,14 +63,14 @@ const STATIC_PAGES = {
     description:
       "Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image and text tools.",
     h1: "Create. Optimize. Convert. Grow.",
-    lede: "CreatorToolbox is a free collection of 21 online tools for YouTube, Instagram, TikTok, images and text — free with no sign-up, running in your browser so nothing is uploaded.",
+    lede: "CreatorToolbox is a free collection of 41 online tools for YouTube, Instagram, TikTok, images, text and calculators — free with no sign-up, running in your browser so nothing is uploaded.",
   },
   "/tools": {
     title: "All Free Tools",
     description:
-      "Browse all 21 free CreatorToolbox tools — YouTube, Instagram, TikTok, image and text tools that run in your browser.",
+      "Browse all 41 free CreatorToolbox tools — YouTube, Instagram, TikTok, image, text and calculator tools that run in your browser.",
     h1: "All Tools",
-    lede: "Browse all 21 free CreatorToolbox tools — YouTube, Instagram, TikTok, image and text tools that run in your browser.",
+    lede: "Browse all 41 free CreatorToolbox tools — YouTube, Instagram, TikTok, image, text and calculator tools that run in your browser.",
   },
   "/workflows": {
     title: "Workflows — Connected Tool Sequences",
@@ -293,7 +293,7 @@ function routeMeta(path) {
   const page = STATIC_PAGES[path];
   if (!page) throw new Error(`no metadata for route: ${path}`);
   let links;
-  if (path === "/") links = [{ href: "/tools", label: "Browse all 21 free tools" }, { href: "/workflows", label: "See workflows" }];
+  if (path === "/") links = [{ href: "/tools", label: "Browse all 41 free tools" }, { href: "/workflows", label: "See workflows" }];
   else if (path === "/tools") links = [
     ...CATEGORIES.map((c) => ({ href: c.path, label: c.name })),
     ...TOOLS.map((t) => ({ href: `/tools/${t.slug}`, label: t.name })),
@@ -301,7 +301,7 @@ function routeMeta(path) {
   else if (path === "/workflows") links = [{ href: "/workflows/youtube-creator", label: "YouTube Creator Workflow" }];
   else if (path === "/collections") links = COLLECTIONS.map((c) => ({ href: `/collections/${c.slug}`, label: c.name }));
   else if (path === "/blog") links = ARTICLES.map((a) => ({ href: `/blog/${a.slug}`, label: a.title }));
-  else links = [{ href: "/tools", label: "Browse all 21 free tools" }];
+  else links = [{ href: "/tools", label: "Browse all 41 free tools" }];
   // Homepage keeps the WebSite + Organization JSON-LD already in the
   // shell; the FAQPage block is added client-side by Home.jsx.
   const jsonLd =

@@ -64,7 +64,7 @@ test("tool directory loads and search filters the list", async () => {
   const { page, errors } = await newPage();
   await page.goto(`${BASE}/tools`, { waitUntil: "networkidle" });
   const before = await page.locator(".grid .card").count();
-  assert.ok(before >= 21, `expected 21 tool cards, got ${before}`);
+  assert.ok(before >= 26, `expected 26 tool cards, got ${before}`);
   await page.locator("#tool-search").fill("thumbnail");
   await page.waitForTimeout(300);
   const after = await page.locator(".grid .card").count();

@@ -6,7 +6,8 @@ export const CATEGORIES = [
   { slug: "instagram-tools", path: "/instagram-tools", name: "Instagram Tools", icon: "Instagram", description: "Captions, hashtags, bios and calculators for Instagram posts and profiles." },
   { slug: "tiktok-tools", path: "/tiktok-tools", name: "TikTok Tools", icon: "Music2", description: "Hooks, captions and hashtags for TikTok videos." },
   { slug: "image-tools", path: "/image-tools", name: "Image Tools", icon: "Image", description: "Compress, resize and convert images right in your browser — no upload needed." },
-  { slug: "text-tools", path: "/text-tools", name: "Text Tools", icon: "Type", description: "Count words and characters, and convert text case in seconds." }
+  { slug: "text-tools", path: "/text-tools", name: "Text Tools", icon: "Type", description: "Count words and characters, and convert text case in seconds." },
+  { slug: "calculator-tools", path: "/calculator-tools", name: "Calculator Tools", icon: "Calculator", description: "Free everyday calculators — percentages, age, BMI, loan EMI and unit conversion — that run in your browser with the formula shown." }
 ];
 
 export const TOOLS = [
@@ -404,6 +405,404 @@ export const TOOLS = [
       { q: "Can I use this as an uppercase to lowercase converter?", a: "Yes. Paste text in capitals and click lowercase \u2014 for example, \u201cA SHOUTY HEADING\u201d becomes \u201ca shouty heading\u201d." },
     ],
     related: ["word-counter", "youtube-title-generator", "instagram-bio-generator", "youtube-description-generator"]
+  },
+  {
+    slug: "percentage-calculator", name: "Percentage Calculator", category: "calculator-tools",
+    title: "Free Percentage Calculator Online",
+    description: "Work out percentages three ways: what X% of a number is, one number as a percentage of another, and percentage increase or decrease. Free, instant, with the formula shown.",
+    keywords: "percentage calculator, percent calculator, percent increase calculator, percentage decrease calculator, how to calculate percentage",
+    howTo: ["Pick a calculation: X% of Y, X as a % of Y, or % increase/decrease.", "Enter the two numbers.", "Click Calculate Percentage.", "Copy the result with the formula shown."],
+    formats: "Numbers only. No files involved. Formulas: (percentage ÷ 100) × value; (part ÷ whole) × 100; ((new − old) ÷ old) × 100.",
+    examples: ["20% of 250 → 50.", "80 to 100 → a 25% increase."],
+    faqs: [
+      { q: "How do I calculate a percentage of a number?", a: "Multiply the number by the percentage divided by 100. For example, 20% of 250 is (20 ÷ 100) × 250 = 50. This percentage calculator does the same sum for you." },
+      { q: "How do I work out X as a percentage of Y?", a: "Divide X by Y and multiply by 100. For example, 50 as a percentage of 200 is (50 ÷ 200) × 100 = 25%." },
+      { q: "How do I calculate percentage increase?", a: "Subtract the old value from the new value, divide by the old value and multiply by 100. For example, 80 to 100 is ((100 − 80) ÷ 80) × 100 = a 25% increase." },
+      { q: "What is the difference between percentage increase and percentage points?", a: "A percentage increase is relative to the starting value — 80 to 100 is a 25% increase. Percentage points are the plain difference between two percentages — 20% to 25% is a rise of 5 percentage points." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["age-calculator", "bmi-calculator", "loan-emi-calculator", "unit-converter"]
+  },
+  {
+    slug: "age-calculator", name: "Age Calculator", category: "calculator-tools",
+    title: "Free Age Calculator Online",
+    description: "Work out your exact age in years, months and days from your date of birth, plus total days lived. Leap years handled correctly; future dates rejected.",
+    keywords: "age calculator, how old am i, calculate age from date of birth, age in years months days",
+    howTo: ["Pick your date of birth.", "Click Calculate Age.", "Read your exact age in years, months and days, plus total days lived."],
+    formats: "A date of birth. No files involved. Age is counted on the calendar, so leap years and month lengths are handled correctly.",
+    examples: ["Born 1 January 2000 → 26 years, 10 months, 9 days on 10 November 2026.", "Born 29 February 2000 → 26 years, 8 months, 12 days on 10 November 2026."],
+    faqs: [
+      { q: "How is my exact age calculated?", a: "By counting full calendar years, then months, then days from your date of birth to today — borrowing days from the previous month and months from the previous year where needed, the way a calendar does." },
+      { q: "Does it handle leap years and 29 February birthdays?", a: "Yes. The count uses real calendar month lengths, so a 29 February birthday is counted correctly — born 29 February 2000, you are 26 years, 8 months and 12 days old on 10 November 2026." },
+      { q: "Can I enter a future date of birth?", a: "No — a future date is rejected with a message, because an age cannot be negative." },
+      { q: "What does total days lived mean?", a: "The number of whole days from your date of birth to today. For example, born 1 January 2000, that is 9,810 days on 10 November 2026." },
+      { q: "Does this tool use AI?", a: "No. It is a plain date calculation in your browser, not AI." },
+      { q: "Is my date of birth uploaded or stored?", a: "No. The calculation runs locally in your browser and your date of birth is never sent to a server or stored." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["percentage-calculator", "bmi-calculator", "unit-converter", "word-counter"]
+  },
+  {
+    slug: "bmi-calculator", name: "BMI Calculator", category: "calculator-tools",
+    title: "Free BMI Calculator Online",
+    description: "Calculate your Body Mass Index from weight and height in metric or imperial units, with the formula and WHO categories shown. An estimate only — not medical advice.",
+    keywords: "bmi calculator, body mass index calculator, calculate bmi, bmi chart, healthy bmi range",
+    howTo: ["Pick metric (kg, cm) or imperial (lb, ft/in).", "Enter your weight and height.", "Click Calculate BMI.", "Read your BMI and its WHO category."],
+    formats: "Numbers only. Metric formula: weight (kg) ÷ height (m)². Imperial formula: 703 × weight (lb) ÷ height (in)².",
+    examples: ["70 kg at 175 cm → BMI 22.86, Healthy weight.", "154 lb at 5 ft 9 in → BMI 22.74, Healthy weight."],
+    faqs: [
+      { q: "How is BMI calculated?", a: "Metric: weight in kilograms divided by height in metres squared. For example, 70 kg at 175 cm is 70 ÷ 1.75² = 22.86. Imperial: 703 × weight in pounds divided by height in inches squared." },
+      { q: "What are the WHO BMI categories?", a: "Under 18.5 Underweight, 18.5–24.9 Healthy weight, 25–29.9 Overweight, and 30 and above Obese. They are population screening bands, not a diagnosis for one person." },
+      { q: "Is BMI accurate for everyone?", a: "No. BMI does not measure body fat, muscle or health on its own. Muscular people, older adults, children and pregnant people should not rely on it alone — it is a screening guide." },
+      { q: "What is a healthy BMI?", a: "The WHO healthy range is 18.5–24.9. A value inside that range is a good sign, but it is not a guarantee of health on its own." },
+      { q: "Is this medical advice?", a: "No. This calculator gives an estimate only and is not medical advice. Talk to a doctor for health decisions." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["age-calculator", "percentage-calculator", "loan-emi-calculator", "unit-converter"]
+  },
+  {
+    slug: "loan-emi-calculator", name: "Loan EMI Calculator", category: "calculator-tools",
+    title: "Free Loan EMI Calculator Online",
+    description: "Work out your monthly loan EMI from the loan amount, annual interest rate and tenure, with total interest and total payment. An estimate only — not financial advice.",
+    keywords: "loan emi calculator, emi calculator, monthly emi calculator, loan interest calculator, how to calculate emi",
+    howTo: ["Enter the loan amount.", "Enter the annual interest rate.", "Enter the tenure in years.", "Click Calculate EMI and read the monthly EMI, total interest and total payment."],
+    formats: "Numbers only. Formula: EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), where r is the monthly rate (annual rate ÷ 12) and n is the tenure in months.",
+    examples: ["100,000 at 10% annual interest for 5 years → monthly EMI about 2,124.70, total interest about 27,482.27.", "At 0% interest the EMI is simply the loan amount divided by the number of months."],
+    faqs: [
+      { q: "How is EMI calculated?", a: "EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12) and n is the tenure in months. For example, 100,000 at 10% for 5 years gives a monthly EMI of about 2,124.70." },
+      { q: "What is the difference between EMI, total interest and total payment?", a: "The EMI is what you pay each month. Total payment is the EMI multiplied by the number of months. Total interest is total payment minus the loan amount — for 100,000 at 10% over 5 years, that is about 27,482.27." },
+      { q: "Does a longer tenure mean a lower EMI?", a: "Yes, a longer tenure lowers the monthly EMI, but you pay more total interest because interest runs for longer. Compare both numbers, not just the EMI." },
+      { q: "What happens with a 0% interest rate?", a: "The EMI is the loan amount divided by the number of months, with no interest — for example 100,000 over 5 years is about 1,666.67 a month." },
+      { q: "Is this an exact loan payment?", a: "No, it is an estimate. Real loan payments depend on the lender's exact rate, fees and schedule, which this calculator does not include." },
+      { q: "Is this financial advice?", a: "No. This calculator gives an estimate only and is not financial advice. Check the lender's own figures before borrowing." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["percentage-calculator", "bmi-calculator", "age-calculator", "youtube-earnings-calculator"]
+  },
+  {
+    slug: "unit-converter", name: "Unit Converter", category: "calculator-tools",
+    title: "Free Unit Converter Online",
+    description: "Convert length, weight and temperature between metric and imperial units with fixed conversion factors. No currency — exchange rates change daily. Free, instant, private.",
+    keywords: "unit converter, length converter, km to miles, kg to pounds, celsius to fahrenheit, convert units online",
+    howTo: ["Pick length, weight or temperature.", "Enter a value and pick the from and to units.", "Click Convert.", "Copy the result."],
+    formats: "Numbers only. Fixed factors: 1 km = 1000 m, 1 mile = 1609.344 m, 1 kg = 2.20462 lb, 1 oz = 28.3495 g. Temperature: °F = °C × 9/5 + 32; K = °C + 273.15.",
+    examples: ["5 km = 3.1069 miles.", "100 °C = 212 °F."],
+    faqs: [
+      { q: "What units can I convert?", a: "Length (mm, cm, m, km, inches, feet, yards, miles), weight (g, kg, lb, oz) and temperature (Celsius, Fahrenheit, Kelvin). Currency is not included because exchange rates change daily." },
+      { q: "How many kilometres are in a mile?", a: "One mile is 1.609344 kilometres, so 5 km is 3.1069 miles and 1 mile is 1.6093 km." },
+      { q: "How do I convert Celsius to Fahrenheit?", a: "Multiply by 9/5 and add 32. For example, 100 °C × 9/5 + 32 = 212 °F. To go back, subtract 32 and multiply by 5/9." },
+      { q: "How many pounds are in a kilogram?", a: "One kilogram is 2.20462 pounds, so 2.5 kg is 5.5116 lb." },
+      { q: "Why is there no currency converter?", a: "Exchange rates change every day, so a currency converter would need live rates. This tool only converts units with fixed factors, so its answers never go stale." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation with fixed factors in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The conversion runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["percentage-calculator", "age-calculator", "bmi-calculator", "video-aspect-ratio-calculator"]
+  },
+  {
+    slug: "compound-interest-calculator", name: "Compound Interest Calculator", category: "calculator-tools",
+    title: "Free Compound Interest Calculator",
+    description: "Work out how savings or an investment grows with compound interest — final amount and total interest earned, with the formula shown. An estimate only.",
+    keywords: "compound interest calculator, compound interest formula, investment growth calculator, savings interest calculator, calculate compound interest",
+    howTo: ["Enter the principal amount.", "Enter the annual interest or return rate.", "Pick the compounding frequency and the years.", "Click Calculate Compound Interest."],
+    formats: "Numbers only. Formula: A = P × (1 + r/n)^(n×t), where P is the principal, r the annual rate, n the compounding frequency and t the years.",
+    examples: ["100,000 at 10% a year, compounded monthly for 5 years → about 164,530.89, of which about 64,530.89 is interest.", "100,000 at 10% compounded yearly for 5 years → about 161,051.00."],
+    faqs: [
+      { q: "How is compound interest calculated?", a: "A = P × (1 + r/n)^(n×t). For example, 100,000 at 10% a year compounded monthly for 5 years is 100,000 × (1 + 0.10/12)^60 = about 164,530.89." },
+      { q: "What is the difference between compound and simple interest?", a: "Simple interest only earns on the principal. Compound interest earns on the principal plus the interest already earned, so the amount grows faster over time." },
+      { q: "Does compounding more often earn more?", a: "Yes, slightly. Monthly compounding earns a little more than yearly compounding at the same rate — 100,000 at 10% for 5 years is about 164,530.89 monthly versus about 161,051.00 yearly." },
+      { q: "Is the result guaranteed?", a: "No. It is an estimate that assumes a fixed rate for the whole period. Real investments vary, and no investment guarantees a fixed return." },
+      { q: "Is this financial advice?", a: "No. This calculator gives an estimate only and is not financial advice." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["sip-calculator", "loan-emi-calculator", "percentage-calculator", "mortgage-calculator"]
+  },
+  {
+    slug: "calorie-calculator", name: "Calorie Calculator", category: "calculator-tools",
+    title: "Free Calorie Calculator Online",
+    description: "Estimate your daily calorie needs — BMR from the Mifflin-St Jeor formula and maintenance calories (TDEE) for your activity level. An estimate only, not medical advice.",
+    keywords: "calorie calculator, bmr calculator, tdee calculator, daily calorie needs, how many calories per day",
+    howTo: ["Pick male or female.", "Enter your age, weight and height.", "Pick your activity level.", "Click Calculate Calories."],
+    formats: "Numbers only. Mifflin-St Jeor: men 10 × weight + 6.25 × height − 5 × age + 5; women the same with − 161 instead of + 5. TDEE = BMR × activity factor.",
+    examples: ["A 30-year-old man, 80 kg, 180 cm, moderately active → BMR about 1,780 kcal/day, maintenance about 2,759 kcal/day.", "A 25-year-old woman, 60 kg, 165 cm, lightly active → BMR about 1,345 kcal/day, maintenance about 1,850 kcal/day."],
+    faqs: [
+      { q: "What is BMR?", a: "Basal metabolic rate — the calories your body burns at complete rest to keep you alive. It is the starting point; your activity level is added on top to get maintenance calories." },
+      { q: "What is TDEE?", a: "Total daily energy expenditure — your BMR multiplied by an activity factor. It estimates the calories you need each day to maintain your current weight." },
+      { q: "How is BMR calculated here?", a: "With the Mifflin-St Jeor formula. For men: 10 × weight in kg + 6.25 × height in cm − 5 × age + 5. For women the same formula ends with − 161 instead of + 5." },
+      { q: "How many calories do I need to lose weight?", a: "As a rough guide, eating about 300–500 kcal a day below your maintenance (TDEE) level is a common starting point — but this is general information, not a plan. Ask a doctor or dietitian before changing your diet." },
+      { q: "Is this medical advice?", a: "No. This calculator gives an estimate only and is not medical advice. Real calorie needs vary with body composition, health and routine." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["bmi-calculator", "daily-water-intake-calculator", "age-calculator", "percentage-calculator"]
+  },
+  {
+    slug: "cgpa-calculator", name: "CGPA Calculator", category: "calculator-tools",
+    title: "Free CGPA Calculator Online",
+    description: "Calculate your CGPA on the 4.0 scale — add courses with credit hours and grades and get your cumulative GPA, as used at Pakistani and international universities.",
+    keywords: "cgpa calculator, gpa calculator, calculate cgpa, university gpa calculator, 4.0 cgpa calculator",
+    howTo: ["Enter each course's credit hours and grade.", "Click Add course for more courses.", "Click Calculate CGPA.", "Copy the result."],
+    formats: "Credit hours and grades. Formula: CGPA = total grade points ÷ total credit hours, where each course contributes credit hours × grade points on the 4.0 scale (A = 4.0, A− = 3.7, B+ = 3.3, B = 3.0).",
+    examples: ["3 credit hours at A (4.0), 3 at B+ (3.3) and 4 at A− (3.7) → CGPA 3.67.", "Two 3-credit courses, one A and one B → (12 + 9) ÷ 6 = CGPA 3.50."],
+    faqs: [
+      { q: "How is CGPA calculated?", a: "Multiply each course's credit hours by its grade points, add them up, and divide by the total credit hours. For example, 3 credits at A (4.0), 3 at B+ (3.3) and 4 at A− (3.7) gives (12 + 9.9 + 14.8) ÷ 10 = 3.67." },
+      { q: "Which grading scale does this use?", a: "The 4.0 scale common at Pakistani universities such as NUST, FAST and COMSATS, and at international universities: A = 4.0, A− = 3.7, B+ = 3.3, B = 3.0, B− = 2.7, C+ = 2.3, C = 2.0, C− = 1.7, D = 1.0, F = 0." },
+      { q: "What if my university uses different grade points?", a: "Then the result will differ. Check your university's grading policy — some use 4.0 with different points for A− or B+, and some use a different scale entirely." },
+      { q: "What is the difference between GPA and CGPA?", a: "GPA is for one semester; CGPA is cumulative across all semesters. This calculator gives a CGPA for all the courses you enter." },
+      { q: "Can I add more courses?", a: "Yes — click Add course as many times as you need, and remove any course with its Remove button." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["percentage-calculator", "age-calculator", "unit-converter", "word-counter"]
+  },
+  {
+    slug: "zakat-calculator", name: "Zakat Calculator", category: "calculator-tools",
+    title: "Free Zakat Calculator Online",
+    description: "Calculate zakat at 2.5% on cash, savings, gold, silver, investments and business stock minus debts, checked against the silver nisab. Religious estimate only.",
+    keywords: "zakat calculator, calculate zakat, zakat nisab, zakat on gold, zakat 2.5 percent",
+    howTo: ["Enter your cash, savings, gold and silver values.", "Add investments and business stock.", "Subtract the debts you owe.", "Enter today's silver rate per gram and click Calculate Zakat."],
+    formats: "Amounts in rupees. Formula: zakat = 2.5% × (cash + savings + gold + silver + investments + business stock − debts), payable when net wealth reaches the nisab — the value of 52.5 tola (612.36 g) of silver.",
+    examples: ["Cash 500,000 + savings 100,000 + gold 200,000 − debts 50,000 = net wealth 750,000. At Rs 450 per gram of silver the nisab is Rs 275,562, so zakat is Rs 18,750.", "Net wealth below the nisab → no zakat is due on that calculation."],
+    faqs: [
+      { q: "How is zakat calculated?", a: "Zakat is 2.5% of net zakatable wealth held for a full lunar year — cash, bank savings, gold, silver, investments and business stock, minus debts. For example, net wealth of 750,000 gives zakat of 18,750." },
+      { q: "What is the nisab?", a: "The minimum wealth above which zakat is due: the value of 52.5 tola (612.36 grams) of silver, or 7.5 tola of gold. This calculator checks the silver nisab using the silver rate you enter." },
+      { q: "Why do I have to enter the silver rate myself?", a: "Silver prices change daily and this tool has no live price feed, so you enter today's rate per gram. The nisab is then 612.36 × that rate." },
+      { q: "Is zakat due on my house or car?", a: "No — zakat is not due on personal items you use, such as your home or car. It is due on wealth held for a year: cash, savings, gold, silver, trade goods, investments and business stock." },
+      { q: "Is this a fatwa?", a: "No. This is a calculation aid only, not a religious ruling. If you are unsure — for example about business stock or debts — ask a scholar." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["gold-value-calculator", "pakistan-salary-tax-calculator", "percentage-calculator", "compound-interest-calculator"]
+  },
+  {
+    slug: "gold-value-calculator", name: "Gold Value Calculator", category: "calculator-tools",
+    title: "Free Gold Value Calculator Online",
+    description: "Work out what your gold is worth — enter weight in tola, grams, masha or ratti, pick the karat, and enter today's per-tola rate. No live price is built in.",
+    keywords: "gold value calculator, gold price tola, gold rate calculator, tola to gram, gold karat calculator",
+    howTo: ["Enter the gold weight and pick tola, gram, masha or ratti.", "Pick the karat (24, 22, 21 or 18).", "Enter today's 24K rate per tola from your sarafa market.", "Click Calculate Gold Value."],
+    formats: "Weight and a rate you enter. Formula: value = weight in tola × per-tola 24K rate × (karat ÷ 24). 1 tola = 11.664 grams = 12 masha = 96 ratti.",
+    examples: ["2 tola of 22K gold at Rs 400,000 per tola (24K) → 2 × 400,000 × (22 ÷ 24) = Rs 733,333.33.", "1 tola of 24K gold at Rs 400,000 per tola → Rs 400,000."],
+    faqs: [
+      { q: "How is gold value calculated?", a: "Weight in tola × the per-tola 24K rate × (karat ÷ 24). For example, 2 tola of 22K gold at Rs 400,000 a tola is 2 × 400,000 × 22/24 = Rs 733,333.33." },
+      { q: "How many grams are in a tola?", a: "One tola is 11.664 grams. One tola is also 12 masha, and one masha is 8 ratti, so one tola is 96 ratti." },
+      { q: "Why do I have to enter the gold rate myself?", a: "Gold prices change daily and this tool has no live price feed. Enter today's 24K per-tola rate from your local sarafa market for an up-to-date value." },
+      { q: "Does the result include making charges?", a: "No. Making charges are added by jewellers when you buy, and are not part of the metal value this calculator works out." },
+      { q: "What is the difference between 22K and 24K?", a: "24K is pure gold. 22K is 22 parts gold out of 24 (about 91.7% pure), so it is worth 22/24 of the 24K price for the same weight." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["zakat-calculator", "unit-converter", "percentage-calculator", "pakistan-salary-tax-calculator"]
+  },
+  {
+    slug: "pakistan-salary-tax-calculator", name: "Pakistan Salary Tax Calculator", category: "calculator-tools",
+    title: "Free Pakistan Salary Tax Calculator",
+    description: "Work out FBR income tax on a Pakistani salary for tax year 2026–27 — monthly tax, take-home pay and a slab-by-slab breakdown. Estimate only.",
+    keywords: "pakistan salary tax calculator, fbr income tax calculator, salary tax pakistan 2026-27, take home salary pakistan, income tax slabs pakistan",
+    howTo: ["Enter your annual salary in rupees.", "Click Calculate Salary Tax.", "Read the annual and monthly tax, take-home pay and slab breakdown."],
+    formats: "One salary figure. FBR salaried slabs for tax year 2026–27 (Finance Act 2026): 0% to Rs 600,000; 1% to Rs 1.2M; 11% to Rs 2.2M; 20% to Rs 3.2M; 25% to Rs 4.1M; 29% to Rs 5.6M; 32% to Rs 7M; 35% above; no surcharge in 2026–27.",
+    examples: ["Rs 1,800,000 a year → Rs 72,000 tax a year (Rs 6,000 a month), take-home Rs 144,000 a month.", "Rs 900,000 a year → Rs 3,000 tax a year (Rs 250 a month)."],
+    faqs: [
+      { q: "How is salary tax calculated in Pakistan?", a: "With progressive slabs: each part of your salary is taxed at its slab's rate. For example, Rs 1,800,000 a year is Rs 600,000 tax-free, Rs 600,000 at 1% (Rs 6,000) and Rs 600,000 at 11% (Rs 66,000) — Rs 72,000 a year in total." },
+      { q: "What are the FBR salary tax slabs for 2026–27?", a: "0% up to Rs 600,000; 1% to Rs 1.2M; 11% to Rs 2.2M; 20% to Rs 3.2M; 25% to Rs 4.1M; 29% to Rs 5.6M; 32% to Rs 7M; and 35% above Rs 7M, with no surcharge in 2026–27, under the Finance Act 2026." },
+      { q: "Is this my exact tax?", a: "No, it is an estimate. Allowances, rebates and filer status can change your final FBR liability. Verify on fbr.gov.pk or ask a tax practitioner." },
+      { q: "Does this include EOBI or provident fund?", a: "No. This calculator only works out income tax on salary. EOBI, provident fund and other deductions are not included." },
+      { q: "What is take-home pay?", a: "Your salary minus income tax — what actually lands in your account. For Rs 1,800,000 a year, monthly take-home is Rs 150,000 minus Rs 6,000 tax = Rs 144,000." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["zakat-calculator", "salary-to-hourly-calculator", "percentage-calculator", "compound-interest-calculator"]
+  },
+  {
+    slug: "pakistan-electricity-bill-calculator", name: "Pakistan Electricity Bill Calculator", category: "calculator-tools",
+    title: "Free Pakistan Electricity Bill Calculator",
+    description: "Estimate your Pakistani electricity bill from units used — NEPRA residential slabs for protected and non-protected users, with every rate editable. Estimate only.",
+    keywords: "pakistan electricity bill calculator, lesco bill calculator, nepra slab rates, bijli bill calculator, k-electric bill calculator",
+    howTo: ["Enter the units used this month.", "Pick protected or non-protected.", "Check the slab rates against your latest bill and edit any that changed.", "Enter fuel adjustment, fixed charges and GST from your bill, then click Calculate."],
+    formats: "Units plus editable rates. Default slab rates are the July 2025 NEPRA notified residential base rates: protected 10.54 (1–100) and 13.01 (101–200); non-protected 22.44, 28.91, 33.10, 37.99, 40.20, 41.62, 42.76 and 47.69 per unit. Slabs are added one by one.",
+    examples: ["300 units, non-protected, at the July 2025 rates → 100 × 22.44 + 100 × 28.91 + 100 × 33.10 = Rs 8,445 energy charges, before fuel adjustment and taxes.", "150 units, protected → 100 × 10.54 + 50 × 13.01 = Rs 1,704.50 energy charges."],
+    faqs: [
+      { q: "How is my electricity bill estimated?", a: "Units in each slab are multiplied by that slab's rate and added up. For example, 300 non-protected units at the July 2025 rates is 100 × 22.44 + 100 × 28.91 + 100 × 33.10 = Rs 8,445 energy charges, before fuel adjustment, fixed charges and taxes." },
+      { q: "What is the difference between protected and non-protected?", a: "Protected users used 200 units or fewer in each of the last six months and pay the two cheap slabs (10.54 and 13.01 per unit in July 2025). Everyone else is non-protected and pays the higher slabs." },
+      { q: "Are the rates up to date?", a: "The defaults are the July 2025 NEPRA notified rates. Tariffs, fuel adjustment and taxes change — often monthly — so every rate field is editable: copy the rates from your latest bill for an accurate estimate." },
+      { q: "Why is my real bill higher than this estimate?", a: "The estimate only adds what you enter. Real bills also include fuel price adjustment, quarterly adjustments, fixed charges, GST, electricity duty and other surcharges — enter those from your bill." },
+      { q: "Which DISCOs does this cover?", a: "The NEPRA residential slabs apply across DISCOs including LESCO, IESCO, FESCO, MEPCO, PESCO and K-Electric, but exact charges vary — always match the rates to your own bill." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pakistan-salary-tax-calculator", "percentage-calculator", "unit-converter", "fuel-cost-calculator"]
+  },
+  {
+    slug: "mortgage-calculator", name: "Mortgage Calculator", category: "calculator-tools",
+    title: "Free Mortgage Calculator Online",
+    description: "Work out your monthly mortgage payment from home price, down payment, interest rate and tenure — with total interest and total payment. Estimate only.",
+    keywords: "mortgage calculator, home loan calculator, monthly mortgage payment, house loan calculator, mortgage payment calculator",
+    howTo: ["Enter the home price.", "Enter your down payment.", "Enter the annual interest rate and the tenure in years.", "Click Calculate Mortgage."],
+    formats: "Numbers only. Formula: payment = P × r × (1+r)^n ÷ ((1+r)^n − 1), where P is the loan amount (price − down payment), r the monthly rate and n the tenure in months.",
+    examples: ["A 10,000,000 home with a 2,000,000 down payment, 12% interest over 20 years → monthly payment about 88,086.89, total interest about 13,140,853.76.", "A bigger down payment shrinks the loan and the monthly payment."],
+    faqs: [
+      { q: "How is a mortgage payment calculated?", a: "From the loan amount (home price minus down payment) with the standard EMI formula. For example, an 8,000,000 loan at 12% over 20 years (240 months) gives a monthly payment of about 88,086.89." },
+      { q: "What is the difference between this and the Loan EMI Calculator?", a: "The maths is the same, but this one is built for buying a home: you enter the home price and down payment, and it works out the loan from those. The Loan EMI Calculator starts from the loan amount itself." },
+      { q: "Does a bigger down payment help?", a: "Yes — a bigger down payment means a smaller loan, a smaller monthly payment and less total interest over the life of the loan." },
+      { q: "Does this include taxes or insurance?", a: "No. Real mortgage bills may also include property tax, insurance and fees, which this calculator does not include." },
+      { q: "Is this an exact mortgage payment?", a: "No, it is an estimate. The lender's exact rate, fees and schedule decide the real payment." },
+      { q: "Is this financial advice?", a: "No. This calculator gives an estimate only and is not financial advice." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["loan-emi-calculator", "compound-interest-calculator", "percentage-calculator", "sip-calculator"]
+  },
+  {
+    slug: "salary-to-hourly-calculator", name: "Salary to Hourly Calculator", category: "calculator-tools",
+    title: "Free Salary to Hourly Calculator",
+    description: "Convert an annual salary to an hourly rate, or an hourly rate to an annual salary — with monthly and weekly pay. Free, instant, private.",
+    keywords: "salary to hourly calculator, hourly to salary calculator, hourly rate calculator, annual salary to hourly, salary per hour",
+    howTo: ["Pick the direction: salary to hourly, or hourly to salary.", "Enter the salary or hourly rate.", "Enter hours per week and weeks per year.", "Click Calculate."],
+    formats: "Numbers only. Formulas: hourly rate = annual salary ÷ (hours per week × weeks per year); annual salary = hourly rate × hours per week × weeks per year.",
+    examples: ["1,200,000 a year at 40 hours a week for 52 weeks → 576.92 an hour.", "500 an hour at 40 hours a week for 52 weeks → 1,040,000 a year."],
+    faqs: [
+      { q: "How do I convert salary to an hourly rate?", a: "Divide the annual salary by hours per week times weeks per year. For example, 1,200,000 a year at 40 hours a week for 52 weeks is 1,200,000 ÷ 2,080 = 576.92 an hour." },
+      { q: "How do I convert an hourly rate to a salary?", a: "Multiply the hourly rate by hours per week and weeks per year. For example, 500 an hour at 40 hours a week for 52 weeks is 500 × 2,080 = 1,040,000 a year." },
+      { q: "Is this my take-home pay?", a: "No. The result is gross pay before tax and deductions, and it assumes the same hours every week." },
+      { q: "What if I work fewer weeks a year?", a: "Change the weeks per year — for example 48 weeks for a month of unpaid leave — and the hourly rate rises, because the same salary is spread over fewer hours." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pakistan-salary-tax-calculator", "percentage-calculator", "compound-interest-calculator", "unit-converter"]
+  },
+  {
+    slug: "discount-calculator", name: "Discount Calculator", category: "calculator-tools",
+    title: "Free Discount Calculator Online",
+    description: "Work out a sale price from a discount %, or the discount % from before and after prices — with the amount saved. Free, instant, private.",
+    keywords: "discount calculator, sale price calculator, percent off calculator, calculate discount, price after discount",
+    howTo: ["Pick what to work out: price after a discount %, or discount % from two prices.", "Enter the original price.", "Enter the discount % or the sale price.", "Click Calculate Discount."],
+    formats: "Numbers only. Formulas: discount = price × (discount % ÷ 100); final price = price − discount; discount % = ((original − sale) ÷ original) × 100.",
+    examples: ["5,000 with 20% off → you save 1,000 and pay 4,000.", "5,000 down to 4,000 is a 20% discount."],
+    faqs: [
+      { q: "How do I calculate a discount?", a: "Multiply the price by the discount percentage divided by 100. For example, 20% off 5,000 is 5,000 × 0.20 = 1,000 saved, so you pay 4,000." },
+      { q: "How do I work out the discount % from two prices?", a: "Subtract the sale price from the original price, divide by the original price and multiply by 100. For example, 5,000 down to 4,000 is ((5,000 − 4,000) ÷ 5,000) × 100 = 20%." },
+      { q: "What is the price after two discounts?", a: "Apply them one after the other, not added together. For example, 20% off then 10% off 5,000 is 5,000 × 0.80 × 0.90 = 4,000 — a 28% total discount, not 30%." },
+      { q: "Does this include tax?", a: "No. This calculator works on the price alone — taxes or extra fees are not included." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["percentage-calculator", "salary-to-hourly-calculator", "unit-converter", "compound-interest-calculator"]
+  },
+  {
+    slug: "sip-calculator", name: "SIP Calculator", category: "calculator-tools",
+    title: "Free SIP Calculator Online",
+    description: "Estimate how a monthly SIP (systematic investment plan) grows — future value, total invested and estimated gains at your expected return. Estimate only.",
+    keywords: "sip calculator, monthly investment calculator, sip returns calculator, systematic investment plan calculator, sip future value",
+    howTo: ["Enter your monthly investment.", "Enter the expected annual return.", "Enter the years.", "Click Calculate SIP Growth."],
+    formats: "Numbers only. Formula: FV = P × (((1+i)^n − 1) ÷ i) × (1+i), where P is the monthly investment, i the monthly return (annual rate ÷ 12) and n the months.",
+    examples: ["10,000 a month at an expected 12% a year for 10 years → about 2,323,390.76, of which 1,200,000 was invested.", "5,000 a month at 10% a year for 5 years → about 390,411.91, of which 300,000 was invested."],
+    faqs: [
+      { q: "How is SIP growth calculated?", a: "Each monthly investment is assumed to compound at the monthly return. For example, 10,000 a month at 12% a year for 10 years (120 months) grows to about 2,323,390.76." },
+      { q: "What is a SIP?", a: "A systematic investment plan — a fixed amount invested every month, usually into a mutual fund. Regular investing spreads purchases over time instead of one lump sum." },
+      { q: "Are the returns guaranteed?", a: "No. The result assumes a fixed expected return, but real investments go up and down. The return you enter is only an assumption — try a lower rate too." },
+      { q: "Does this include taxes or fees?", a: "No. Taxes and fund fees are not included, so the real amount you keep can be lower." },
+      { q: "What is the difference between invested and gains?", a: "Invested is what you put in (monthly amount × months). Gains are the growth on top — future value minus invested. For 10,000 a month over 10 years, invested is 1,200,000 and estimated gains are about 1,123,390.76." },
+      { q: "Is this financial advice?", a: "No. This calculator gives an estimate only and is not financial advice." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["compound-interest-calculator", "loan-emi-calculator", "percentage-calculator", "mortgage-calculator"]
+  },
+  {
+    slug: "pregnancy-due-date-calculator", name: "Pregnancy Due Date Calculator", category: "calculator-tools",
+    title: "Free Pregnancy Due Date Calculator",
+    description: "Estimate your due date from the first day of your last menstrual period — plus how many weeks pregnant you are today. Estimate only, not medical advice.",
+    keywords: "pregnancy calculator, due date calculator, pregnancy due date, edd calculator, how many weeks pregnant",
+    howTo: ["Pick the first day of your last menstrual period.", "Click Calculate Due Date.", "Read the estimated due date and your current week."],
+    formats: "One date. Formula: due date = first day of the last menstrual period + 280 days (40 weeks).",
+    examples: ["Last menstrual period starting 1 January 2026 → estimated due date 8 October 2026.", "A period starting 1 March 2026 → estimated due date 6 December 2026."],
+    faqs: [
+      { q: "How is the due date calculated?", a: "By adding 280 days (40 weeks) to the first day of your last menstrual period. For example, 1 January 2026 + 280 days = 8 October 2026." },
+      { q: "How many weeks pregnant am I?", a: "Count full weeks from the first day of your last menstrual period to today. This calculator shows that alongside the due date." },
+      { q: "Is the due date exact?", a: "No. It is an estimate — most babies arrive within about two weeks either side of the due date. Only a doctor or an ultrasound can confirm it." },
+      { q: "What if my cycles are irregular?", a: "Then this estimate is less reliable, because the calculation assumes a typical 28-day cycle. An ultrasound gives a better date." },
+      { q: "Is this medical advice?", a: "No. This calculator gives an estimate only and is not medical advice. See a doctor for pregnancy care." },
+      { q: "Does this tool use AI?", a: "No. It is a plain date calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and your dates are never sent to a server or stored." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["age-calculator", "calorie-calculator", "daily-water-intake-calculator", "time-zone-converter"]
+  },
+  {
+    slug: "time-zone-converter", name: "Time Zone Converter", category: "calculator-tools",
+    title: "Free Time Zone Converter Online",
+    description: "Convert a date and time between time zones — Karachi, UTC, London, New York and more — with daylight saving handled. Free, instant, private.",
+    keywords: "time zone converter, convert time zone, karachi to utc, pakistan time converter, world time converter",
+    howTo: ["Pick a date and time.", "Pick the from time zone.", "Pick the to time zone.", "Click Convert Time Zone."],
+    formats: "A date, a time and two IANA time zones. Conversion uses your browser's built-in time-zone data, so daylight saving is handled for the date you enter.",
+    examples: ["15 January 2026, 12:00 in Karachi → 07:00 UTC, and 02:00 the same day in New York.", "15 January 2026, 09:30 in New York → 14:30 UTC, and 19:30 in Karachi."],
+    faqs: [
+      { q: "How does the conversion work?", a: "Your browser holds the IANA time-zone database, so the tool converts the moment exactly, including daylight saving for the date you enter. No offset is typed in by hand." },
+      { q: "What time is it in Karachi when it is noon in London?", a: "It depends on the date, because London uses daylight saving. Enter the date here — for example, 15 January 2026 at 12:00 in London is 17:00 in Karachi." },
+      { q: "Why does the same time convert differently in summer and winter?", a: "Because some zones move their clocks for daylight saving. New York is 5 hours behind UTC in winter (EST) and 4 hours behind in summer (EDT), so the same Karachi time lands an hour apart." },
+      { q: "Which time zones are included?", a: "UTC, Karachi, Dubai, Kolkata, Dhaka, Singapore, Tokyo, Sydney, London, Berlin, New York, Chicago, Los Angeles and Toronto." },
+      { q: "Does this tool use AI?", a: "No. It is a plain date calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The conversion runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["age-calculator", "pregnancy-due-date-calculator", "unit-converter", "word-counter"]
+  },
+  {
+    slug: "daily-water-intake-calculator", name: "Daily Water Intake Calculator", category: "calculator-tools",
+    title: "Free Daily Water Intake Calculator",
+    description: "Estimate how much water to drink each day from your weight and activity level — in litres and glasses. Estimate only, not medical advice.",
+    keywords: "water intake calculator, how much water per day, daily water calculator, water drinking calculator, hydration calculator",
+    howTo: ["Enter your weight in kg or pounds.", "Pick your activity level.", "Click Calculate Water Intake.", "Read the litres per day and the number of glasses."],
+    formats: "Weight and activity. Formula: litres per day = weight in kg × ml per kg (30 for low, 35 for moderate, 40 for high activity), divided by 1000. One glass is 250 ml.",
+    examples: ["70 kg at moderate activity → 70 × 35 ml = 2.45 litres a day, about 10 glasses.", "80 kg at high activity → 80 × 40 ml = 3.20 litres a day."],
+    faqs: [
+      { q: "How much water should I drink a day?", a: "A common guide is about 30–40 ml per kilogram of body weight. For example, 70 kg at moderate activity is 70 × 35 ml = 2.45 litres a day, about 10 glasses of 250 ml." },
+      { q: "Does food count towards water intake?", a: "Yes — food, especially fruit, vegetables and soups, adds water. This calculator estimates drinking water only, so your total fluid intake is higher." },
+      { q: "Do I need more water in hot weather or when exercising?", a: "Yes. Pick high activity for hot weather or heavy exercise — the guide rises to about 40 ml per kilogram." },
+      { q: "Can I drink too much water?", a: "Yes, although it is uncommon. Do not force large amounts beyond thirst, and ask a doctor if you have a condition that limits fluids, such as kidney or heart disease." },
+      { q: "Is this medical advice?", a: "No. This calculator gives an estimate only and is not medical advice." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["calorie-calculator", "bmi-calculator", "age-calculator", "fuel-cost-calculator"]
+  },
+  {
+    slug: "fuel-cost-calculator", name: "Fuel Cost Calculator", category: "calculator-tools",
+    title: "Free Fuel Cost Calculator Online",
+    description: "Work out fuel cost for a trip — enter distance, your vehicle's mileage and today's fuel price per litre. No live price is built in.",
+    keywords: "fuel cost calculator, petrol cost calculator, trip fuel calculator, fuel price calculator, car fuel cost per km",
+    howTo: ["Enter the trip distance in kilometres.", "Enter your vehicle's mileage in km per litre.", "Enter today's fuel price per litre.", "Click Calculate Fuel Cost."],
+    formats: "Distance, mileage and a price you enter. Formulas: fuel = distance ÷ mileage; cost = fuel × price per litre; cost per km = cost ÷ distance.",
+    examples: ["300 km at 15 km per litre → 20 litres. At Rs 250 a litre that costs Rs 5,000, or Rs 16.67 per kilometre.", "150 km at 10 km per litre → 15 litres."],
+    faqs: [
+      { q: "How is fuel cost calculated?", a: "Fuel needed is distance divided by mileage, and cost is fuel times the price per litre. For example, 300 km at 15 km per litre needs 20 litres; at Rs 250 a litre that is Rs 5,000." },
+      { q: "Why do I have to enter the fuel price myself?", a: "Fuel prices change often and this tool has no live price feed. Enter today's price per litre from your nearest petrol pump." },
+      { q: "How do I find my vehicle's mileage?", a: "Fill the tank, note the odometer, drive, then refill and divide the kilometres driven by the litres used. City driving usually gives lower mileage than highway driving." },
+      { q: "What is the cost per kilometre?", a: "Total fuel cost divided by distance — a handy way to compare vehicles. For the example above it is Rs 5,000 ÷ 300 km = Rs 16.67 per kilometre." },
+      { q: "Does this include tolls?", a: "No. Only fuel is counted — tolls, parking and other trip costs are not included." },
+      { q: "Does this tool use AI?", a: "No. It is a plain calculation in your browser, not AI." },
+      { q: "Is my data uploaded or stored?", a: "No. The calculation runs locally in your browser and nothing is sent to a server." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["unit-converter", "percentage-calculator", "daily-water-intake-calculator", "pakistan-electricity-bill-calculator"]
   }
 ];
 

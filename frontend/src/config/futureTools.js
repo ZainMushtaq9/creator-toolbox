@@ -1,6 +1,8 @@
-// 51 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
+// 46 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
 // do not list them as working tools, and do not create pages for them.
-// Priority after the 21 are stable: SEO tools first, then developer tools.
+// Priority after the 21 launch tools are stable: SEO tools first, then developer tools.
+// Built 2026-11-10 and removed from this list: Percentage Calculator,
+// Age Calculator, BMI Calculator, Loan/EMI Calculator, Unit Converter.
 // Each entry: name, pillar, stage ("2" or "3"), note.
 export const FUTURE_TOOLS = [
   // SEO tools (priority)
@@ -33,12 +35,7 @@ export const FUTURE_TOOLS = [
   { name: "PDF Splitter", pillar: "file-media-tools", stage: "3", note: "pdf-lib, local." },
   { name: "PDF to Text", pillar: "file-media-tools", stage: "3", note: "PDF.js, local." },
   { name: "Barcode Generator", pillar: "file-media-tools", stage: "3", note: "Local generation." },
-  { name: "Unit Converter", pillar: "productivity-developer-tools", stage: "2", note: "Length/weight/temperature." },
   { name: "Currency Converter (rates note)", pillar: "productivity-developer-tools", stage: "3", note: "Needs a rates source; label the source and date." },
-  { name: "Age Calculator", pillar: "productivity-developer-tools", stage: "3", note: "Simple date math." },
-  { name: "BMI Calculator", pillar: "productivity-developer-tools", stage: "3", note: "Estimate with formula shown." },
-  { name: "Loan/EMI Calculator", pillar: "productivity-developer-tools", stage: "3", note: "Estimate with formula shown." },
-  { name: "Percentage Calculator", pillar: "productivity-developer-tools", stage: "2", note: "Simple math." },
   { name: "Pomodoro Timer", pillar: "ai-productivity", stage: "3", note: "Local timer." },
   { name: "Lorem Ipsum Generator", pillar: "creator-tools", stage: "2", note: "Local text generation." },
   { name: "Hashtag Generator (X/Twitter)", pillar: "creator-tools", stage: "3", note: "Template-based, labelled." },
@@ -53,7 +50,6 @@ export const FUTURE_TOOLS = [
   { name: "Plagiarism-style Similarity Checker (local)", pillar: "productivity-developer-tools", stage: "3", note: "Compares two pasted texts only; never claim plagiarism detection." },
   { name: "Reading Time Calculator", pillar: "productivity-developer-tools", stage: "2", note: "Fold into Word Counter or standalone." },
   { name: "Character Counter (standalone)", pillar: "productivity-developer-tools", stage: "2", note: "Fold into Word Counter or standalone." },
-  { name: "Time Zone Converter", pillar: "productivity-developer-tools", stage: "3", note: "Date math with IANA zones." },
   { name: "Stopwatch & Countdown", pillar: "productivity-developer-tools", stage: "3", note: "Local timers." },
   { name: "AI Writing Assistant (labelled)", pillar: "ai-productivity", stage: "3", note: "Only via the NVIDIA backend when it exists; label AI output clearly." },
   { name: "Website Section Templates (AI-assisted guide)", pillar: "ai-productivity", stage: "3", note: "Candidate only. Curated section templates + prompts for Claude/Cursor-style tools; never claim the site builds websites. Blog topic first — owner decides." }

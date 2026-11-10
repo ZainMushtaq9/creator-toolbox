@@ -12,7 +12,7 @@ NOT CONNECTED, admin health (`mock-only`).
 
 Original skeleton checklist (superseded — the stubs are gone):
 - [x] `GET /api/v1/health` → 200, `{status:"ok"}`.
-- [x] `GET /api/v1/tools/config` → 200, tools: 21.
+- [x] `GET /api/v1/tools/config` → 200, tools: 26.
 - [x] `GET /api/v1/admin/usage` → 401 (protected).
 - [x] URL validation rejects: `http://localhost/admin`, `http://169.254.169.254/`,
       `http://192.168.1.1/`, `ftp://example.com/`, `javascript:alert(1)`.

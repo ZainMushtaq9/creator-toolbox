@@ -25,7 +25,27 @@ const MAP = {
   "image-resizer": lazy(() => import("../tools/image/ImageResizer.jsx")),
   "jpg-to-png-converter": lazy(() => import("../tools/image/JpgToPngConverter.jsx")),
   "word-counter": lazy(() => import("../tools/text/WordCounter.jsx")),
-  "text-case-converter": lazy(() => import("../tools/text/TextCaseConverter.jsx"))
+  "text-case-converter": lazy(() => import("../tools/text/TextCaseConverter.jsx")),
+  "percentage-calculator": lazy(() => import("../tools/calculator/PercentageCalculator.jsx")),
+  "age-calculator": lazy(() => import("../tools/calculator/AgeCalculator.jsx")),
+  "bmi-calculator": lazy(() => import("../tools/calculator/BmiCalculator.jsx")),
+  "loan-emi-calculator": lazy(() => import("../tools/calculator/LoanEmiCalculator.jsx")),
+  "unit-converter": lazy(() => import("../tools/calculator/UnitConverter.jsx")),
+  "compound-interest-calculator": lazy(() => import("../tools/calculator/CompoundInterestCalculator.jsx")),
+  "calorie-calculator": lazy(() => import("../tools/calculator/CalorieCalculator.jsx")),
+  "cgpa-calculator": lazy(() => import("../tools/calculator/CgpaCalculator.jsx")),
+  "zakat-calculator": lazy(() => import("../tools/calculator/ZakatCalculator.jsx")),
+  "gold-value-calculator": lazy(() => import("../tools/calculator/GoldValueCalculator.jsx")),
+  "pakistan-salary-tax-calculator": lazy(() => import("../tools/calculator/PakistanSalaryTaxCalculator.jsx")),
+  "pakistan-electricity-bill-calculator": lazy(() => import("../tools/calculator/PakistanElectricityBillCalculator.jsx")),
+  "mortgage-calculator": lazy(() => import("../tools/calculator/MortgageCalculator.jsx")),
+  "salary-to-hourly-calculator": lazy(() => import("../tools/calculator/SalaryToHourlyCalculator.jsx")),
+  "discount-calculator": lazy(() => import("../tools/calculator/DiscountCalculator.jsx")),
+  "sip-calculator": lazy(() => import("../tools/calculator/SipCalculator.jsx")),
+  "pregnancy-due-date-calculator": lazy(() => import("../tools/calculator/PregnancyCalculator.jsx")),
+  "time-zone-converter": lazy(() => import("../tools/calculator/TimeZoneConverter.jsx")),
+  "daily-water-intake-calculator": lazy(() => import("../tools/calculator/WaterIntakeCalculator.jsx")),
+  "fuel-cost-calculator": lazy(() => import("../tools/calculator/FuelCostCalculator.jsx"))
 };
 
 export default function ToolPage() {
@@ -39,7 +59,7 @@ export default function ToolPage() {
     return (
       <div className="container section">
         <h1>Tool not found</h1>
-        <p>There is no tool at this address. <Link to="/tools">Browse all 21 tools</Link>.</p>
+        <p>There is no tool at this address. <Link to="/tools">Browse all 41 tools</Link>.</p>
       </div>
     );
   }

@@ -29,21 +29,21 @@ export default function Home() {
   const submitSearch = (e) => { e.preventDefault(); navigate(query.trim() ? `/tools?q=${encodeURIComponent(query.trim())}` : "/tools"); };
   return (
     <div>
-      <SeoHead title="Free Online Tools" description="Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image and text tools." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
+      <SeoHead title="Free Online Tools" description="Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image, text and calculator tools." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
       {/* NOTE: WebSite + Organization JSON-LD now live statically in
           index.html so crawlers see them without JavaScript. */}
       {/* Hero — strategy tagline */}
       <section className="hero">
         <div className="container">
-          <p className="hero-badge">✦ 21 free tools · No sign-up · Privacy-first</p>
+          <p className="hero-badge">✦ 41 free tools · No sign-up · Privacy-first</p>
           <h1>Create. Optimize. Convert. <span className="accent">Grow.</span></h1>
-          <p>CreatorToolbox is a free collection of 21 online tools for YouTube, Instagram, TikTok, images and text — free with no sign-up, running in your browser so nothing is uploaded.</p>
+          <p>CreatorToolbox is a free collection of 41 online tools for YouTube, Instagram, TikTok, images, text and calculators — free with no sign-up, running in your browser so nothing is uploaded.</p>
           <form onSubmit={submitSearch}><SearchBar value={query} onChange={goSearch} /></form>
-          <p style={{ marginTop: 16 }}><Link to="/tools" className="btn" style={{ background: "var(--accent)", color: "#102A43" }}>Browse all 21 free tools <ArrowRight size={16} style={{ verticalAlign: "-2px" }} /></Link> <Link to="/workflows" className="btn secondary" style={{ marginLeft: 8 }}>See workflows</Link></p>
+          <p style={{ marginTop: 16 }}><Link to="/tools" className="btn" style={{ background: "var(--accent)", color: "#102A43" }}>Browse all 41 free tools <ArrowRight size={16} style={{ verticalAlign: "-2px" }} /></Link> <Link to="/workflows" className="btn secondary" style={{ marginLeft: 8 }}>See workflows</Link></p>
           <p style={{ fontSize: ".95rem", opacity: .85 }}>No sign-up for the core tools. Most tools run in your browser — nothing is uploaded.</p>
           <div className="hero-stats">
-            <div><b>21</b><span>free tools</span></div>
-            <div><b>5</b><span>categories</span></div>
+            <div><b>41</b><span>free tools</span></div>
+            <div><b>6</b><span>categories</span></div>
             <div><b>0</b><span>sign-up needed</span></div>
             <div><b>100%</b><span>browser-local</span></div>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
                 <span className="icon-chip"><Icon size={24} color="#176B58" aria-hidden="true" /></span>
                 <h3>{p.name}</h3>
                 <p>{p.description}</p>
-                <p><strong>{p.tools.length ? `${p.tools.length} tools in Stage 1` : "Coming in a later stage"}</strong></p>
+                <p><strong>{p.tools.length ? `${p.tools.length} tools` : "Coming in a later stage"}</strong></p>
               </article>
             );
           })}
@@ -105,8 +105,8 @@ export default function Home() {
       {/* All tools */}
       <section className="section container">
         <p className="kicker">Directory</p>
-        <h2>All 21 free online tools</h2>
-        <p className="lede">Searchable directory of all 21 free tools.</p>
+        <h2>All 41 free online tools</h2>
+        <p className="lede">Searchable directory of all 41 free tools.</p>
         <div className="grid">{TOOLS.map((t) => <ToolCard key={t.slug} tool={t} />)}</div>
         <p style={{ marginTop: 16 }}><Link to="/tools">Open the searchable tool directory →</Link> · <Link to="/collections">Browse tool collections →</Link></p>
       </section>
@@ -115,7 +115,7 @@ export default function Home() {
       <section className="section container">
         <p className="kicker">New</p>
         <h2>Recently added</h2>
-        <p className="lede">New in the Stage 1 launch: all 21 tools, plus workflows, workspaces and collections.</p>
+        <p className="lede">New: 20 calculator tools join the Stage 1 launch set of 21 tools, plus workflows, workspaces and collections.</p>
         <div className="grid">
           <article className="card"><h3><Link to="/workflows/youtube-creator">YouTube Creator Workflow</Link></h3><p>One topic carried through title, description, tags, thumbnail and a final check.</p></article>
           <article className="card"><h3><Link to="/workspaces">Workspaces</Link></h3><p>Save tool results into projects on your own device — no account needed.</p></article>

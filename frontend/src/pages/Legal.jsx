@@ -7,7 +7,7 @@ const PAGES = {
     sections: [
       ["What we collect", "We do not ask you to create an account. Tool inputs (text, images, numbers) stay in your browser unless a tool page explicitly says otherwise. The contact form opens your own email app; we receive only what you choose to send."],
       ["Local processing", "Image compression, resizing and conversion, text counting and conversion, and all template generators run locally in your browser. No files are uploaded for these tools."],
-      ["AI processing (when enabled)", "AI features (SEO Intelligence) send only the page content you submit for analysis to the configured AI provider (Cloudflare Workers AI by default, running in our Cloudflare Worker; Google Gemini only as a long-context overflow, and Hugging Face / AnyRouter / Groq / NVIDIA only as optional fallbacks). AI is not used for the 21 launch tools — those use templates or calculations, and each tool page says so."],
+      ["AI processing (when enabled)", "AI features (SEO Intelligence) send only the page content you submit for analysis to the configured AI provider (Cloudflare Workers AI by default, running in our Cloudflare Worker; Google Gemini only as a long-context overflow, and Hugging Face / AnyRouter / Groq / NVIDIA only as optional fallbacks). AI is not used for the tools on this site — those use templates or calculations, and each tool page says so."],
       ["Analytics", "Google Analytics 4 is configured but disabled by default. If enabled, it collects anonymised usage statistics (pages visited, tool used) and never receives your tool inputs, file contents or email addresses."],
       ["Advertising", "Google AdSense is disabled until the site is approved. After approval, Google and its partners may use cookies to serve ads. See the Cookie Policy for details."],
       ["Search Console connection", "The owner's Search Console connection (a later stage) stores an encrypted refresh token in our database. It is never shared with visitors and is not used for advertising."],
@@ -30,7 +30,7 @@ const PAGES = {
     title: "Disclaimer", path: "/disclaimer",
     intro: "CreatorToolbox tools are helpers, not professional advice.",
     sections: [
-      ["Calculators are estimates", "The YouTube Earnings Calculator and Instagram Engagement Calculator use the formulas shown on their pages. Real earnings and engagement depend on factors no calculator can know."],
+      ["Calculators are estimates", "The calculators on this site (YouTube earnings, Instagram engagement, percentage, age, BMI, loan/EMI and unit conversion) use the formulas shown on their pages. Real earnings, engagement, loan payments and health measures depend on factors no calculator can know."],
       ["Template generators are not AI", "Title, caption, bio, hook and hashtag generators use hand-written templates. They do not understand your content and may produce generic or unsuitable suggestions — review before using."],
       ["AI features (later stages)", "Where AI is used, its output can be wrong, outdated or incomplete. It never publishes changes automatically and should be checked against the source pages."],
       ["No professional advice", "Nothing on this site is financial, legal, medical or business advice."],

@@ -45,6 +45,7 @@ export default function Router() {
         <Route path="/tiktok-tools" element={<Category slug="tiktok-tools" />} />
         <Route path="/image-tools" element={<Category slug="image-tools" />} />
         <Route path="/text-tools" element={<Category slug="text-tools" />} />
+        <Route path="/calculator-tools" element={<Category slug="calculator-tools" />} />
         <Route path="/workflows" element={<Workflows />} />
         <Route path="/workflows/youtube-creator" element={<YoutubeWorkflow />} />
         <Route path="/workspaces" element={<Workspaces />} />
