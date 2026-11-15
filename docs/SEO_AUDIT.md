@@ -263,8 +263,9 @@ claims a ranking, traffic or indexing outcome.
     (reel 19) as a step in the daily GSC check; run it when the
     query list grows and turn real question queries into FAQ
     patches through the pipeline. Returns nothing today (all 8
-    current queries are non-question). Parent decision — the
-    cron body is parent-owned.
+    current queries are non-question). **CLOSED 2026-11-15** —
+    user approved, step 3a added to the daily-check cron
+    (creator-toolbox-weekly-striking-distance).
 
 ## How this document is maintained
 
