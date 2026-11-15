@@ -259,6 +259,12 @@ claims a ranking, traffic or indexing outcome.
     outreach only — pick competitors, run the gap tool, decide which,
     if any, shortlist sources to create, and record each one when it
     goes live.
+13. Question-query mining — add the GSC question-regex filter
+    (reel 19) as a step in the daily GSC check; run it when the
+    query list grows and turn real question queries into FAQ
+    patches through the pipeline. Returns nothing today (all 8
+    current queries are non-question). Parent decision — the
+    cron body is parent-owned.
 
 ## How this document is maintained
 
@@ -331,3 +337,17 @@ Method (from the "Ugly AI generated websites?" reel, aiwithdivyam, 2026-11-06): 
 - Decorative emoji — PASS (measured). The only non-text glyphs in the UI are ✦ (hero badge, Home.jsx) and ✓ / ✗ check marks (YoutubeWorkflow.jsx, Aeo.jsx) — functional marks, not decorative emoji.
 
 Honest caveats: the reel's "48,000+ stars" claim is unverified — the latest verified figure found is ~41,408 stars on 29 October 2026 (other late-October sources show 33.8k–43.8k), so the 48k figure is not adopted here. Stars measure attention, not outcomes; no independent study is cited that Hallmark-built pages convert better or are judged more trustworthy. Hallmark emits HTML + CSS, not production React components, so the skill cannot build this site's pages directly — its audit and redesign commands are the applicable part, and any AI-assisted prototype still falls under the reel-12 rebuild-to-standards rule (docs/ROADMAP.md). The reel's install is DM-gated (repo name and setup guide offered by DM); no DM was sent and no install was performed — the skill was verified from its public repo page and independent write-ups instead. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## Question-query mining — the GSC regex filter (reel 19, 2026-11-15)
+
+Method (from the "Google Hack #01" reel, Tech.vision24, 2026-11-13): in Google Search Console, Performance → Search results → + Add filter → Query → Custom (regex) → Matches regex, paste a question-word pattern, and the Queries table shows only question queries — the exact questions people search, instead of guessed topics. The reel gets the pattern from ChatGPT or Claude with the prompt "Create a regex that filters Search Console queries to only questions". The pattern as shown on screen (read from the video frame):
+
+`^(who|what|why|how|when|where|which|can|does|do|is|are|should|will|could|would)\b`
+
+How it works: `^` anchors to the start of the query, the group lists the question words, `\b` keeps the match to whole words (so "how" does not match "however"). Search Console uses RE2 syntax, matches partially and ignores case by default; the pattern uses no lookarounds or backreferences, so it is valid RE2. Verified 2026-11-15: the pattern was tested against 12 sample queries and matched exactly the question queries ("how to start a blog", "what is a backlink", do/does/should questions) and none of the non-question ones. Google's own June 2021 Search Central post suggested `what|how|when|why` for queries an FAQ could answer — the same idea with a shorter list.
+
+Rule for this site: a question query from this filter is a candidate FAQ for the matching tool page ONLY through the patch pipeline — real GSC query with its clicks, impressions, CTR and position, one patch per page, answer true of the tool. A question that matches no tool page gets no page and no forced content. The filter complements the daily check's striking-distance pass (position 5–20, 0 clicks) and CTR step; it does not replace them. Proposed: add the filter as a step in the daily GSC check (parent decision — the cron body is parent-owned). Open item 13.
+
+Measured status for this site (2026-11-15): the filter returns nothing today. All 8 current GSC queries (Last 28 days to 2026-11-14, 0 clicks, 11 impressions: "image compressor free online", "compress image online tool", "online image compressor", "image compression free online", "photo compressor free online", "free photo compress", "photo compressor online", "free online image compressor") are non-question queries — none starts with a question word, confirmed by testing the pattern against all eight. So no FAQ edit results from this reel today. Re-run the filter when the query list grows.
+
+Honest caveats: the reel opens with a Shark Tank India pitch clip — the "100Cr Business" overlay and the ₹14.2 crore (last 3 months) / ₹1.6 crore average revenue figures are from that TV pitch, unverified by us, and they are about that founder's business, not SEO results. The Search Console screenshots are mockups/demo data (0.8K clicks / 19K impressions; "how to start a blog" 980 clicks / 21.5K impressions; "what is a backlink" 640 / 11.2K) — not a real property's data and not this site's. "Rank #1 on Google" in the overlay is a marketing claim, not a guarantee: the filter reveals question queries, it does not rank pages. The pattern only catches questions that START with a question word — a question phrased later in the query ("image compressor how to use") is missed, so the filter undercounts questions. The reel shows no course pitch, affiliate link or DM gate — the regex is shown on screen in full. Nothing in this section claims a ranking, traffic or indexing outcome.
