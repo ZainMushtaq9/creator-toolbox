@@ -304,7 +304,7 @@ export const TOOLS = [
     slug: "image-compressor", name: "Image Compressor", category: "image-tools",
     title: "Free Image Compressor Online (No Upload)",
     description: "Compress JPG, PNG and WebP images in your browser. Adjust quality and download smaller files — no upload. Photos often shrink 50–80% at 70–80% quality.",
-    keywords: "image compressor, compress jpg, compress png, reduce image size, photo compressor, compress image online",
+    keywords: "image compressor, compress jpg, compress png, reduce image size, photo compressor, compress image online, compress image online free",
     howTo: ["Upload an image (JPG, PNG or WebP, up to 20 MB).", "Choose a quality level.", "Click Compress Image.", "Download the compressed file and compare sizes."],
     formats: "Input: JPG, PNG, WebP. Output: same format where possible; PNG transparency is preserved when output is PNG/WebP. JPG has no transparency.",
     examples: ["A 4 MB phone photo compressed to under 800 KB at 80% quality.", "A PNG screenshot with transparency kept as PNG so the transparent areas survive."],
@@ -318,6 +318,7 @@ export const TOOLS = [
       { q: "Can I compress PNG images here?", a: "Yes. Upload a PNG image, choose a quality level and download the compressed file. PNG transparency is preserved when the output is PNG or WebP." },
       { q: "Is this a photo compressor for phone pictures?", a: "Yes. Upload a phone photo, choose a quality level and download the smaller file. Compression runs entirely in your browser, so the photo never leaves your device." },
       { q: "Can I compress image online without uploading it?", a: "Yes. The tool runs entirely in your browser, so there is no upload and no sign-up." },
+      { q: "Can I compress image online free?", a: "Yes — this tool is free with no sign-up. Upload a JPG, PNG or WebP image (up to 20 MB), choose a quality level and download the smaller file. Compression runs entirely in your browser, so your image is never uploaded." },
     ],
     related: ["image-resizer", "jpg-to-png-converter", "youtube-thumbnail-resizer", "instagram-post-size-calculator"]
   },
