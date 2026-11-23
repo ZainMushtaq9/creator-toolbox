@@ -1,4 +1,5 @@
-// Unit tests for the PDF toolkit (Patch 050) — pure pdf-lib logic only.
+// Unit tests for the PDF toolkit (Patch 050; Patch 051 adds the merge
+// page-count display tests) — pure pdf-lib logic only.
 // Run: `npm test` (repo root). Fixtures are generated in-memory with
 // pdf-lib (no checked-in binary files); the 8x8 JPEG/PNG fixtures below
 // were generated with Pillow. PDF.js rendering, Tesseract OCR and
@@ -11,7 +12,8 @@ import pkg from "../../frontend/node_modules/pdf-lib/cjs/index.js";
 import {
   mergePdfs, splitPdfRange, splitPdfAll, rotatePdf, compressPdf,
   watermarkPdf, addPageNumbers, imagesToPdf, signPdf, getPdfPageCount,
-  parsePageRanges, formatBytes, validatePdfFile,
+  parsePageRanges, formatBytes, formatPageCount, formatMergeResult,
+  validatePdfFile,
 } from "../../frontend/src/tools/pdf/pdfUtils.js";
 import { textPagesToDocx } from "../../frontend/src/tools/pdf/pdfDocx.js";
 
@@ -41,6 +43,22 @@ test("mergePdfs joins two PDFs in order", async () => {
   const b = await makePdf(2, "B");
   const merged = await mergePdfs([a, b]);
   assert.equal(await getPdfPageCount(merged), 5);
+});
+
+test("merged PDF page count equals the sum of its parts (2 + 1 = 3)", async () => {
+  const a = await makePdf(2, "A");
+  const b = await makePdf(1, "B");
+  const merged = await mergePdfs([a, b]);
+  assert.equal(await getPdfPageCount(merged), 3);
+});
+
+test("formatPageCount uses the singular for one page", () => {
+  assert.equal(formatPageCount(1), "1 page");
+  assert.equal(formatPageCount(3), "3 pages");
+});
+
+test("formatMergeResult shows file count, total pages and size", () => {
+  assert.equal(formatMergeResult(2, 3, 2048), "Merged 2 PDFs (3 pages) into one file — 2 KB.");
 });
 
 test("splitPdfRange extracts a page range", async () => {

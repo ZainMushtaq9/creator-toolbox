@@ -21,6 +21,16 @@ export function validatePdfFile(file, maxBytes = MAX_PDF_BYTES) {
   return "";
 }
 
+// "1 page" / "3 pages" — used by the Merge PDF file list and result.
+export function formatPageCount(n) {
+  return `${n} page${n === 1 ? "" : "s"}`;
+}
+
+// Merge PDF success message: file count, total page count, output size.
+export function formatMergeResult(fileCount, totalPages, size) {
+  return `Merged ${fileCount} PDFs (${formatPageCount(totalPages)}) into one file — ${formatBytes(size)}.`;
+}
+
 export function validateImageFile(file, maxBytes = MAX_PDF_BYTES) {
   if (!file) return "Choose an image first.";
   const ok = /^image\/(jpeg|png)$/.test(file.type) || /\.(jpe?g|png)$/i.test(file.name || "");

@@ -7,7 +7,7 @@
 import { PDFDocument, StandardFonts, rgb, degrees } from "pdf-lib";
 import { formatBytes } from "./pdfSmall.js";
 
-export { MAX_PDF_BYTES, MAX_MERGE_FILES, MAX_OCR_PAGES, formatBytes, validatePdfFile, validateImageFile, parsePageRanges } from "./pdfSmall.js";
+export { MAX_PDF_BYTES, MAX_MERGE_FILES, MAX_OCR_PAGES, formatBytes, formatPageCount, formatMergeResult, validatePdfFile, validateImageFile, parsePageRanges } from "./pdfSmall.js";
 
 export async function readFileBytes(file) {
   return new Uint8Array(await file.arrayBuffer());
