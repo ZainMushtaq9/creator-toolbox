@@ -7,7 +7,8 @@ export const CATEGORIES = [
   { slug: "tiktok-tools", path: "/tiktok-tools", name: "TikTok Tools", icon: "Music2", description: "Hooks, captions and hashtags for TikTok videos." },
   { slug: "image-tools", path: "/image-tools", name: "Image Tools", icon: "Image", description: "Compress, resize and convert images right in your browser — no upload needed." },
   { slug: "text-tools", path: "/text-tools", name: "Text Tools", icon: "Type", description: "Count words and characters, and convert text case in seconds." },
-  { slug: "calculator-tools", path: "/calculator-tools", name: "Calculator Tools", icon: "Calculator", description: "Free everyday calculators — percentages, age, BMI, loan EMI and unit conversion — that run in your browser with the formula shown." }
+  { slug: "calculator-tools", path: "/calculator-tools", name: "Calculator Tools", icon: "Calculator", description: "Free everyday calculators — percentages, age, BMI, loan EMI and unit conversion — that run in your browser with the formula shown." },
+  { slug: "pdf-tools", path: "/pdf-tools", name: "PDF Tools", icon: "FileText", description: "Merge, split, compress, rotate, watermark, sign and convert PDF files in your browser — free, no sign-up, and nothing is ever uploaded to a server." }
 ];
 
 export const TOOLS = [
@@ -805,6 +806,227 @@ export const TOOLS = [
       { q: "Is it free?", a: "Yes, free with no sign-up." }
     ],
     related: ["unit-converter", "percentage-calculator", "daily-water-intake-calculator", "pakistan-electricity-bill-calculator"]
+  },
+  {
+    slug: "merge-pdf", name: "Merge PDF", category: "pdf-tools",
+    title: "Free Merge PDF Online (No Upload)",
+    description: "Merge PDF files into one document in your browser — free, no sign-up, no upload. Add up to 20 PDFs, reorder them, then download the combined file in seconds.",
+    keywords: "merge pdf, combine pdf, merge pdf files, merge pdf online free, join pdf files",
+    howTo: ["Add up to 20 PDF files (20 MB each).", "Use the up and down arrows to set the order.", "Click Merge PDFs.", "Download the single combined PDF."],
+    formats: "Input: PDF files (up to 20, 20 MB each). Output: one PDF with the pages in the order you set. Encrypted PDFs cannot be merged.",
+    examples: ["Three chapters of a report merged into one document for submission.", "Scanned pages merged into a single PDF to email."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Merging runs entirely in your browser with pdf-lib. Your files never leave your device." },
+      { q: "How many PDFs can I merge at once?", a: "Up to 20 PDFs, 20 MB each. Use the up and down arrows to set the page order before merging." },
+      { q: "Can I merge password-protected PDFs?", a: "No. Encrypted PDFs cannot be opened in the browser — pdf-lib cannot decrypt them. Unlock the PDF first, then merge it." },
+      { q: "Does merging change the quality of my PDFs?", a: "No. Pages are copied unchanged into the new file — text, images and formatting stay as they were." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["split-pdf", "compress-pdf", "rotate-pdf", "images-to-pdf"]
+  },
+  {
+    slug: "split-pdf", name: "Split PDF", category: "pdf-tools",
+    title: "Free Split PDF Online (No Upload)",
+    description: "Split a PDF into single pages or extract a page range — free, in your browser, no upload. Download each part as its own PDF file, ready to share or print.",
+    keywords: "split pdf, extract pdf pages, split pdf online free, separate pdf pages, pdf splitter",
+    howTo: ["Upload a PDF (up to 20 MB).", "Choose a page range, or split into single pages.", "Click Split PDF.", "Download the part — or download all parts at once."],
+    formats: "Input: one PDF (up to 20 MB). Output: one PDF per part. Encrypted PDFs cannot be split.",
+    examples: ["Extracting pages 4–6 of a contract to send to a colleague.", "Splitting a 12-page scan into 12 single-page PDFs."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Splitting runs entirely in your browser. Your file never leaves your device." },
+      { q: "Can I extract non-adjacent pages, like pages 1, 5 and 9?", a: "Partly — enter 1, 5, 9 and the tool extracts the range from the first to the last page you list, so pages 2–4 and 6–8 come along too. For exact non-adjacent pages, split into single pages and keep the ones you need." },
+      { q: "Can I split a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "What is the maximum file size?", a: "20 MB per PDF." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["merge-pdf", "pdf-to-text", "pdf-to-images", "rotate-pdf"]
+  },
+  {
+    slug: "compress-pdf", name: "Compress PDF", category: "pdf-tools",
+    title: "Free Compress PDF Online (No Upload)",
+    description: "Reduce PDF file size in your browser — free, no upload, no sign-up. Re-saves your PDF with compressed streams; savings are usually small, often 0–20%.",
+    keywords: "compress pdf, reduce pdf size, pdf compressor, compress pdf online free, shrink pdf",
+    howTo: ["Upload a PDF (up to 20 MB).", "Click Compress PDF.", "Read the before-and-after sizes.", "Download the compressed file."],
+    formats: "Input: one PDF (up to 20 MB). Output: one PDF. No quality is lost — and savings are usually small (often 0–20%). Encrypted PDFs cannot be compressed.",
+    examples: ["A 12 MB report re-saved at 10 MB for an email attachment.", "A PDF that was already compressed — returned unchanged, with the page saying so."],
+    faqs: [
+      { q: "How much smaller will my PDF get?", a: "Usually only a little. This tool re-saves the PDF with compressed object streams — typical savings are 0–20%, because most PDFs are already compressed. If no saving is possible, the file is returned unchanged and the page says so." },
+      { q: "Does compression reduce quality?", a: "No. Nothing is re-encoded — the pages, text and images are identical. That is also why the savings are modest: real shrinking needs image re-encoding, which this tool does not do." },
+      { q: "Is my PDF uploaded to a server?", a: "No. Compression runs entirely in your browser." },
+      { q: "Can I compress a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["merge-pdf", "pdf-to-images", "image-compressor", "split-pdf"]
+  },
+  {
+    slug: "rotate-pdf", name: "Rotate PDF", category: "pdf-tools",
+    title: "Free Rotate PDF Online (No Upload)",
+    description: "Rotate PDF pages by 90, 180 or 270 degrees in your browser — free, no upload. Fix sideways scans or upside-down pages, then download the corrected PDF.",
+    keywords: "rotate pdf, rotate pdf pages, rotate pdf online free, fix sideways pdf",
+    howTo: ["Upload a PDF (up to 20 MB).", "Pick a rotation: 90°, 180° or 270°.", "Choose all pages or a page range.", "Click Rotate PDF and download the result."],
+    formats: "Input: one PDF (up to 20 MB). Output: one PDF with the pages rotated. Encrypted PDFs cannot be rotated.",
+    examples: ["A phone scan saved sideways, rotated 90° so it reads correctly.", "One upside-down page in a 10-page document, rotated 180° on its own."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Rotation runs entirely in your browser." },
+      { q: "Can I rotate only some pages?", a: "Yes. Choose “A page range” and enter the first and last page — only those pages are rotated." },
+      { q: "Does rotation change the file's content?", a: "No. It only changes each page's rotation setting — the text and images are untouched." },
+      { q: "Can I rotate a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["merge-pdf", "split-pdf", "watermark-pdf", "add-page-numbers"]
+  },
+  {
+    slug: "images-to-pdf", name: "Images to PDF", category: "pdf-tools",
+    title: "Free Images to PDF Converter Online",
+    description: "Convert JPG and PNG images into a PDF in your browser — free, no upload, no sign-up. One image per A4 page, in the order you choose, ready to share or print.",
+    keywords: "images to pdf, jpg to pdf, png to pdf, convert image to pdf, pictures to pdf",
+    howTo: ["Add JPG or PNG images (up to 20, 20 MB each).", "Use the arrows to set the page order.", "Click Convert Images to PDF.", "Download the PDF — one image per A4 page."],
+    formats: "Input: JPG or PNG images (up to 20, 20 MB each). Output: one PDF, one image per A4 page, scaled to fit with a margin.",
+    examples: ["Phone photos of handwritten notes turned into one PDF to share.", "Scanned receipts combined into a single PDF for expenses."],
+    faqs: [
+      { q: "Is my image uploaded to a server?", a: "No. Conversion runs entirely in your browser." },
+      { q: "What image formats work?", a: "JPG and PNG. Each image becomes one A4 page, scaled to fit with a margin." },
+      { q: "Can I change the page order?", a: "Yes. Use the up and down arrows to reorder the images before converting." },
+      { q: "How many images can I convert at once?", a: "Up to 20 images, 20 MB each." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pdf-to-images", "merge-pdf", "image-compressor", "image-resizer"]
+  },
+  {
+    slug: "pdf-to-images", name: "PDF to Images", category: "pdf-tools",
+    title: "Free PDF to Images Converter Online",
+    description: "Convert PDF pages to PNG or JPG images in your browser — free, no upload. Pick the pages and the resolution, then download each page as an image file.",
+    keywords: "pdf to images, pdf to png, pdf to jpg, convert pdf to image, pdf pages to images",
+    howTo: ["Upload a PDF (up to 20 MB).", "Pick PNG or JPG, and a resolution.", "Enter pages, or leave blank for all pages.", "Click Convert PDF to Images and download each image."],
+    formats: "Input: one PDF (up to 20 MB). Output: PNG or JPG images, one per page, at 72 dpi (standard) or 144 dpi (high). Encrypted PDFs cannot be converted.",
+    examples: ["A PDF page exported as a PNG to drop into a slide deck.", "A full brochure converted to JPG images for a photo gallery."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Pages are rendered locally with PDF.js. Your file never leaves your device." },
+      { q: "PNG or JPG — which should I choose?", a: "PNG for text, screenshots and line art — it stays sharp. JPG for photos — the files are smaller." },
+      { q: "What resolution do the images come out at?", a: "Standard is 72 dpi; High is 144 dpi (2x), which looks better when printed or zoomed." },
+      { q: "Can I convert only some pages?", a: "Yes. Enter the pages you want (e.g. 1-3, 5) or leave the field blank for all pages." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["images-to-pdf", "pdf-to-text", "ocr-pdf", "image-resizer"]
+  },
+  {
+    slug: "pdf-to-text", name: "PDF to Text", category: "pdf-tools",
+    title: "Free PDF to Text Converter Online",
+    description: "Extract the text from a PDF in your browser — free, no upload, no sign-up. Copy it or download a .txt file. Works on text-based PDFs, not scanned images.",
+    keywords: "pdf to text, extract text from pdf, pdf text extractor, convert pdf to txt",
+    howTo: ["Upload a PDF (up to 20 MB).", "Click Extract Text.", "Read the extracted text in the box.", "Copy it, or download it as a .txt file."],
+    formats: "Input: one PDF (up to 20 MB). Output: plain text. Works on text-based PDFs only — scanned PDFs have no text layer; use the OCR tool for those.",
+    examples: ["Copying a paragraph out of a research paper without retyping it.", "Extracting the text of a report to search it in an editor."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Text is read locally with PDF.js. Your file never leaves your device." },
+      { q: "Why did I get no text from my PDF?", a: "Scanned PDFs are images, not text — they have no text layer to extract. Use the OCR PDF & Images tool instead; it reads text from scanned pages." },
+      { q: "Does it keep the formatting?", a: "No. The output is plain text — fonts, columns and tables are not preserved. For editable paragraphs in Word, use the PDF to Word tool." },
+      { q: "Can I extract text from a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pdf-to-word", "ocr-pdf", "pdf-to-images", "word-counter"]
+  },
+  {
+    slug: "watermark-pdf", name: "Watermark PDF", category: "pdf-tools",
+    title: "Free Watermark PDF Online (No Upload)",
+    description: "Add a text watermark to every page of a PDF in your browser — free, no upload. Set your own wording, size and opacity, then download the stamped PDF file.",
+    keywords: "watermark pdf, add watermark to pdf, pdf watermark online free, stamp pdf",
+    howTo: ["Upload a PDF (up to 20 MB).", "Enter the watermark text (e.g. DRAFT).", "Set the opacity and text size.", "Click Add Watermark and download the stamped PDF."],
+    formats: "Input: one PDF (up to 20 MB). Output: one PDF with the text stamped diagonally on every page. Text watermark only — no image watermarks. Encrypted PDFs cannot be watermarked.",
+    examples: ["Stamping DRAFT across a proposal before sharing it.", "Adding a name as a watermark to a sample document."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Watermarking runs entirely in your browser." },
+      { q: "Can the watermark be removed afterwards?", a: "The watermark is drawn into each page as text, so it is part of the PDF — it cannot be toggled off. Keep an unwatermarked copy if you need one." },
+      { q: "Can I use an image as a watermark?", a: "Not in this tool — it stamps text only. For a logo or signature image, use the Sign PDF tool, which places an image on a page." },
+      { q: "Can I watermark a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["sign-pdf", "add-page-numbers", "merge-pdf", "rotate-pdf"]
+  },
+  {
+    slug: "add-page-numbers", name: "Add Page Numbers to PDF", category: "pdf-tools",
+    title: "Free Add Page Numbers to PDF Online",
+    description: "Add page numbers to a PDF in your browser — free, no upload, no sign-up. Choose the position, format and start number, then download the numbered PDF.",
+    keywords: "add page numbers to pdf, number pdf pages, pdf page numbers online free",
+    howTo: ["Upload a PDF (up to 20 MB).", "Pick a position, a format and a start number.", "Click Add Page Numbers.", "Download the numbered PDF."],
+    formats: "Input: one PDF (up to 20 MB). Output: one PDF with a number on every page. Formats: 1, 2, 3… / Page 1… / 1 of 12…. Encrypted PDFs cannot be numbered.",
+    examples: ["Numbering a 40-page thesis from the title page.", "Numbering one chapter starting at page 87 to match the full book."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Numbering runs entirely in your browser." },
+      { q: "Can I start numbering at a number other than 1?", a: "Yes. Set “Start at” to any number — useful when your PDF is one chapter of a longer document." },
+      { q: "What number formats are available?", a: "Plain numbers (1, 2, 3), “Page 1” style, or “1 of 12” style with the total page count." },
+      { q: "Can I number a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["watermark-pdf", "merge-pdf", "split-pdf", "pdf-to-word"]
+  },
+  {
+    slug: "sign-pdf", name: "Sign PDF", category: "pdf-tools",
+    title: "Free Sign PDF Online (No Upload)",
+    description: "Sign a PDF in your browser — free, no upload, no sign-up. Draw your signature or upload a signature image, place it on the page, then download the signed PDF.",
+    keywords: "sign pdf, sign pdf online free, add signature to pdf, esign pdf free",
+    howTo: ["Upload a PDF (up to 20 MB).", "Draw your signature, or upload a signature image.", "Pick the page, position and size.", "Click Sign PDF and download the signed file."],
+    formats: "Input: one PDF (up to 20 MB) plus a drawn signature or a JPG/PNG signature image. Output: one PDF with the signature image on one page. This is a visible signature image, not a certified digital signature.",
+    examples: ["Signing a permission slip by drawing a signature with the mouse.", "Stamping a scanned signature onto the last page of a contract."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Signing runs entirely in your browser. Your document and signature never leave your device." },
+      { q: "Is this a legally certified digital signature?", a: "No. This tool places a visible signature image on the page. It does not add cryptographic signing or a certificate — for contracts that need a certified signature, use a dedicated e-signature service." },
+      { q: "Can I use my own signature image?", a: "Yes. Upload a JPG or PNG — a PNG with a transparent background looks best, because the white box around the signature disappears." },
+      { q: "Can I sign a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["watermark-pdf", "pdf-to-word", "merge-pdf", "add-page-numbers"]
+  },
+  {
+    slug: "pdf-to-word", name: "PDF to Word", category: "pdf-tools",
+    title: "Free PDF to Word Converter (Text-Based)",
+    description: "Convert a PDF to an editable Word (.docx) document in your browser — free, no upload. Text-based: it extracts the text, it does not rebuild the layout.",
+    keywords: "pdf to word, convert pdf to docx, pdf to word converter free, pdf to editable word",
+    howTo: ["Upload a PDF (up to 20 MB).", "Click Convert PDF to Word.", "Wait while the text is extracted page by page.", "Download the .docx file and open it in Word."],
+    formats: "Input: one PDF (up to 20 MB). Output: one .docx file with the extracted text as editable paragraphs. Text-based only — layout, fonts, tables and images are NOT rebuilt. Scanned PDFs return no text.",
+    examples: ["Turning a PDF report into a Word file to edit one paragraph.", "Converting a PDF essay to Word to reformat it for submission."],
+    faqs: [
+      { q: "Is my PDF uploaded to a server?", a: "No. Conversion runs entirely in your browser." },
+      { q: "Does the Word file keep the PDF's layout?", a: "No. This is a text-based conversion: it extracts the text into editable paragraphs. Fonts, columns, tables and images are not rebuilt — a layout-perfect conversion needs a server-side engine." },
+      { q: "What if my PDF is a scan?", a: "Scanned PDFs have no text to extract, so the conversion returns nothing. Use the OCR PDF & Images tool to read the text first, then paste it into Word." },
+      { q: "Can I convert a password-protected PDF?", a: "No. Encrypted PDFs cannot be opened in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pdf-to-text", "ocr-pdf", "word-counter", "text-case-converter"]
+  },
+  {
+    slug: "ocr-pdf", name: "OCR PDF & Images", category: "pdf-tools",
+    title: "Free OCR PDF & Images Online",
+    description: "Extract text from a scanned PDF or an image in your browser — free, no upload. OCR runs locally with Tesseract; best on clear, straight scans in English.",
+    keywords: "ocr pdf, image to text, ocr online, extract text from image, pdf ocr online, scan to text",
+    howTo: ["Upload a scanned PDF, JPG or PNG (up to 20 MB).", "Click Read Text (OCR).", "Wait while Tesseract reads the pages — the engine downloads on first use.", "Copy the text, or download it as a .txt file."],
+    formats: "Input: a scanned PDF (first 10 pages are read), JPG or PNG (up to 20 MB). Output: plain text. English only. The OCR engine downloads from a public CDN on first use; your file is never uploaded.",
+    examples: ["Reading the text off a scanned letter to paste into an email.", "Extracting the text from a photo of a printed page."],
+    faqs: [
+      { q: "Is my file uploaded to a server?", a: "No. OCR runs locally in your browser with Tesseract.js — your file never leaves your device. The OCR engine itself (code and English language data) downloads from a public CDN the first time you use it." },
+      { q: "Which languages does it read?", a: "English only. Other languages need extra language data, which this tool does not load." },
+      { q: "Why is the text full of mistakes?", a: "OCR works best on clear, straight, printed text. Blurry, skewed or handwritten pages misread often — 0 and O, 1 and l are common confusions. Always proofread important text." },
+      { q: "How many pages of a PDF are read?", a: "The first 10 pages. Longer PDFs are cut off there to keep the tool fast in the browser." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["pdf-to-text", "pdf-to-word", "pdf-to-images", "word-counter"]
+  },
+  {
+    slug: "html-to-pdf", name: "HTML to PDF", category: "pdf-tools",
+    title: "Free HTML to PDF Converter Online",
+    description: "Convert HTML code into a PDF in your browser — free, no upload, no sign-up. Paste HTML, preview the rendered page, then download it as a PDF document.",
+    keywords: "html to pdf, convert html to pdf, html to pdf online free, webpage to pdf",
+    howTo: ["Paste your HTML code (or edit the sample invoice).", "Check the preview — it shows what will be captured.", "Pick a page size and orientation.", "Click Convert HTML to PDF and download the file."],
+    formats: "Input: HTML code you paste in. Output: one PDF (A4 or Letter, portrait or landscape). Scripts do not run; complex CSS may render differently than in a browser. Cannot fetch a URL.",
+    examples: ["Turning an HTML invoice template into a PDF to send a client.", "Saving a styled HTML report as a PDF for printing."],
+    faqs: [
+      { q: "Is my HTML uploaded to a server?", a: "No. The page is rendered and captured locally in your browser." },
+      { q: "Do scripts in my HTML run?", a: "No. JavaScript does not run in the renderer, and external images may fail to load. Keep the HTML self-contained — inline styles work best." },
+      { q: "Why does the PDF look different from my browser?", a: "The renderer (html2canvas) supports common CSS but not everything — complex flexbox/grid layouts, web fonts and some positioning can differ. The preview on the page shows exactly what will be captured." },
+      { q: "Can I convert a live website URL?", a: "No. This tool converts HTML code you paste in. It cannot fetch a URL." },
+      { q: "Is it free?", a: "Yes, free with no sign-up." }
+    ],
+    related: ["images-to-pdf", "pdf-to-images", "merge-pdf", "word-counter"]
   }
 ];
 

@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/pdf-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/youtube-title-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -242,6 +247,71 @@
   </url>
   <url>
     <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/fuel-cost-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/merge-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/split-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/compress-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/rotate-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/images-to-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/pdf-to-images</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/pdf-to-text</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/watermark-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/add-page-numbers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/sign-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/pdf-to-word</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/ocr-pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zainmushtaq9.github.io/creator-toolbox/tools/html-to-pdf</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

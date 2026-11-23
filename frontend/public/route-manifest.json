@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T10:26:36.216Z",
+  "generatedAt": "2026-11-23T10:34:04.469Z",
   "tools": [
     "/tools/youtube-title-generator",
     "/tools/youtube-description-generator",
@@ -41,7 +41,20 @@
     "/tools/pregnancy-due-date-calculator",
     "/tools/time-zone-converter",
     "/tools/daily-water-intake-calculator",
-    "/tools/fuel-cost-calculator"
+    "/tools/fuel-cost-calculator",
+    "/tools/merge-pdf",
+    "/tools/split-pdf",
+    "/tools/compress-pdf",
+    "/tools/rotate-pdf",
+    "/tools/images-to-pdf",
+    "/tools/pdf-to-images",
+    "/tools/pdf-to-text",
+    "/tools/watermark-pdf",
+    "/tools/add-page-numbers",
+    "/tools/sign-pdf",
+    "/tools/pdf-to-word",
+    "/tools/ocr-pdf",
+    "/tools/html-to-pdf"
   ],
   "categories": [
     "/youtube-tools",
@@ -49,7 +62,8 @@
     "/tiktok-tools",
     "/image-tools",
     "/text-tools",
-    "/calculator-tools"
+    "/calculator-tools",
+    "/pdf-tools"
   ],
   "collections": [
     "/collections/youtube-starter-kit",
@@ -79,6 +93,7 @@
     "/image-tools",
     "/text-tools",
     "/calculator-tools",
+    "/pdf-tools",
     "/tools/youtube-title-generator",
     "/tools/youtube-description-generator",
     "/tools/youtube-hashtag-generator",
@@ -120,6 +135,19 @@
     "/tools/time-zone-converter",
     "/tools/daily-water-intake-calculator",
     "/tools/fuel-cost-calculator",
+    "/tools/merge-pdf",
+    "/tools/split-pdf",
+    "/tools/compress-pdf",
+    "/tools/rotate-pdf",
+    "/tools/images-to-pdf",
+    "/tools/pdf-to-images",
+    "/tools/pdf-to-text",
+    "/tools/watermark-pdf",
+    "/tools/add-page-numbers",
+    "/tools/sign-pdf",
+    "/tools/pdf-to-word",
+    "/tools/ocr-pdf",
+    "/tools/html-to-pdf",
     "/workflows",
     "/workflows/youtube-creator",
     "/workspaces",

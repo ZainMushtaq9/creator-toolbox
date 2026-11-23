@@ -1,0 +1,360 @@
+{
+  "generatedAt": "2026-11-23T10:37:29.148Z",
+  "method": "Rendered DOM via headless Chromium against vite preview of the production build; site audit engine (pageAudit/gsoAnalysis/aeoAnalysis).",
+  "rows": [
+    {
+      "slug": "merge-pdf",
+      "path": "/tools/merge-pdf",
+      "keyword": "merge pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "split-pdf",
+      "path": "/tools/split-pdf",
+      "keyword": "split pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 93,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 8,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "compress-pdf",
+      "path": "/tools/compress-pdf",
+      "keyword": "compress pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "rotate-pdf",
+      "path": "/tools/rotate-pdf",
+      "keyword": "rotate pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "images-to-pdf",
+      "path": "/tools/images-to-pdf",
+      "keyword": "images to pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "pdf-to-images",
+      "path": "/tools/pdf-to-images",
+      "keyword": "pdf to images",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "pdf-to-text",
+      "path": "/tools/pdf-to-text",
+      "keyword": "pdf to text",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 91,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 14,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "watermark-pdf",
+      "path": "/tools/watermark-pdf",
+      "keyword": "watermark pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "add-page-numbers",
+      "path": "/tools/add-page-numbers",
+      "keyword": "add page numbers to pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "sign-pdf",
+      "path": "/tools/sign-pdf",
+      "keyword": "sign pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "pdf-to-word",
+      "path": "/tools/pdf-to-word",
+      "keyword": "pdf to word",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 91,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 14,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "ocr-pdf",
+      "path": "/tools/ocr-pdf",
+      "keyword": "ocr pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "html-to-pdf",
+      "path": "/tools/html-to-pdf",
+      "keyword": "html to pdf",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 93,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 8,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "7/8",
+      "aeoFailed": [
+        "Direct answer early"
+      ]
+    },
+    {
+      "slug": "pdf-tools",
+      "path": "/pdf-tools",
+      "keyword": "pdf tools",
+      "seo": 100,
+      "seoFindings": [
+        "info: Core Web Vitals (LCP/INP/CLS) were not measured by this audit — they need production measurement."
+      ],
+      "gso": 92,
+      "gsoFactors": {
+        "completeness": 20,
+        "factualSupport": 15,
+        "originality": 7,
+        "clarity": 10,
+        "topicCoverage": 10,
+        "structure": 10,
+        "entityClarity": 5,
+        "crawlability": 10,
+        "freshness": 5
+      },
+      "aeo": "3/8",
+      "aeoFailed": [
+        "Direct answer early",
+        "Question-led headings",
+        "Examples present",
+        "Tables used",
+        "FAQ section"
+      ]
+    }
+  ]
+}

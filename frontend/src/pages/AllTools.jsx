@@ -28,9 +28,9 @@ export default function AllTools() {
   }, [query, filteredCount]);
   return (
     <div className="container section">
-      <SeoHead title="All Free Tools" description="Browse all 41 free CreatorToolbox tools — YouTube, Instagram, TikTok, image, text and calculator tools that run in your browser." path="/tools" />
+      <SeoHead title="All Free Tools" description="Browse all 54 free CreatorToolbox tools — YouTube, Instagram, TikTok, image, text, PDF and calculator tools that run in your browser, free with no sign-up." path="/tools" />
       <h1>All Tools</h1>
-      <p className="lede">41 free tools. Most run entirely in your browser — no upload, no sign-up.</p>
+      <p className="lede">54 free tools. Most run entirely in your browser — no upload, no sign-up.</p>
       <SearchBar value={query} onChange={setQuery} />
       <div className="toolbar" role="group" aria-label="Filter by category">
         <button type="button" className={`chip${category === "all" ? " active" : ""}`} onClick={() => setCategory("all")}>All ({TOOLS.length})</button>

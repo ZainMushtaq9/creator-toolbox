@@ -10,7 +10,7 @@
     "validate:metadata": "node scripts/validate-metadata.js",
     "validate:links": "node scripts/validate-links.js",
     "manifest": "node scripts/build-route-manifest.js",
-    "test": "node --test tests/unit/services.test.mjs tests/security/fetch.test.mjs tests/seo/seo.test.mjs",
+    "test": "node --test tests/unit/services.test.mjs tests/unit/pdf.test.mjs tests/security/fetch.test.mjs tests/seo/seo.test.mjs",
     "test:backend": "npm --prefix backend test",
     "test:e2e": "node --test tests/e2e/smoke.test.mjs",
     "test:all": "npm test && npm run test:backend && npm run test:e2e"

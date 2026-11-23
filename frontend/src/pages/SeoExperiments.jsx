@@ -52,7 +52,7 @@ export default function SeoExperiments() {
         <label htmlFor="se-pos">Average position</label>
         <input id="se-pos" className="input" type="number" min="0" step="0.1" value={form.position} onChange={(e) => setForm({ ...form, position: e.target.value })} />
         <div className="toolbar"><button type="button" className="btn" onClick={add}>Save Experiment</button></div>
-        {msg && <p className="success">{msg}</p>}
+        {msg && <p className="success" role="status">{msg}</p>}
       </div>
       {items.map((it) => (
         <article className="card" key={it.id} style={{ marginTop: 16 }}>

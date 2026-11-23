@@ -12,11 +12,11 @@ import { ARTICLES } from "../config/blog.js";
 import { faqJsonLd } from "../config/seo.js";
 
 const PILLAR_ICONS = { Clapperboard, Image, Code2, Search, Sparkles };
-const POPULAR = ["youtube-title-generator", "image-compressor", "word-counter", "instagram-caption-generator", "youtube-thumbnail-resizer", "tiktok-hook-generator"];
+const POPULAR = ["youtube-title-generator", "image-compressor", "word-counter", "instagram-caption-generator", "youtube-thumbnail-resizer", "tiktok-hook-generator", "merge-pdf"];
 const HOME_FAQS = [
   { q: "Are the tools really free?", a: "Yes — the core tools are free with no subscription required. Some have transparent limits (for example a 20 MB file limit), shown on each tool page." },
   { q: "Do I need an account?", a: "No. There is no signup for the core tools. Workspaces save to your browser's local storage on your own device." },
-  { q: "Are my files uploaded?", a: "No, for the image and text tools. They run locally in your browser. AI features in later stages will say clearly what is sent and where." },
+  { q: "Are my files uploaded?", a: "No, for the image, text and PDF tools. They run locally in your browser. AI features in later stages will say clearly what is sent and where." },
   { q: "Do the generators use AI?", a: "Not in Stage 1. Title, caption, bio, hook and hashtag generators use hand-written templates, and each tool page says so. AI features will be labelled AI when they arrive." },
   { q: "What is SEO Intelligence?", a: "It is the later advanced product — keyword research, audits, competitor analysis and Search Console, for the site owner. It is not part of the Stage 1 launch." }
 ];
@@ -29,21 +29,21 @@ export default function Home() {
   const submitSearch = (e) => { e.preventDefault(); navigate(query.trim() ? `/tools?q=${encodeURIComponent(query.trim())}` : "/tools"); };
   return (
     <div>
-      <SeoHead title="Free Online Tools" description="Free online tools and AI-powered productivity for everyone. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image, text and calculator tools." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
+      <SeoHead title="Free Online Tools" description="Free online tools for everyone — no sign-up. Create, optimize, convert and grow with free YouTube, Instagram, TikTok, image, text, PDF and calculator tools." path="/" jsonLd={faqJsonLd(HOME_FAQS)} />
       {/* NOTE: WebSite + Organization JSON-LD now live statically in
           index.html so crawlers see them without JavaScript. */}
       {/* Hero — strategy tagline */}
       <section className="hero">
         <div className="container">
-          <p className="hero-badge">✦ 41 free tools · No sign-up · Privacy-first</p>
+          <p className="hero-badge">✦ 54 free tools · No sign-up · Privacy-first</p>
           <h1>Create. Optimize. Convert. <span className="accent">Grow.</span></h1>
-          <p>CreatorToolbox is a free collection of 41 online tools for YouTube, Instagram, TikTok, images, text and calculators — free with no sign-up, running in your browser so nothing is uploaded.</p>
+          <p>CreatorToolbox is a free collection of 54 online tools for YouTube, Instagram, TikTok, images, text, PDFs and calculators — free with no sign-up, running in your browser so nothing is uploaded.</p>
           <form onSubmit={submitSearch}><SearchBar value={query} onChange={goSearch} /></form>
-          <p style={{ marginTop: 16 }}><Link to="/tools" className="btn" style={{ background: "var(--accent)", color: "#102A43" }}>Browse all 41 free tools <ArrowRight size={16} style={{ verticalAlign: "-2px" }} /></Link> <Link to="/workflows" className="btn secondary" style={{ marginLeft: 8 }}>See workflows</Link></p>
+          <p style={{ marginTop: 16 }}><Link to="/tools" className="btn" style={{ background: "var(--accent)", color: "#102A43" }}>Browse all 54 free tools <ArrowRight size={16} style={{ verticalAlign: "-2px" }} /></Link> <Link to="/workflows" className="btn secondary" style={{ marginLeft: 8 }}>See workflows</Link></p>
           <p style={{ fontSize: ".95rem", opacity: .85 }}>No sign-up for the core tools. Most tools run in your browser — nothing is uploaded.</p>
           <div className="hero-stats">
-            <div><b>41</b><span>free tools</span></div>
-            <div><b>6</b><span>categories</span></div>
+            <div><b>54</b><span>free tools</span></div>
+            <div><b>7</b><span>categories</span></div>
             <div><b>0</b><span>sign-up needed</span></div>
             <div><b>100%</b><span>browser-local</span></div>
           </div>
@@ -105,8 +105,8 @@ export default function Home() {
       {/* All tools */}
       <section className="section container">
         <p className="kicker">Directory</p>
-        <h2>All 41 free online tools</h2>
-        <p className="lede">Searchable directory of all 41 free tools.</p>
+        <h2>All 54 free online tools</h2>
+        <p className="lede">Searchable directory of all 54 free tools.</p>
         <div className="grid">{TOOLS.map((t) => <ToolCard key={t.slug} tool={t} />)}</div>
         <p style={{ marginTop: 16 }}><Link to="/tools">Open the searchable tool directory →</Link> · <Link to="/collections">Browse tool collections →</Link></p>
       </section>
@@ -115,7 +115,7 @@ export default function Home() {
       <section className="section container">
         <p className="kicker">New</p>
         <h2>Recently added</h2>
-        <p className="lede">New: 20 calculator tools join the Stage 1 launch set of 21 tools, plus workflows, workspaces and collections.</p>
+        <p className="lede">New: 13 PDF tools — merge, split, compress, rotate, watermark, sign and convert PDFs in your browser — join the 41 tools already here. Nothing is uploaded.</p>
         <div className="grid">
           <article className="card"><h3><Link to="/workflows/youtube-creator">YouTube Creator Workflow</Link></h3><p>One topic carried through title, description, tags, thumbnail and a final check.</p></article>
           <article className="card"><h3><Link to="/workspaces">Workspaces</Link></h3><p>Save tool results into projects on your own device — no account needed.</p></article>
@@ -172,6 +172,8 @@ export default function Home() {
         <p>Open the <Link to="/tools/image-compressor">free Image Compressor</Link>, choose a quality level and download the smaller file. Compression runs entirely in your browser, so your image never leaves your device — a 4 MB phone photo often shrinks to under 800 KB at 80% quality.</p>
         <h2>How do I find hashtags for Instagram?</h2>
         <p>Enter your post topic in the <Link to="/tools/instagram-hashtag-generator">free Instagram Hashtag Generator</Link> and copy up to 5 relevant hashtags. For example, a travel photo topic gives #TravelPhotography, #Wanderlust and #PhotoOfTheDay.</p>
+        <h2>How do I merge PDF files without uploading them?</h2>
+        <p>Open the <Link to="/tools/merge-pdf">free Merge PDF tool</Link>, add up to 20 PDFs, set the order with the arrows, and download one combined file. Merging runs entirely in your browser, so your files never leave your device.</p>
       </section>
 
       {/* Ad placeholder — in-content, before the FAQs (placeholder only). */}

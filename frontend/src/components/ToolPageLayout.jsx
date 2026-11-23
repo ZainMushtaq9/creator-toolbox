@@ -13,7 +13,7 @@ import { trackEvent } from "../services/analytics.js";
 //   - tool_start: first form submit or generate-type button click.
 //   - tool_complete: a result (.output / .result-list) appears after a start.
 //   - copy_result / file_download: a Copy / Download button click.
-const START_BUTTON = /generate|calculate|convert|compress|resize|count|check/i;
+const START_BUTTON = /generate|calculate|convert|compress|resize|count|check|merge|split|rotate|watermark|sign|extract|read/i;
 
 export default function ToolPageLayout({ tool, children }) {
   const cat = getCategory(tool.category);

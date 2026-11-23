@@ -11,7 +11,7 @@ ranks on each term with a live search on 2026-11-05.
 
 | Page | Target | Read |
 | --- | --- | --- |
-| `/` (homepage) | **free online tools** | Hard. Page 1 is big directories: ToolsTide (998 tools, 26 categories), ToopTools (200+ tools), All-WebTools (102+ tools), HelpfulToolsOnline. A 21-tool site does not outrank them on the head term quickly. Keep it as the homepage head target, but expect traffic to come through the long-tail tool pages first. |
+| `/` (homepage) | **free online tools** | Hard. Page 1 is big directories: ToolsTide (998 tools, 26 categories), ToopTools (200+ tools), All-WebTools (102+ tools), HelpfulToolsOnline. A 54-tool site does not outrank them on the head term quickly. Keep it as the homepage head target, but expect traffic to come through the long-tail tool pages first. |
 
 ## Long-tail targets — one per tool page (the winnable path)
 
@@ -46,6 +46,32 @@ authorship/updated line.
 | `/tools/jpg-to-png-converter` | jpg to png converter | convert jpg to png, jpeg to png converter, convert jpeg to png |
 | `/tools/word-counter` | word counter | character counter, count words online, sentence counter, paragraph counter, reading time calculator |
 | `/tools/text-case-converter` | text case converter | uppercase lowercase converter, title case converter, sentence case converter, uppercase to lowercase converter |
+
+### PDF tools (patch 050, 2026-11-23)
+
+Thirteen PDF tools, all client-side (pdf-lib / PDF.js / Tesseract.js /
+docx / html2pdf.js). Head terms ("merge pdf", "compress pdf") are
+dominated by iLovePDF and Smallpdf; the winnable path is the same as
+the other tools — long-tail pages plus the privacy angle (nothing
+uploaded), which the server-upload giants cannot match without
+changing their model. No volume/difficulty numbers are claimed —
+same rule as the rest of this file.
+
+| Tool page | Primary target | Secondary terms |
+| --- | --- | --- |
+| `/tools/merge-pdf` | merge pdf | combine pdf, merge pdf files, merge pdf online free, join pdf files |
+| `/tools/split-pdf` | split pdf | extract pdf pages, split pdf online free, separate pdf pages, pdf splitter |
+| `/tools/compress-pdf` | compress pdf | reduce pdf size, pdf compressor, compress pdf online free, shrink pdf |
+| `/tools/rotate-pdf` | rotate pdf | rotate pdf pages, rotate pdf online free, fix sideways pdf |
+| `/tools/images-to-pdf` | images to pdf | jpg to pdf, png to pdf, convert image to pdf, pictures to pdf |
+| `/tools/pdf-to-images` | pdf to images | pdf to png, pdf to jpg, convert pdf to image, pdf pages to images |
+| `/tools/pdf-to-text` | pdf to text | extract text from pdf, pdf text extractor, convert pdf to txt |
+| `/tools/watermark-pdf` | watermark pdf | add watermark to pdf, pdf watermark online free, stamp pdf |
+| `/tools/add-page-numbers` | add page numbers to pdf | number pdf pages, pdf page numbers online free |
+| `/tools/sign-pdf` | sign pdf | sign pdf online free, add signature to pdf, esign pdf free |
+| `/tools/pdf-to-word` | pdf to word | convert pdf to docx, pdf to word converter free, pdf to editable word |
+| `/tools/ocr-pdf` | ocr pdf | image to text, ocr online, extract text from image, pdf ocr online, scan to text |
+| `/tools/html-to-pdf` | html to pdf | convert html to pdf, html to pdf online free, webpage to pdf |
 
 ## Evening round 2026-11-05 — keyword research + on-page additions
 

@@ -30,9 +30,9 @@ test("slugify normalises titles to slugs", () => {
 });
 
 // --- tool registry / route metadata ---
-test("registry has 41 tools in 6 categories", () => {
-  assert.equal(TOOLS.length, 41);
-  assert.equal(CATEGORIES.length, 6);
+test("registry has 54 tools in 7 categories", () => {
+  assert.equal(TOOLS.length, 54);
+  assert.equal(CATEGORIES.length, 7);
   for (const t of TOOLS) {
     assert.ok(t.slug && t.title && t.description, t.slug);
     assert.ok(t.description.length >= 40, t.slug);
@@ -43,10 +43,10 @@ test("registry has 41 tools in 6 categories", () => {
 });
 
 test("tool slugs are unique and public pages are unique", () => {
-  assert.equal(new Set(TOOLS.map((t) => t.slug)).size, 41);
+  assert.equal(new Set(TOOLS.map((t) => t.slug)).size, 54);
   const paths = publicPages.map((p) => p.path);
   assert.equal(new Set(paths).size, paths.length);
-  assert.equal(publicPages.length, 75);
+  assert.equal(publicPages.length, 89);
 });
 
 test("pageMeta builds unique canonicals from SITE_URL + path", () => {

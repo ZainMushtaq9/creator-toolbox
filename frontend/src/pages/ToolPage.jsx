@@ -45,7 +45,20 @@ const MAP = {
   "pregnancy-due-date-calculator": lazy(() => import("../tools/calculator/PregnancyCalculator.jsx")),
   "time-zone-converter": lazy(() => import("../tools/calculator/TimeZoneConverter.jsx")),
   "daily-water-intake-calculator": lazy(() => import("../tools/calculator/WaterIntakeCalculator.jsx")),
-  "fuel-cost-calculator": lazy(() => import("../tools/calculator/FuelCostCalculator.jsx"))
+  "fuel-cost-calculator": lazy(() => import("../tools/calculator/FuelCostCalculator.jsx")),
+  "merge-pdf": lazy(() => import("../tools/pdf/MergePdf.jsx")),
+  "split-pdf": lazy(() => import("../tools/pdf/SplitPdf.jsx")),
+  "compress-pdf": lazy(() => import("../tools/pdf/CompressPdf.jsx")),
+  "rotate-pdf": lazy(() => import("../tools/pdf/RotatePdf.jsx")),
+  "images-to-pdf": lazy(() => import("../tools/pdf/ImagesToPdf.jsx")),
+  "pdf-to-images": lazy(() => import("../tools/pdf/PdfToImages.jsx")),
+  "pdf-to-text": lazy(() => import("../tools/pdf/PdfToText.jsx")),
+  "watermark-pdf": lazy(() => import("../tools/pdf/WatermarkPdf.jsx")),
+  "add-page-numbers": lazy(() => import("../tools/pdf/AddPageNumbers.jsx")),
+  "sign-pdf": lazy(() => import("../tools/pdf/SignPdf.jsx")),
+  "pdf-to-word": lazy(() => import("../tools/pdf/PdfToWord.jsx")),
+  "ocr-pdf": lazy(() => import("../tools/pdf/OcrPdf.jsx")),
+  "html-to-pdf": lazy(() => import("../tools/pdf/HtmlToPdf.jsx"))
 };
 
 export default function ToolPage() {
@@ -59,7 +72,7 @@ export default function ToolPage() {
     return (
       <div className="container section">
         <h1>Tool not found</h1>
-        <p>There is no tool at this address. <Link to="/tools">Browse all 41 tools</Link>.</p>
+        <p>There is no tool at this address. <Link to="/tools">Browse all 54 tools</Link>.</p>
       </div>
     );
   }

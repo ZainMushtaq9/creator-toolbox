@@ -352,3 +352,48 @@ Rule for this site: a question query from this filter is a candidate FAQ for the
 Measured status for this site (2026-11-15): the filter returns nothing today. All 8 current GSC queries (Last 28 days to 2026-11-14, 0 clicks, 11 impressions: "image compressor free online", "compress image online tool", "online image compressor", "image compression free online", "photo compressor free online", "free photo compress", "photo compressor online", "free online image compressor") are non-question queries — none starts with a question word, confirmed by testing the pattern against all eight. So no FAQ edit results from this reel today. Re-run the filter when the query list grows.
 
 Honest caveats: the reel opens with a Shark Tank India pitch clip — the "100Cr Business" overlay and the ₹14.2 crore (last 3 months) / ₹1.6 crore average revenue figures are from that TV pitch, unverified by us, and they are about that founder's business, not SEO results. The Search Console screenshots are mockups/demo data (0.8K clicks / 19K impressions; "how to start a blog" 980 clicks / 21.5K impressions; "what is a backlink" 640 / 11.2K) — not a real property's data and not this site's. "Rank #1 on Google" in the overlay is a marketing claim, not a guarantee: the filter reveals question queries, it does not rank pages. The pattern only catches questions that START with a question word — a question phrased later in the query ("image compressor how to use") is missed, so the filter undercounts questions. The reel shows no course pitch, affiliate link or DM gate — the regex is shown on screen in full. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## Patch 050 — PDF toolkit (2026-11-23)
+
+Thirteen PDF tools added (merge, split, compress, rotate, images-to-PDF,
+PDF-to-images, PDF-to-text, watermark, add page numbers, sign, PDF-to-Word
+text-based, OCR PDF & images, HTML-to-PDF) plus a PDF Tools category.
+Site grows 41 → 54 tools, 6 → 7 categories, 75 → 89 public pages.
+All processing is client-side (pdf-lib, PDF.js, Tesseract.js, docx,
+html2pdf.js); nothing is uploaded. Honest limits are stated on each
+page: the compressor re-saves with compressed streams (typical savings
+0–20%, no image re-encoding); PDF to Word is text-based (layout not
+rebuilt); Sign adds a visible signature image (not a certified digital
+signature); OCR is English only and its engine downloads from a public
+CDN on first use; encrypted PDFs cannot be opened (pdf-lib cannot
+decrypt). No fake tool was built: unlock/decrypt and layout-perfect
+Office conversion were explicitly deferred, not faked.
+
+Rendered SEO/GSO/AEO audit (same engine as the 2026-11-10 homepage
+audit — backend pageAudit/gsoAnalysis/aeoAnalysis against the
+browser-rendered DOM of the production build; script
+scripts/audit-pdf-pages.mjs, full results
+docs/pdf-pages-audit-2026-11-23.json):
+
+- All 13 tool pages: SEO 100, GSO 91–93, AEO 7/8. Averages across the
+  13 tool pages + the category page: SEO 100, GSO 92.
+- The one AEO check every tool page fails is "Direct answer early" —
+  a known quirk of the audit tool: it takes the first paragraph from
+  whitespace-collapsed body text, which has no paragraph breaks, so
+  the "first paragraph" is the whole page text (>400 chars). The
+  homepage scores 7/8 for the same reason. Not chased; the audit
+  engine is backend code and out of scope for this patch.
+- The /pdf-tools category page: SEO 100, GSO 92, AEO 3/8 — category
+  pages carry no FAQ/examples/table by design (same as the other six
+  categories), so the AEO content checks do not apply to them.
+- Two defects found by the audit and fixed before deploy: the OCR
+  page title rendered at 61 characters (the "&" counts as "&amp;" in
+  the audit — "(Tesseract)" dropped from the title) and the HTML to
+  PDF sample invoice contained an <h1> (changed to <h2> — one H1 per
+  page restored).
+- All 13 tool descriptions measure 150–160 characters; all rendered
+  titles measure 60 or under; 5 real FAQs per page with FAQPage
+  JSON-LD; sitemap 89 URLs, metadata/links 0 errors; tests 78/78
+  (unit+security+SEO 51, backend 22, e2e 5); functional browser smoke
+  19/19 (merge/split/text-extraction/compress exercised end to end
+  with real files, zero console errors).

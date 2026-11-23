@@ -49,7 +49,7 @@ export default function Workspaces() {
         <label htmlFor="ws-name">Project name</label>
         <input id="ws-name" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. YouTube videos" />
         <div className="toolbar"><button type="button" className="btn" onClick={createProject}>Create Project</button></div>
-        {msg && <p className="success">{msg}</p>}
+        {msg && <p className="success" role="status">{msg}</p>}
       </div>
       {data.projects.length === 0 && (
         <p className="notice info">No projects yet. Create one above, or finish the <Link to="/workflows/youtube-creator">YouTube Creator Workflow</Link> and save it — it creates a “YouTube videos” project automatically.</p>

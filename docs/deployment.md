@@ -40,12 +40,12 @@ before any deployment that serves it. AdSense approval is not guaranteed.
 
 ```bash
 cd ~/workspace/creator-toolbox
-npm run build            # PASS (~4-5 s)
+npm run build            # PASS (~15 s, 89 routes -> 177 files)
 npm run validate:metadata  # 0 errors
 npm run validate:links     # 0 broken links
-npm run sitemap            # 54 URLs (regenerate after changing SITE_URL)
+npm run sitemap            # 89 URLs (regenerate after changing SITE_URL)
 npm run manifest           # regenerate route-manifest.json
-npm run test:all           # 57/57 PASS (unit 36 + backend 16 + e2e 5)
+npm run test:all           # 78/78 PASS (unit+security+SEO 51 + backend 22 + e2e 5)
 ```
 
 ## 2. Configure the site (before the first deploy)

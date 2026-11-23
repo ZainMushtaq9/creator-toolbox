@@ -1,14 +1,16 @@
 # Unit test checklist — tools (Phase 7: runnable)
 
-Runnable tests: `tests/unit/services.test.mjs` (`npm test`).
-They cover pure logic: format helpers (`gcd`, `slugify`), the tool
-registry (41 tools, unique slugs/titles/descriptions, ≥3 FAQs, related
-links resolve), canonicals/JSON-LD honesty, audit/GSO/AEO scoring,
-keyword research (volume/difficulty always `unavailable`), the JSON
-envelope, validation and URL validation. **36 tests pass** (see
-`docs/TEST_REPORT.md`).
+Runnable tests: `tests/unit/services.test.mjs` + `tests/unit/pdf.test.mjs`
+(`npm test`). They cover pure logic: format helpers (`gcd`, `slugify`),
+the tool registry (54 tools, unique slugs/titles/descriptions, ≥3 FAQs,
+related links resolve), canonicals/JSON-LD honesty, audit/GSO/AEO
+scoring, keyword research (volume/difficulty always `unavailable`), the
+JSON envelope, validation and URL validation, plus the PDF toolkit's
+pdf-lib operations (merge, split, rotate, compress, watermark, page
+numbers, images-to-PDF, sign, page-range parsing, .docx generation).
+**51 tests pass** (see `docs/TEST_REPORT.md`).
 
-For EACH of the 41 tools (still manual — components are React UI, and
+For EACH of the 54 tools (still manual — components are React UI, and
 their behaviour is covered only by the e2e smoke test for loading):
 - [ ] Empty input → clear validation message, no crash, no result shown.
 - [ ] Valid input → correct output (spot-check against the formula/template).
@@ -45,3 +47,19 @@ Calculators to verify by hand:
 - Water intake: 70 kg moderate → 2.45 litres/day.
 - Fuel cost: 300 km at 15 km/litre → 20 litres; at Rs 250/litre → Rs 5,000 (16.67/km).
 - Word counter: "hello world" → 2 words, 11 characters with spaces.
+
+PDF tools to verify by hand (browser-only parts — PDF.js rendering,
+Tesseract OCR, html2pdf capture — have no runnable test):
+- Merge: 3-page + 2-page PDF → one 5-page PDF, pages in the set order.
+- Split: range 2–3 of a 5-page PDF → 2-page PDF; split-all → one file per page.
+- Compress: re-saved file is valid and opens; page says the honest saving (often small).
+- Rotate: 90° on all pages; range-only rotation leaves other pages alone.
+- Images to PDF: JPG + PNG → one A4 page per image, in order.
+- PDF to Images: each page downloads as a PNG/JPG that opens; 2x is sharper than 1x.
+- PDF to Text: text-based PDF extracts; scanned PDF shows the empty-text notice + OCR link.
+- Watermark: “DRAFT” appears diagonally on every page.
+- Page numbers: “1 of 3” style shows the total; start-at works.
+- Sign: drawn signature and uploaded PNG both stamp onto the chosen page.
+- PDF to Word: .docx opens in Word/LibreOffice with editable paragraphs; layout is NOT preserved (page says so).
+- OCR: clear English scan reads correctly; blurry scan shows the proofread warning.
+- HTML to PDF: sample invoice renders and downloads; scripts do not run.

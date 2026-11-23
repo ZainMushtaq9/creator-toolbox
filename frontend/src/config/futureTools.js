@@ -1,8 +1,10 @@
-// 46 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
+// 43 FUTURE tools — Stage 2/3 CANDIDATES ONLY. Do not build them in Stage 1,
 // do not list them as working tools, and do not create pages for them.
 // Priority after the 21 launch tools are stable: SEO tools first, then developer tools.
 // Built 2026-11-10 and removed from this list: Percentage Calculator,
 // Age Calculator, BMI Calculator, Loan/EMI Calculator, Unit Converter.
+// Built 2026-11-23 (patch 050) and removed from this list: PDF Merger,
+// PDF Splitter, PDF to Text (plus 10 more PDF tools built the same day).
 // Each entry: name, pillar, stage ("2" or "3"), note.
 export const FUTURE_TOOLS = [
   // SEO tools (priority)
@@ -31,9 +33,6 @@ export const FUTURE_TOOLS = [
   { name: "Image Metadata Viewer", pillar: "file-media-tools", stage: "2", note: "EXIF read, local only." },
   { name: "WebP Converter", pillar: "file-media-tools", stage: "2", note: "Canvas-based, local." },
   { name: "Image Cropper", pillar: "file-media-tools", stage: "2", note: "Local canvas crop." },
-  { name: "PDF Merger", pillar: "file-media-tools", stage: "3", note: "pdf-lib, local." },
-  { name: "PDF Splitter", pillar: "file-media-tools", stage: "3", note: "pdf-lib, local." },
-  { name: "PDF to Text", pillar: "file-media-tools", stage: "3", note: "PDF.js, local." },
   { name: "Barcode Generator", pillar: "file-media-tools", stage: "3", note: "Local generation." },
   { name: "Currency Converter (rates note)", pillar: "productivity-developer-tools", stage: "3", note: "Needs a rates source; label the source and date." },
   { name: "Pomodoro Timer", pillar: "ai-productivity", stage: "3", note: "Local timer." },
