@@ -89,7 +89,7 @@ export const TOOLS = [
     slug: "youtube-thumbnail-resizer", name: "YouTube Thumbnail Resizer", category: "youtube-tools",
     title: "Free YouTube Thumbnail Resizer (1280 × 720)",
     description: "Resize any image to 1280 × 720 pixels for a YouTube thumbnail. Choose fit or contain, then download — processed locally in your browser, nothing is uploaded.",
-    keywords: "youtube thumbnail resizer, 1280x720 thumbnail, resize thumbnail, youtube thumbnail size",
+    keywords: "youtube thumbnail resizer, 1280x720 thumbnail, resize thumbnail, youtube thumbnail size, youtube thumbnail size converter",
     howTo: ["Upload an image (JPG, PNG or WebP).", "Choose fit (cover) or contain (letterboxed).", "Click Resize Thumbnail.", "Download the 1280 × 720 image."],
     formats: "Input: JPG, PNG, WebP. Output: JPG or PNG at exactly 1280 × 720 px. File size limit: 20 MB.",
     examples: ["A phone photo resized to a crisp 1280 × 720 thumbnail.", "A wide screenshot fitted to thumbnail size without stretching."],
@@ -98,7 +98,8 @@ export const TOOLS = [
       { q: "What size does YouTube recommend?", a: "The standard YouTube thumbnail size is 1280 × 720 pixels (16:9). This tool resizes your image to a 1280x720 thumbnail at exactly that size, ready to upload." },
       { q: "Will the image be stretched?", a: "No. Cover mode crops the edges to fill the frame; contain mode keeps the whole image with padding." },
       { q: "Is it free?", a: "Yes, free with no sign-up." },
-      { q: "What is the maximum file size for a YouTube thumbnail?", a: "YouTube accepts thumbnails up to 2 MB, at least 640 pixels wide, in JPG, PNG, GIF or WebP. A 1280 × 720 JPG from this tool is usually well under that limit." }
+      { q: "What is the maximum file size for a YouTube thumbnail?", a: "YouTube accepts thumbnails up to 2 MB, at least 640 pixels wide, in JPG, PNG, GIF or WebP. A 1280 × 720 JPG from this tool is usually well under that limit." },
+      { q: "What does a YouTube thumbnail size converter do?", a: "A YouTube thumbnail size converter resizes your image to the 1280 × 720 pixels YouTube recommends for thumbnails. Upload a JPG, PNG or WebP image (up to 20 MB) and this tool converts it to exactly 1280 × 720, free with no sign-up, processed locally in your browser." }
     ],
     related: ["image-resizer", "image-compressor", "video-aspect-ratio-calculator", "jpg-to-png-converter"]
   },
