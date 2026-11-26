@@ -271,6 +271,11 @@ claims a ranking, traffic or indexing outcome.
     edit, a recorded minor improvement since 2026-11-10); no
     Markdown versions of tool pages exist (new build surface —
     owner decision); WebMCP not applicable (no MCP server).
+15. December 2026 core update watch (reel 21) — rollout not
+    started yet (scheduled December 2026); freeze hard changes
+    during rollout; after completion + 7 days, compare GSC week
+    vs pre-rollout week (baseline 26 Nov evening: 2 clicks, 73
+    impressions, avg pos 46.2) and record the outcome here.
 
 ## How this document is maintained
 
@@ -373,6 +378,20 @@ Measured status for this site (2026-11-26): the same repo was already verified f
 Why it is not installed here: claude-seo is a plugin for Claude Code — it needs Claude Code 1.0.33+ and a Claude Code plan to run. This project is built and maintained in Muse, not Claude Code, and its own deterministic audit engine already exists. Installing a Claude Code plugin into this workflow is not applicable; the repo is recorded as a reference method, not adopted.
 
 Honest caveats: the repo's own copy disagrees with itself on size — the About line says 26 sub-skills + 19 sub-agents while the README body says 29 sub-skills and 20 specialist agents (up to 17 in parallel). The reel's spoken "15–20 sub-agents" sits inside that range, so it is not adopted as an exact figure. "Free" in the reel means the repo is free and open-source (MIT) — running it still needs a Claude Code plan, which the reel does not mention. The PDF is not the audit's default output — audits save as Markdown and only `/seo google report` produces a PDF, so the reel's "audit gives a PDF" is shorthand. The video shows the install running in Muse ("Install claude-seo repo on VM", "Running claude-seo install script") but shows no audit running, no findings and no PDF on screen — the audit outcome is promised, not demonstrated. The repo's "Real results" (its own site: 10.8K Search Console clicks in its first 12 weeks, 99 mobile PageSpeed) is the project's own self-reported screenshot, unverified by us. Its pricing table's $106,500 agency-year comparison is labelled "illustrative" by the repo itself. The video's star/fork figures on screen (32.3k stars, 3.9k forks) match the live counts above. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## December 2026 core update — preannounced; freeze-and-measure posture (reel 21, 2026-11-26)
+
+Method (from the "Google Dec Update is preannounced. Be ready for it." reel, Ghulam Ali - GM, 2026-11-26): Google pre-announced the December 2026 core update before December arrived; while the update rolls out, make no hard and fast changes to the site; sit calmly and watch what happens; after the rollout completes, audit the site and assess the situation.
+
+Verified — primary source (Google Search Status Dashboard, incident AXrqxXXdtSjj3672ux7X, checked 2026-11-26): incident began 2026-11-24 07:02 US/Pacific; at 07:03 PST Google "Preannounced the December 2026 core update, which focuses on multiple improvements to how our systems understand and rank relevant content (including for longer and more complex questions), as well as improving personalized results for people who have personalization turned on. This core update applies to all locations and languages where Google Search is available, and our guidance about general core updates applies. This update is scheduled to be released in December 2026." The update is NOT live yet and Google has given no exact date (Search Engine Land: a Google spokesperson confirmed it is not live and not active, with no date yet). The November 2026 core update completed the same day, 24 Nov 2026 (reported by Search Engine Journal and Search Engine Roundtable). Google's core-update guidance: wait at least seven days after an update concludes, then compare that week with the week preceding the rollout's initiation.
+
+Why this matters for this site: the update's stated focus — "longer and more complex questions" — is exactly the ground this site's question work stands on (question-query mining, patch 046; FAQ additions from real GSC queries, patches 048/049/052). A core update that re-ranks long questions can move this site's question-adjacent pages either way; that is a measurement question, not a reason to change content mid-rollout.
+
+Baseline, pre-December-update (26 Nov 2026 evening GSC snapshot, hidden_files/gsc-performance-2026-11-26-evening.md — Last 28 days, Web): 2 clicks, 73 impressions, avg CTR 2.7%, avg position 46.2. Indexed 15, Not indexed 2. This is the number to compare against after the December rollout completes.
+
+Site posture (recorded here; these are our rules, not Google's words): no hard or structural changes during the December rollout — no redesign, no slug or title overhaul, no mass FAQ rewrite. Routine daily striking-distance work (small FAQ additions from real GSC queries) continues — it is ordinary publishing, not a reaction to the rollout. After Google marks the rollout complete: wait at least a full week, then compare that week's GSC figures with the week before the rollout began, and only then decide whether any page needs a fix. Do not treat a mid-rollout dip as a penalty — a core update does not penalize a site; a drop means the page was reassessed against the updated systems.
+
+Honest caveats on the reel: "instantly Google ko signal jayega that person is panicking" is the creator's own framing — Google says nothing about a "panic signal". What Google's guidance actually implies runs the other way: changes made mid-rollout make it harder to tell what caused a later movement, so waiting keeps the measurement clean. "If you get penalize otherwise happy to go" is imprecise — a core update does not penalize a site. "Chaar din baaki hai" (26 Nov to December) is correct: 4 days of November remained. The video is talking-head only (frames r001–r007 carry one burned-in overlay, "Breaking: Dec 2026 Google update preanounced"); no dashboard, screenshot or data is shown on screen — the pre-announcement itself was verified from Google's own dashboard, not from the video. Nothing in this section claims a ranking, traffic or indexing outcome.
 
 ## Patch 050 — PDF toolkit (2026-11-23)
 
