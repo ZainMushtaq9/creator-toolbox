@@ -266,6 +266,11 @@ claims a ranking, traffic or indexing outcome.
     current queries are non-question). **CLOSED 2026-11-15** —
     user approved, step 3a added to the daily-check cron
     (creator-toolbox-weekly-striking-distance).
+14. Agent readiness (reel 20) — llms.txt lists all 54 tools by
+    name but links only 4 tool pages (add per-tool URLs — small
+    edit, a recorded minor improvement since 2026-11-10); no
+    Markdown versions of tool pages exist (new build surface —
+    owner decision); WebMCP not applicable (no MCP server).
 
 ## How this document is maintained
 
@@ -352,6 +357,22 @@ Rule for this site: a question query from this filter is a candidate FAQ for the
 Measured status for this site (2026-11-15): the filter returns nothing today. All 8 current GSC queries (Last 28 days to 2026-11-14, 0 clicks, 11 impressions: "image compressor free online", "compress image online tool", "online image compressor", "image compression free online", "photo compressor free online", "free photo compress", "photo compressor online", "free online image compressor") are non-question queries — none starts with a question word, confirmed by testing the pattern against all eight. So no FAQ edit results from this reel today. Re-run the filter when the query list grows.
 
 Honest caveats: the reel opens with a Shark Tank India pitch clip — the "100Cr Business" overlay and the ₹14.2 crore (last 3 months) / ₹1.6 crore average revenue figures are from that TV pitch, unverified by us, and they are about that founder's business, not SEO results. The Search Console screenshots are mockups/demo data (0.8K clicks / 19K impressions; "how to start a blog" 980 clicks / 21.5K impressions; "what is a backlink" 640 / 11.2K) — not a real property's data and not this site's. "Rank #1 on Google" in the overlay is a marketing claim, not a guarantee: the filter reveals question queries, it does not rank pages. The pattern only catches questions that START with a question word — a question phrased later in the query ("image compressor how to use") is missed, so the filter undercounts questions. The reel shows no course pitch, affiliate link or DM gate — the regex is shown on screen in full. Nothing in this section claims a ranking, traffic or indexing outcome.
+
+## Multi-agent AI SEO audit — claude-seo, re-verified (reel 20, 2026-11-26)
+
+Method (from the "APNI WEBSITE KA DEEP SEO AUDIT FREE MEIN?" reel, AH Digital Studio, 2026-11-25): install the AgriciDaniel/claude-seo repo in Muse, give it the site URL, and 15–20 sub-agents audit the site in parallel — technical SEO, content quality, structured data, AI search (GEO), local SEO, e-commerce — then a complete audit report (PDF) is produced; feed the report and the site files back to the AI model, have it fix the gaps, and redeploy.
+
+Repo verified live 2026-11-26 (github.com/AgriciDaniel/claude-seo): public, MIT licence, created 2026-02-07, 32,562 stars, 3,963 forks, 768 commits, 35 releases. About line: "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data." Install (inside Claude Code 1.0.33 or newer): `/plugin marketplace add AgriciDaniel/claude-seo`, `/plugin install claude-seo@agricidaniel-claude-seo`, `/seo setup`. A full audit runs 10–15 minutes with up to 17 agents in parallel; reports are saved as Markdown, and `/seo google report` turns them into a polished PDF. Commands include /seo audit, /seo technical, /seo content, /seo schema, /seo geo, /seo agentic, /seo backlinks, /seo local, /seo ecommerce.
+
+Measured status for this site (2026-11-26): the same repo was already verified for reel 2 (2026-11-06, vikasBuildsApp) and the conclusion then was no patch — this site already has its own Phase 5 SEO Intelligence engine (deterministic audit, 11 modules, /seo dashboard) covering technical SEO, content quality, structured data and GEO. That conclusion was never written into this document; it is recorded here now. The one audit dimension the repo covers that this site's own audit does NOT check is agent readiness (`/seo agentic`: Lighthouse Agentic Browsing score, AI-agent access, llms.txt, Markdown page versions, WebMCP). Measured against it:
+- llms.txt — live (37 lines, GitHub main 2026-11-26): all 54 tools listed by name, plus key pages with URLs; only 4 of the 54 tool pages are linked. Per-tool URLs are still missing — the same minor gap recorded in the 2026-11-10 full re-check. Open item 14.
+- robots.txt — AI crawlers allowed: User-agent: * / Allow: /, with no AI-bot disallow anywhere (no GPTBot line — covered by the wildcard). PASS.
+- Markdown versions of tool pages — none exist. Pages are prerendered HTML; no .md equivalents are generated. Recorded as a gap, not a fix: adding a Markdown mirror of 54 tool pages is a new build surface and an owner decision. Open item 14.
+- WebMCP — not applicable. The site has no MCP server or endpoint (static frontend + a REST Workers API); there is nothing for an agent to connect to over MCP. Not a gap.
+
+Why it is not installed here: claude-seo is a plugin for Claude Code — it needs Claude Code 1.0.33+ and a Claude Code plan to run. This project is built and maintained in Muse, not Claude Code, and its own deterministic audit engine already exists. Installing a Claude Code plugin into this workflow is not applicable; the repo is recorded as a reference method, not adopted.
+
+Honest caveats: the repo's own copy disagrees with itself on size — the About line says 26 sub-skills + 19 sub-agents while the README body says 29 sub-skills and 20 specialist agents (up to 17 in parallel). The reel's spoken "15–20 sub-agents" sits inside that range, so it is not adopted as an exact figure. "Free" in the reel means the repo is free and open-source (MIT) — running it still needs a Claude Code plan, which the reel does not mention. The PDF is not the audit's default output — audits save as Markdown and only `/seo google report` produces a PDF, so the reel's "audit gives a PDF" is shorthand. The video shows the install running in Muse ("Install claude-seo repo on VM", "Running claude-seo install script") but shows no audit running, no findings and no PDF on screen — the audit outcome is promised, not demonstrated. The repo's "Real results" (its own site: 10.8K Search Console clicks in its first 12 weeks, 99 mobile PageSpeed) is the project's own self-reported screenshot, unverified by us. Its pricing table's $106,500 agency-year comparison is labelled "illustrative" by the repo itself. The video's star/fork figures on screen (32.3k stars, 3.9k forks) match the live counts above. Nothing in this section claims a ranking, traffic or indexing outcome.
 
 ## Patch 050 — PDF toolkit (2026-11-23)
 
